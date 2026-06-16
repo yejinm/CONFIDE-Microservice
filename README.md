@@ -131,7 +131,7 @@ This package includes an automated pipeline that constructs high-fidelity multi-
 
 We develop an automated pipeline to construct high-fidelity multi-modal datasets from heterogeneous sources. By integrating non-intrusive instrumentation with domain-aware preprocessing, our pipeline provides auditable benchmarks that address the critical scarcity of multi-modal data and support reproducible research.
 
-## Reviewer-response add-ons (rebuttal-friendly)
+## Additional robustness experiments
 
 ### Cold-start simulation (sparse runtime traces)
 
