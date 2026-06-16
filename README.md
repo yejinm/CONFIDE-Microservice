@@ -164,7 +164,7 @@ python scripts\multimodal\phase4\run_llm_baseline_cached.py
 
 To evaluate specific systems, pass them explicitly. If a requested cached file is missing, the script will error and tell you which file to add.
 
-### End-to-end cold-start sweep (recommended for rebuttal)
+### End-to-end cold-start sweep
 
 To report *end-to-end* robustness when runtime data is scarce, use the provided sweep runner. It will:
 
