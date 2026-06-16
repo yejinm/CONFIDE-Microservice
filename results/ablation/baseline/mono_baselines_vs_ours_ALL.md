@@ -5,13 +5,13 @@ Generated: (no timestamp; deterministic overwrite)
 | System | Method | BCubedF1 | MoJoSim | IFN | NED | SM | ICP | K | GT_K | K-Diff | mu_override | U | cap |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|
 | acmeair | Bunch_MEM_Structural | 0.3851 | 47.83 | 28.00 | 0.3074 | -0.0311 | 0.6364 | 3 | 4 | -1 | 1.0 | with_u | 0.05 |
-| acmeair | COGCN_SimpleFusion | 0.3929 | 34.78 | 31.00 | 0.3074 | -0.0288 | 0.7045 | 3 | 4 | -1 | 0.5 | no_u | 0.05 |
+| acmeair | COGCN_SimpleFusion | 0.3929 | 21.74 | 31.00 | 0.3074 | -0.0288 | 0.7045 | 3 | 4 | -1 | 0.5 | no_u | 0.05 |
 | acmeair | Mono2Micro_Semantic | 0.3421 | 34.78 | 31.00 | 0.1627 | -0.0141 | 0.7045 | 3 | 4 | -1 | 0.0 | with_u | 0.05 |
 | acmeair | Ours_CAC_noU | 0.3938 | 39.13 | 26.00 | 0.4032 | 0.0121 | 0.5909 | 3 | 4 | -1 | - | no_u | 0.05 |
 | acmeair | Ours_CAC_withU | 0.3923 | 39.13 | 25.00 | 0.5033 | -0.0356 | 0.5682 | 3 | 4 | -1 | - | with_u | 0.05 |
-| daytrader | Bunch_MEM_Structural | 0.4418 | 40.62 | 46.00 | 0.3953 | 0.0224 | 0.7797 | 4 | 5 | -1 | 1.0 | with_u | 0.18 |
+| daytrader | Bunch_MEM_Structural | 0.4418 | 34.38 | 46.00 | 0.3953 | 0.0224 | 0.7797 | 4 | 5 | -1 | 1.0 | with_u | 0.18 |
 | daytrader | COGCN_SimpleFusion | 0.4778 | 37.50 | 49.00 | 0.2932 | -0.0056 | 0.8305 | 4 | 5 | -1 | 0.5 | no_u | 0.18 |
-| daytrader | Mono2Micro_Semantic | 0.4934 | 46.88 | 50.00 | 0.4593 | 0.0010 | 0.8475 | 5 | 5 | 0 | 0.0 | with_u | 0.18 |
+| daytrader | Mono2Micro_Semantic | 0.4934 | 34.38 | 50.00 | 0.4593 | 0.0010 | 0.8475 | 5 | 5 | 0 | 0.0 | with_u | 0.18 |
 | daytrader | Ours_CAC_noU | 0.4267 | 31.25 | 47.00 | 0.6435 | -0.0180 | 0.7966 | 4 | 5 | -1 | 0.3 | no_u | 0.18 |
 | daytrader | Ours_CAC_withU | 0.5139 | 50.00 | 27.00 | 1.3199 | -0.0061 | 0.4576 | 6 | 5 | 1 | 0.3 | with_u | 0.18 |
 | jpetstore | Bunch_MEM_Structural | 0.2953 | 27.40 | 67.00 | 0.1913 | 0.0116 | 0.7283 | 4 | 4 | 0 | 1.0 | with_u | 0.14 |

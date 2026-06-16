@@ -1,0 +1,301 @@
+{
+  "authority": {
+    "note": "Redistribute large controller cluster into Catalog/Order/Cart using lightweight keyword heuristics. Other classes default to web/gateway.",
+    "repo": "data/raw/jPetStore"
+  },
+  "cluster_legend": {
+    "-1": "infra/unmatched",
+    "0": "catalog",
+    "1": "order",
+    "2": "cart",
+    "3": "web/gateway"
+  },
+  "rules_applied": {
+    "forced_keyword_mappings": [
+      {
+        "class": "org.springframework.samples.jpetstore.dao.CategoryDao",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ItemDao",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.OrderDao",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ProductDao",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ibatis.MsSqlOrderDao",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapCategoryDao",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao.ProductSearch",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.Account",
+        "rule": "entity:unknown->web",
+        "to": 3
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.Cart",
+        "rule": "keyword:cart/shoppingcart->cart",
+        "to": 2
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.CartItem",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.Category",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.Item",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.LineItem",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.Order",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.Product",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.logic.AccountValidator",
+        "rule": "entity:unknown->web",
+        "to": 3
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.logic.OrderService",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.logic.OrderValidator",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+        "rule": "entity:unknown->web",
+        "to": 3
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+        "rule": "entity:unknown->web",
+        "to": 3
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.domain.logic.SendOrderConfirmationEmailAdvice",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.service.JaxRpcOrderService",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.service.client.OrderServiceClient",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.AddItemToCartController",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.ListOrdersController",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.OrderForm",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.OrderFormController",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.RemoveItemFromCartController",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.SearchProductsController",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.UpdateCartQuantitiesController",
+        "rule": "keyword:cart/shoppingcart->cart",
+        "to": 2
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.ViewCartController",
+        "rule": "keyword:cart/shoppingcart->cart",
+        "to": 2
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.ViewCategoryController",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.ViewItemController",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.ViewOrderController",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.spring.ViewProductController",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.AddItemToCartAction",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.CartActionForm",
+        "rule": "keyword:cart/shoppingcart->cart",
+        "to": 2
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.ListOrdersAction",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.NewOrderAction",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.NewOrderFormAction",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.OrderActionForm",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.RemoveItemFromCartAction",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.SearchProductsAction",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.UpdateCartQuantitiesAction",
+        "rule": "keyword:cart/shoppingcart->cart",
+        "to": 2
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.ViewCartAction",
+        "rule": "keyword:cart/shoppingcart->cart",
+        "to": 2
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.ViewCategoryAction",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.ViewItemAction",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.ViewOrderAction",
+        "rule": "keyword:order/purchase/checkout->order",
+        "to": 1
+      },
+      {
+        "class": "org.springframework.samples.jpetstore.web.struts.ViewProductAction",
+        "rule": "keyword:catalog/product/category/item->catalog",
+        "to": 0
+      }
+    ],
+    "notes": [
+      "Controller classes matched by keywords (catalog/order/cart) are steered into domain clusters.",
+      "Fallback controller/classes remain in web/gateway to avoid over-splitting."
+    ]
+  },
+  "summary": {
+    "business_context_coverage": {
+      "business_labeled": 73,
+      "business_ratio": 1.0,
+      "infra_or_excluded": 0,
+      "infra_ratio": 0.0
+    },
+    "class_count": 73,
+    "cluster_counts": {
+      "0": 24,
+      "1": 18,
+      "2": 6,
+      "3": 25
+    },
+    "coverage_ratio": 1.0,
+    "covered_labeled": 73,
+    "covered_unlabeled": 0,
+    "largest_cluster": 25
+  },
+  "system": "jpetstore"
+}

@@ -1,0 +1,392 @@
+{
+  "com.acmeair.AcmeAirConstants": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.acmeair.config.AcmeAirConfiguration": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.config.LoaderREST": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.AirportCodeMapping": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.Booking": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.BookingPK": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.Customer": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.Customer.MemberShipStatus": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.acmeair.entities.Customer.PhoneType": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.acmeair.entities.CustomerAddress": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.CustomerSession": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.Flight": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.entities.FlightPK": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.acmeair.entities.FlightSegment": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.loader.CustomerLoader": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.loader.FlightLoader": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.loader.Loader": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.BigDecimalConverter": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.BigIntegerConverter": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.DatastoreFactory": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.MorphiaConstants": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.acmeair.morphia.entities.AirportCodeMappingImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.entities.BookingImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.entities.CustomerAddressImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.entities.CustomerImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.entities.CustomerSessionImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.entities.FlightImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.entities.FlightSegmentImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.services.BookingServiceImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.services.CustomerServiceImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.morphia.services.FlightServiceImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.ReportGenerator": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.IndividualChartResults": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.MultipleChartResults": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.OverallResults": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.ResultParser": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.ResultParserHelper": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.component.JmeterJTLParser": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.component.JmeterSummariserParser": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.component.JtlTotals": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.reporter.parser.component.NmonParser": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.service.BookingService": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.service.CustomerService": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.service.DataService": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.acmeair.service.FlightService": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.service.KeyGenerator": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.service.ServiceLocator": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.service.TransactionService": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.AcmeAirApp": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.AppConfig": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.BookingsREST": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.CustomerREST": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.FlightsREST": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.LoginREST": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.RESTCookieSessionFilter": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.AddressInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.BookingInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.BookingPKInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.BookingReceiptInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.CustomerInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.FlightInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.FlightPKInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.FlightSegmentInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.TripFlightOptions": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.web.dto.TripLegInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.WXSConstants": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.acmeair.wxs.entities.AirportCodeMappingImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.BookingImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.BookingPKImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.CustomerAddressImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.CustomerImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.CustomerSessionImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.FlightImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.FlightPKImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.entities.FlightSegmentImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.service.BookingServiceImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.service.CustomerServiceImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.acmeair.wxs.service.FlightServiceImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  }
+}

@@ -1,0 +1,15 @@
+system,drop_rate,seed,traces_before,traces_kept,traces_dropped,method,bcubed_f1,mojosim,pred_k,gt_k,run_dir
+acmeair,0.0,1337,580,580,0,COGCN_SimpleFusion,0.3928819739858639,21.73913043478261,3,4,results/cold_start/run_rate_0.00
+acmeair,0.0,1337,580,580,0,Ours_CAC_withU,0.4131693887017971,47.82608695652174,3,4,results/cold_start/run_rate_0.00
+acmeair,0.2,1337,580,464,116,COGCN_SimpleFusion,0.3928819739858641,30.434782608695656,3,4,results/cold_start/run_rate_0.20
+acmeair,0.2,1337,580,464,116,Ours_CAC_withU,0.4343642069115239,47.82608695652174,3,4,results/cold_start/run_rate_0.20
+acmeair,0.4,1337,580,348,232,COGCN_SimpleFusion,0.392881973985864,43.47826086956522,3,4,results/cold_start/run_rate_0.40
+acmeair,0.4,1337,580,348,232,Ours_CAC_withU,0.3922582744038101,39.13043478260869,3,4,results/cold_start/run_rate_0.40
+acmeair,0.6,1337,580,232,348,COGCN_SimpleFusion,0.392881973985864,26.086956521739136,3,4,results/cold_start/run_rate_0.60
+acmeair,0.6,1337,580,232,348,Ours_CAC_withU,0.4343642069115238,47.82608695652174,3,4,results/cold_start/run_rate_0.60
+acmeair,0.8,1337,580,116,464,COGCN_SimpleFusion,0.3928819739858641,34.78260869565217,3,4,results/cold_start/run_rate_0.80
+acmeair,0.8,1337,580,116,464,Ours_CAC_withU,0.4053438540841138,43.47826086956522,3,4,results/cold_start/run_rate_0.80
+acmeair,0.9,1337,580,58,522,COGCN_SimpleFusion,0.3928819739858639,30.434782608695656,3,4,results/cold_start/run_rate_0.90
+acmeair,0.9,1337,580,58,522,Ours_CAC_withU,0.3671359243905545,39.13043478260869,3,4,results/cold_start/run_rate_0.90
+acmeair,0.95,1337,580,29,551,COGCN_SimpleFusion,0.3928819739858639,21.73913043478261,3,4,results/cold_start/run_rate_0.95
+acmeair,0.95,1337,580,29,551,Ours_CAC_withU,0.3671359243905545,39.13043478260869,3,4,results/cold_start/run_rate_0.95

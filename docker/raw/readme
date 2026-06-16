@@ -1,0 +1,94 @@
+# Docker (raw subjects) runbook
+
+This folder contains **four Dockerfiles** for running the 4 third-party monolith applications with Docker:
+
+- `Dockerfile-daytrader`
+- `Dockerfile-plants`
+- `Dockerfile-jPetstore`
+- `Dockerfile-acmeair`
+
+Goal:
+
+1. Put each Dockerfile into its corresponding **raw monolith repository folder** (top-level only)
+2. Use Docker / Docker Compose to start the monoliths
+3. After startup, run the JMeter workloads to generate runtime traffic and traces
+
+> The raw subject systems are **not redistributed** in this reproducibility package.
+> Download them first as described in `data/raw/README.md`.
+
+---
+
+## 1) Prerequisites
+
+- Docker Desktop (with Docker Compose v2)
+- Repository root as working directory (the folder that contains `docker/`, `data/`, `scripts/`, `results/`)
+- (Optional, for workload generation) Apache JMeter 5.6.3
+
+---
+
+## 2) Copy the Dockerfiles into each raw monolith repository (top-level)
+
+After you clone the upstream subject systems under `data/raw/`, copy the Dockerfiles in this folder into the **outermost directory** of each monolith repository:
+
+- Copy `docker/raw/Dockerfile-daytrader`  -> `data/raw/daytrader7/Dockerfile`
+- Copy `docker/raw/Dockerfile-plants`    -> `data/raw/plantsbywebsphere/Dockerfile`
+- Copy `docker/raw/Dockerfile-jPetstore` -> `data/raw/jPetStore/Dockerfile`
+- Copy `docker/raw/Dockerfile-acmeair`   -> `data/raw/acmeair/Dockerfile`
+
+Only placing it at the repository root is enough.
+
+> Notes
+> - If your local folder names differ, update the paths accordingly.
+> - These Dockerfiles assume the monolith artifacts (WAR/EAR / Liberty server config) are already built or available at the paths referenced by `COPY`.
+
+---
+
+## 3) Start the monoliths with Docker Compose (PowerShell)
+
+From the repository root:
+
+```powershell
+cd .\docker
+
+# stop and remove containers (recommended before each run)
+docker compose down
+
+# start all services in background
+docker compose up -d
+
+# check status
+docker compose ps
+```
+
+Wait until each application is fully started (homepage reachable) before running JMeter.
+
+To inspect logs for a single container:
+
+```powershell
+docker logs <container_name>
+```
+
+Example:
+
+```powershell
+docker logs jpetstore
+```
+
+---
+
+## 4) Run JMeter workloads after startup
+
+After the containers are up, run the JMeter scripts to generate load:
+
+- JMeter test plans are under `scripts/jmeter/`
+- Detailed runbook: `scripts/jmeter/readme`
+
+Make sure the target URLs/ports inside each `.jmx` match the Docker port mapping in `docker/docker-compose.yml`.
+
+---
+
+## 5) Troubleshooting
+
+- If `docker compose up` fails, check whether ports are already in use.
+- If a JMeter run produces an empty/small JTL file, the target service might not be ready; re-check `docker compose ps` and container logs.
+- If you changed any exposed ports, update the `.jmx` target URL accordingly.

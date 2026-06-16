@@ -1,13 +1,13 @@
 # Final Comparison Table (Paper-Ready)
 
-Source: `D:/multimodal_microservice_extraction/results/ablation/baseline/mono_baselines_vs_ours_ALL.csv`
+Source: `results/ablation/baseline/mono_baselines_vs_ours_ALL.csv`
 
 ## acmeair
 
 | Metric | Mono2Micro_Semantic | Bunch_MEM_Structural | COGCN_SimpleFusion | Ours_CAC_noU | Ours_CAC_withU | Improve% (withU vs noU) | Improve% (withU vs Mono2Micro_Semantic) |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | BCubedF1 | 0.3421 | 0.3851 | 0.3929 | **0.3938** | 0.3923 | -0.4% | +14.7% |
-| MoJoSim | 34.78 | **47.83** | 34.78 | 39.13 | 39.13 | +0.0% | +12.5% |
+| MoJoSim | 34.78 | **47.83** | 21.74 | 39.13 | 39.13 | +0.0% | +12.5% |
 | IFN | 31.00 | 28.00 | 31.00 | 26.00 | **25.00** | +3.8% | +19.4% |
 | ICP | 0.7045 | 0.6364 | 0.7045 | 0.5909 | **0.5682** | +3.8% | +19.4% |
 | NED | **0.1627** | 0.3074 | 0.3074 | 0.4032 | 0.5033 | -24.8% | -209.4% |
@@ -19,7 +19,7 @@ Source: `D:/multimodal_microservice_extraction/results/ablation/baseline/mono_ba
 | Metric | Mono2Micro_Semantic | Bunch_MEM_Structural | COGCN_SimpleFusion | Ours_CAC_noU | Ours_CAC_withU | Improve% (withU vs noU) | Improve% (withU vs Mono2Micro_Semantic) |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | BCubedF1 | 0.4934 | 0.4418 | 0.4778 | 0.4267 | **0.5139** | +20.4% | +4.2% |
-| MoJoSim | 46.88 | 40.62 | 37.50 | 31.25 | **50.00** | +60.0% | +6.7% |
+| MoJoSim | 34.38 | 34.38 | 37.50 | 31.25 | **50.00** | +60.0% | +45.5% |
 | IFN | 50.00 | 46.00 | 49.00 | 47.00 | **27.00** | +42.6% | +46.0% |
 | ICP | 0.8475 | 0.7797 | 0.8305 | 0.7966 | **0.4576** | +42.6% | +46.0% |
 | NED | 0.4593 | 0.3953 | **0.2932** | 0.6435 | 1.3199 | -105.1% | -187.4% |

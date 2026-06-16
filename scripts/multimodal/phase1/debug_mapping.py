@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Target system
 SYSTEM = "acmeair"
-ROOT = Path(r"D:\multimodal_microservice_extraction")
+ROOT = Path(__file__).resolve().parents[3]
 
 # 1) Load class_order
 order_path = ROOT / "data" / "processed" / "fusion" / f"{SYSTEM}_class_order.json"

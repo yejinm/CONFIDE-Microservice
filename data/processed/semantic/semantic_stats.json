@@ -1,0 +1,53 @@
+{
+  "acmeair": {
+    "source_roots": [
+      "data\\raw\\acmeair\\acmeair-common\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-loader\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-reporter\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-services\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-services-morphia\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-services-wxs\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-webapp\\src\\main\\java"
+    ],
+    "methods_total": 662,
+    "methods_valid": 662,
+    "total_java_files": 81,
+    "total_parsed_files": 81,
+    "total_files_with_methods": 76,
+    "total_parse_failed": 0
+  },
+  "daytrader": {
+    "source_roots": [
+      "data\\raw\\daytrader7\\daytrader-ee7-ejb\\src\\main\\java",
+      "data\\raw\\daytrader7\\daytrader-ee7-web\\src\\main\\java"
+    ],
+    "methods_total": 952,
+    "methods_valid": 952,
+    "total_java_files": 108,
+    "total_parsed_files": 108,
+    "total_files_with_methods": 105,
+    "total_parse_failed": 0
+  },
+  "plants": {
+    "source_roots": [
+      "data\\raw\\plantsbywebsphere\\src\\main\\java"
+    ],
+    "methods_total": 426,
+    "methods_valid": 426,
+    "total_java_files": 36,
+    "total_parsed_files": 36,
+    "total_files_with_methods": 34,
+    "total_parse_failed": 0
+  },
+  "jpetstore": {
+    "source_roots": [
+      "data\\raw\\jpetstore\\src\\main\\java"
+    ],
+    "methods_total": 371,
+    "methods_valid": 371,
+    "total_java_files": 72,
+    "total_parsed_files": 72,
+    "total_files_with_methods": 72,
+    "total_parse_failed": 0
+  }
+}

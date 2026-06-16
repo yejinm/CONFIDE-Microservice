@@ -1,0 +1,15 @@
+{
+  "system": "jpetstore",
+  "semantic_tfidf_diagnostics": {},
+  "adaptive_weight_diagnostics": {},
+  "sparsity": {
+    "sem": 0.0,
+    "struct": 0.018645357686453576,
+    "temp": 0.9790715372907154
+  },
+  "fusion_weights": {
+    "w_sem": 0.4,
+    "w_struct": 0.4,
+    "w_temp": 0.2
+  }
+}

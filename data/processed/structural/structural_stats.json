@@ -1,0 +1,49 @@
+{
+  "acmeair": {
+    "ast_classes": 81,
+    "callgraph_nodes": 843,
+    "callgraph_edges": 852,
+    "dependency_nodes": 110,
+    "dependency_edges": 221,
+    "src_roots": [
+      "data\\raw\\acmeair\\acmeair-common\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-loader\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-reporter\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-services\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-services-morphia\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-services-wxs\\src\\main\\java",
+      "data\\raw\\acmeair\\acmeair-webapp\\src\\main\\java"
+    ]
+  },
+  "daytrader7": {
+    "ast_classes": 112,
+    "callgraph_nodes": 1200,
+    "callgraph_edges": 2590,
+    "dependency_nodes": 109,
+    "dependency_edges": 235,
+    "src_roots": [
+      "data\\raw\\daytrader7\\daytrader-ee7-ejb\\src\\main\\java",
+      "data\\raw\\daytrader7\\daytrader-ee7-web\\src\\main\\java"
+    ]
+  },
+  "jPetStore": {
+    "ast_classes": 73,
+    "callgraph_nodes": 425,
+    "callgraph_edges": 510,
+    "dependency_nodes": 72,
+    "dependency_edges": 92,
+    "src_roots": [
+      "data\\raw\\jPetStore\\src\\main\\java"
+    ]
+  },
+  "plantsbywebsphere": {
+    "ast_classes": 37,
+    "callgraph_nodes": 543,
+    "callgraph_edges": 580,
+    "dependency_nodes": 36,
+    "dependency_edges": 73,
+    "src_roots": [
+      "data\\raw\\plantsbywebsphere\\src\\main\\java"
+    ]
+  }
+}

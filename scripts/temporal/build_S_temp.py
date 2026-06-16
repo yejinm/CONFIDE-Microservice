@@ -757,7 +757,7 @@ def _normalize_to_similarity(M: np.ndarray) -> np.ndarray:
     return S.astype(np.float32)
 
 
-def _build_s_from_jtl(system: str, *, group_by: str, max_events: int, min_events: int, max_session_seconds: float, debug: bool = False, debug_sessions: int = 5) -> Tuple[np.ndarray, Dict[str, int]]:
+def _build_s_from_jtl(system: str, *, group_by: str, max_events: int, min_events: int, max_session_seconds: float, jtl_drop_rate: float = 0.0, jtl_drop_seed: int = 1337, debug: bool = False, debug_sessions: int = 5) -> Tuple[np.ndarray, Dict[str, int]]:
     order = _load_class_order(system)
     n = len(order)
     sessions = _build_sessions_from_jtl(
@@ -772,6 +772,11 @@ def _build_s_from_jtl(system: str, *, group_by: str, max_events: int, min_events
         debug=debug,
         debug_sessions=debug_sessions,
     )
+
+    # Optional: cold-start simulation by dropping JTL sessions
+    jtl_drop_meta = {"jtl_sessions_before": int(len(sessions)), "jtl_sessions_after": int(len(sessions)), "jtl_sessions_dropped": 0}
+    if float(jtl_drop_rate) > 0:
+        sessions, jtl_drop_meta = _apply_jtl_session_drop(sessions, float(jtl_drop_rate), int(jtl_drop_seed))
 
     # Co-occurrence (off-diagonal) + per-class occurrence count (occ) on diagonal
     M = _cooccurrence_from_sessions(sessions, n=n)
@@ -788,7 +793,11 @@ def _build_s_from_jtl(system: str, *, group_by: str, max_events: int, min_events
     off = S.copy()
     np.fill_diagonal(off, 0.0)
     off_nz = int((off > 0).sum())
-    meta = {"sessions": len(sessions), "offdiag_nonzero": int(off_nz)}
+    meta = {
+        "sessions": len(sessions),
+        "offdiag_nonzero": int(off_nz),
+        **{k: int(v) for k, v in (jtl_drop_meta or {}).items()},
+    }
     return S, meta
 
 
@@ -806,6 +815,55 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--max-events", type=int, default=80)
     ap.add_argument("--min-events", type=int, default=2)
     ap.add_argument("--max-session-seconds", type=float, default=5.0)
+
+    # Cold-start simulation (JTL): randomly drop a portion of JTL sessions
+    ap.add_argument(
+        "--jtl_drop_rate",
+        type=float,
+        default=0.0,
+        help=(
+            "Randomly discard this fraction of JTL sessions before building the JTL temporal evidence (0..1). "
+            "Use to simulate sparse/limited load-test runtime logs. Applied before co-occurrence computation."
+        ),
+    )
+    ap.add_argument(
+        "--jtl_drop_seed",
+        type=int,
+        default=1337,
+        help="Seed for --jtl_drop_rate to make drops deterministic and reproducible.",
+    )
+
+    # Cold-start simulation: randomly drop a portion of traces (traceId groups)
+    ap.add_argument(
+        "--trace_drop_rate",
+        type=float,
+        default=0.0,
+        help="Randomly discard this fraction of traces before building S_temp (0..1). Use to simulate sparse runtime data.",
+    )
+    ap.add_argument(
+        "--trace_drop_seed",
+        type=int,
+        default=1337,
+        help="Seed for --trace_drop_rate to make drops deterministic and reproducible.",
+    )
+
+    # Cold-start simulation (ALT): randomly drop spans/events within traces
+    ap.add_argument(
+        "--span_drop_rate",
+        type=float,
+        default=0.0,
+        help=(
+            "Randomly discard this fraction of span-to-class hits inside traces (0..1). "
+            "Unlike --trace_drop_rate which drops whole requests, this simulates missing/partial instrumentation "
+            "and can change S_temp sparsity. Applied after trace extraction but before building S_trace."
+        ),
+    )
+    ap.add_argument(
+        "--span_drop_seed",
+        type=int,
+        default=1337,
+        help="Seed for --span_drop_rate to make drops deterministic and reproducible.",
+    )
 
     # Optional smoothing for nicer paper heatmaps (purely cosmetic, tiny magnitude)
     ap.add_argument(
@@ -834,11 +892,47 @@ def parse_args() -> argparse.Namespace:
     return ap.parse_args()
 
 
+def _apply_jtl_session_drop(sessions: List[List[int]], drop_rate: float, seed: int) -> tuple[List[List[int]], Dict[str, int]]:
+    """Randomly discard a fraction of JTL sessions (cold-start simulation).
+
+    This drops whole sessions to mimic fewer observed transactions.
+    Deterministic given seed.
+    """
+    try:
+        r = float(drop_rate)
+    except Exception:
+        r = 0.0
+
+    n_before = int(len(sessions or []))
+    if r <= 0.0 or n_before == 0:
+        return sessions, {"jtl_sessions_before": n_before, "jtl_sessions_after": n_before, "jtl_sessions_dropped": 0}
+
+    r = max(0.0, min(1.0, r))
+    k_keep = int(round((1.0 - r) * n_before))
+    k_keep = max(0, min(n_before, k_keep))
+
+    rng = np.random.RandomState(int(seed))
+    if k_keep == 0:
+        kept_idx = set()
+    elif k_keep == n_before:
+        kept_idx = set(range(n_before))
+    else:
+        kept_idx = set(rng.choice(np.arange(n_before), size=k_keep, replace=False).tolist())
+
+    out = [s for i, s in enumerate(sessions) if i in kept_idx]
+    meta = {
+        "jtl_sessions_before": n_before,
+        "jtl_sessions_after": int(len(out)),
+        "jtl_sessions_dropped": int(n_before - len(out)),
+    }
+    return out, meta
+
+
 def _apply_leaf_package_smoothing(order: List[str], S: np.ndarray, eps: float) -> np.ndarray:
     """Add a tiny background similarity to classes sharing the same *leaf* package.
 
-    This is intended only to avoid fully-white "islands" in paper heatmaps when a class
-    never appears in JTL nor traces. It should be kept very small (e.g., 0.005-0.02).
+    This is intended only to avoid fully-white "islands" in heatmaps when a class
+    never appears in JTL nor traces. Keep eps very small (e.g., 0.005-0.02).
 
     Notes:
     - Applies to off-diagonal entries only.
@@ -847,7 +941,6 @@ def _apply_leaf_package_smoothing(order: List[str], S: np.ndarray, eps: float) -
     if eps <= 0 or S.size == 0:
         return S
 
-    # group indices by leaf package name
     groups: Dict[str, List[int]] = {}
     for i, cls in enumerate(order):
         pkg = cls.rsplit(".", 1)[0] if "." in cls else ""
@@ -871,6 +964,92 @@ def _apply_leaf_package_smoothing(order: List[str], S: np.ndarray, eps: float) -
     return S2.astype(np.float32)
 
 
+def _apply_trace_drop(trace_map: Dict[str, set], drop_rate: float, seed: int) -> tuple[Dict[str, set], Dict[str, int]]:
+    """Randomly discard a fraction of traceIds (cold-start simulation).
+
+    We drop whole traceId groups (not individual spans) to mimic fewer requests being observed.
+    The sampling is deterministic given the same seed.
+    """
+    try:
+        r = float(drop_rate)
+    except Exception:
+        r = 0.0
+    if r <= 0.0 or not trace_map:
+        return trace_map, {
+            "traces_before": int(len(trace_map)),
+            "traces_after": int(len(trace_map)),
+            "traces_dropped": 0,
+        }
+
+    r = max(0.0, min(1.0, r))
+    keys = list(trace_map.keys())
+    n = len(keys)
+    k_keep = int(round((1.0 - r) * n))
+    k_keep = max(0, min(n, k_keep))
+
+    rng = np.random.RandomState(int(seed))
+    if k_keep == 0:
+        kept = set()
+    elif k_keep == n:
+        kept = set(keys)
+    else:
+        kept = set(rng.choice(keys, size=k_keep, replace=False).tolist())
+
+    out = {tid: v for tid, v in trace_map.items() if tid in kept}
+    meta = {"traces_before": int(n), "traces_after": int(len(out)), "traces_dropped": int(n - len(out))}
+    return out, meta
+
+
+def _apply_span_drop(trace_map: Dict[str, set], drop_rate: float, seed: int) -> tuple[Dict[str, set], Dict[str, int]]:
+    """Randomly discard a fraction of span hits *within* traces.
+
+    `extract_classes_from_traces()` returns traceId -> set[int] (class indices seen in that trace).
+    We approximate span/event loss by randomly dropping entries from these per-trace sets.
+
+    Returns the filtered trace_map and meta counts.
+    """
+    try:
+        r = float(drop_rate)
+    except Exception:
+        r = 0.0
+
+    before_items = int(sum(len(v) for v in trace_map.values())) if trace_map else 0
+    if r <= 0.0 or not trace_map:
+        return trace_map, {
+            "span_items_before": before_items,
+            "span_items_after": before_items,
+            "span_items_dropped": 0,
+        }
+
+    r = max(0.0, min(1.0, r))
+    rng = np.random.RandomState(int(seed))
+
+    out: Dict[str, set] = {}
+    dropped = 0
+    kept = 0
+
+    for tid, cls_set in trace_map.items():
+        if not cls_set:
+            out[tid] = set()
+            continue
+
+        new_set = set()
+        for x in sorted(cls_set):
+            if rng.rand() < r:
+                dropped += 1
+            else:
+                new_set.add(int(x))
+                kept += 1
+        out[tid] = new_set
+
+    meta = {
+        "span_items_before": int(before_items),
+        "span_items_after": int(kept),
+        "span_items_dropped": int(dropped),
+    }
+    return out, meta
+
+
 def main() -> None:
     args = parse_args()
 
@@ -889,6 +1068,8 @@ def main() -> None:
         max_events=int(args.max_events),
         min_events=int(args.min_events),
         max_session_seconds=float(args.max_session_seconds),
+        jtl_drop_rate=float(args.jtl_drop_rate),
+        jtl_drop_seed=int(args.jtl_drop_seed),
         debug=bool(args.debug_jtl),
         debug_sessions=int(args.debug_jtl_sessions),
     )
@@ -920,6 +1101,20 @@ def main() -> None:
         debug_sample_spans=int(args.debug_trace_sample_spans),
     )
 
+    # Optional: cold-start simulation by dropping traces
+    trace_drop_meta = {
+        "traces_before": int(len(trace_map)),
+        "traces_after": int(len(trace_map)),
+        "traces_dropped": 0,
+    }
+    if float(args.trace_drop_rate) > 0:
+        trace_map, trace_drop_meta = _apply_trace_drop(trace_map, float(args.trace_drop_rate), int(args.trace_drop_seed))
+
+    # Optional: cold-start simulation by dropping span hits within traces
+    span_drop_meta = {"span_items_before": 0, "span_items_after": 0, "span_items_dropped": 0}
+    if float(args.span_drop_rate) > 0:
+        trace_map, span_drop_meta = _apply_span_drop(trace_map, float(args.span_drop_rate), int(args.span_drop_seed))
+
     S_trace = calculate_s_temp(trace_map, num_classes=len(order))
 
     # Fuse
@@ -938,13 +1133,71 @@ def main() -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     np.save(str(out_path), S.astype(np.float32))
 
+    # Sidecar meta for reproducible audit (cold-start kept/dropped)
+    meta_path = out_path.with_suffix(".meta.json")
+    meta = {
+        "system": str(args.system),
+        "physical": str(physical),
+        "trace_path": trace_path.as_posix(),
+        "service_name": str(service_name),
+        "alpha_jtl": float(alpha_jtl),
+        "beta_trace": float(beta_trace),
+        "trace_drop_rate": float(args.trace_drop_rate),
+        "trace_drop_seed": int(args.trace_drop_seed),
+        **{k: int(v) for k, v in (trace_drop_meta or {}).items()},
+        "span_drop_rate": float(args.span_drop_rate),
+        "span_drop_seed": int(args.span_drop_seed),
+        **{k: int(v) for k, v in (span_drop_meta or {}).items()},
+        "jtl_drop_rate": float(args.jtl_drop_rate),
+        "jtl_drop_seed": int(args.jtl_drop_seed),
+        "jtl_sessions_before": int(jtl_meta.get("jtl_sessions_before", jtl_meta.get("sessions", 0))),
+        "jtl_sessions_after": int(jtl_meta.get("jtl_sessions_after", jtl_meta.get("sessions", 0))),
+        "jtl_sessions_dropped": int(jtl_meta.get("jtl_sessions_dropped", 0)),
+        "sessions": int(jtl_meta.get("sessions", 0)),
+        "jtl_offdiag_nonzero": int(jtl_meta.get("offdiag_nonzero", 0)),
+    }
+
+    # --- Debug / audit output ---------------------------------------------------
+    try:
+        meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+    # -----------------------------------------------------------------------------
+
     off = S.copy()
     np.fill_diagonal(off, 0.0)
     off_nz = int((off > 0).sum())
 
     print(f"[build_S_temp] system={args.system} physical={physical}")
-    print(f"  JTL: sessions={jtl_meta.get('sessions', 0)} offdiag_nonzero={jtl_meta.get('offdiag_nonzero', 0)} alpha={alpha_jtl}")
-    print(f"  TRACE: traces={len(trace_map)} beta={beta_trace} path={trace_path.as_posix()} service_name={service_name}")
+    print(
+        f"  JTL: sessions={jtl_meta.get('sessions', 0)} offdiag_nonzero={jtl_meta.get('offdiag_nonzero', 0)} alpha={alpha_jtl}"
+        + (
+            f" jtl_drop_rate={float(args.jtl_drop_rate):.2f} seed={int(args.jtl_drop_seed)}"
+            f" sessions_dropped={int(jtl_meta.get('jtl_sessions_dropped', 0))}"
+            f" kept={int(jtl_meta.get('jtl_sessions_after', jtl_meta.get('sessions', 0)))}/{int(jtl_meta.get('jtl_sessions_before', jtl_meta.get('sessions', 0)))}"
+            if float(args.jtl_drop_rate) > 0
+            else ""
+        )
+    )
+
+    print(
+        f"  TRACE: traces={len(trace_map)} beta={beta_trace} path={trace_path.as_posix()} service_name={service_name}"
+        + (
+            f" trace_drop_rate={float(args.trace_drop_rate):.2f} seed={int(args.trace_drop_seed)}"
+            f" traces_dropped={trace_drop_meta.get('traces_dropped', 0)}"
+            f" traces_kept={trace_drop_meta.get('traces_after', 0)}/{trace_drop_meta.get('traces_before', 0)}"
+            if float(args.trace_drop_rate) > 0
+            else ""
+        )
+        + (
+            f" span_drop_rate={float(args.span_drop_rate):.2f} seed={int(args.span_drop_seed)}"
+            f" span_items_dropped={span_drop_meta.get('span_items_dropped', 0)}"
+            f" span_items_kept={span_drop_meta.get('span_items_after', 0)}/{span_drop_meta.get('span_items_before', 0)}"
+            if float(args.span_drop_rate) > 0
+            else ""
+        )
+    )
+
     if float(args.package_smoothing) > 0:
         print(f"  SMOOTH: package_smoothing={float(args.package_smoothing)} (leaf package)")
     print(f"  FUSED: n={S.shape[0]} offdiag_nonzero={off_nz} out={out_path.as_posix()}")

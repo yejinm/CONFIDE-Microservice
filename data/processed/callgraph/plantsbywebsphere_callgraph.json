@@ -1,0 +1,2869 @@
+{
+  "nodes": [
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.deleteBackOrder",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.findBackOrders",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderInventoryID",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderQuantity",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderOrderDate",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderQuantity",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderStatus",
+    "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.updateStock",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.addItem",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInv",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInvUpdate",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemImageBytes",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemInventory",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemsByCategory",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemImageBytes",
+    "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemQuantity",
+    "com.ibm.websphere.samples.pbw.bean.CustomerMgr.createCustomer",
+    "com.ibm.websphere.samples.pbw.bean.CustomerMgr.getCustomer",
+    "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+    "com.ibm.websphere.samples.pbw.bean.CustomerMgr.verifyUserAndPassword",
+    "com.ibm.websphere.samples.pbw.bean.EMailMessage.getEmailReceiver",
+    "com.ibm.websphere.samples.pbw.bean.EMailMessage.getHtmlContents",
+    "com.ibm.websphere.samples.pbw.bean.EMailMessage.getSubject",
+    "com.ibm.websphere.samples.pbw.bean.EMailMessage.toString",
+    "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+    "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+    "com.ibm.websphere.samples.pbw.bean.MailerBean.createSubjectLine",
+    "com.ibm.websphere.samples.pbw.bean.PopulateDBBean.initDB",
+    "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+    "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll",
+    "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+    "com.ibm.websphere.samples.pbw.bean.ResetDBBean.resetDB",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.addItem",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getInventoryItem",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getItems",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getSize",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getSubtotalCost",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeAllItems",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeItem",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeZeroQuantityItems",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.setItems",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.addItem",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.getInventoryID",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.getQuantity",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.removeItem",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.size",
+    "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.updateItem",
+    "com.ibm.websphere.samples.pbw.bean.SuppliersBean.createSupplier",
+    "com.ibm.websphere.samples.pbw.bean.SuppliersBean.findSuppliers",
+    "com.ibm.websphere.samples.pbw.bean.SuppliersBean.getSupplier",
+    "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.getBackOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.getInventory",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.getLowDate",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.getOrderDate",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.getQuantity",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.getStatus",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.getSupplierOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.increateQuantity",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.setBackOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.setInventory",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.setLowDate",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.setOrderDate",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.setQuantity",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.setStatus",
+    "com.ibm.websphere.samples.pbw.jpa.BackOrder.setSupplierOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getAddr1",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getAddr2",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrCity",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrState",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrZip",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getCustomerID",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getFirstName",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getFullName",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getLastName",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getPassword",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.getPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setAddr1",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setAddr2",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setAddrCity",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setAddrState",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setAddrZip",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setCustomerID",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setFirstName",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setLastName",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setPassword",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.setPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Customer.verifyPassword",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getBackOrder",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getCategory",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getCost",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getDescription",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getHeading",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getID",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getImage",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getImgbytes",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getInventoryId",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getMaxThreshold",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getMinThreshold",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getName",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getNotes",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getPkginfo",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getPrice",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.increaseInventory",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.isPublic",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setBackOrder",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setCategory",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setCost",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setDescription",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setHeading",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setID",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setImage",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setImgbytes",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setInventoryId",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setIsPublic",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setMaxThreshold",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setMinThreshold",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setName",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setNotes",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setPkginfo",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setPrice",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setPrivacy",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.setQuantity",
+    "com.ibm.websphere.samples.pbw.jpa.Inventory.toString",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getBillAddr1",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getBillAddr2",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getBillCity",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getBillName",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getBillPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getBillState",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getBillZip",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getCardHolder",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getCcExpireMonth",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getCcExpireYear",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getCcNum",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getCreditCard",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getCustomer",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getItems",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getOrderItems",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getProfit",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getSellDate",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShipAddr1",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShipAddr2",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShipCity",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShipName",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShipPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShipState",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShipZip",
+    "com.ibm.websphere.samples.pbw.jpa.Order.getShippingMethod",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setBillAddr1",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setBillAddr2",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setBillCity",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setBillName",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setBillPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setBillState",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setBillZip",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setCardHolder",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setCcExpireMonth",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setCcExpireYear",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setCcNum",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setCreditCard",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setCustomer",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setItems",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setOrderItems",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setProfit",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setSellDate",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShipAddr1",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShipAddr2",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShipCity",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShipName",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShipPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShipState",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShipZip",
+    "com.ibm.websphere.samples.pbw.jpa.Order.setShippingMethod",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.PK.equals",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.PK.hashCode",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getCategory",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getCost",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getInventory",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getInventoryId",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getName",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getOrder",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getPkginfo",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getPrice",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getQuantity",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.getSellDate",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setCategory",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setCost",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setInventory",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setInventoryId",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setName",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setOrder",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setPkginfo",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setPrice",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setQuantity",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.setSellDate",
+    "com.ibm.websphere.samples.pbw.jpa.OrderItem.updatePK",
+    "com.ibm.websphere.samples.pbw.jpa.OrderKey.equals",
+    "com.ibm.websphere.samples.pbw.jpa.OrderKey.getOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.OrderKey.hashCode",
+    "com.ibm.websphere.samples.pbw.jpa.OrderKey.setOrderID",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getCity",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getName",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getStreet",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getSupplierID",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getUrl",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getUsstate",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.getZip",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setCity",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setName",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setPhone",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setStreet",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setSupplierID",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setUrl",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setUsstate",
+    "com.ibm.websphere.samples.pbw.jpa.Supplier.setZip",
+    "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties",
+    "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+    "com.ibm.websphere.samples.pbw.utils.ListProperties.readTokens",
+    "com.ibm.websphere.samples.pbw.utils.Util.debug",
+    "com.ibm.websphere.samples.pbw.utils.Util.debugOn",
+    "com.ibm.websphere.samples.pbw.utils.Util.getCategoryString",
+    "com.ibm.websphere.samples.pbw.utils.Util.getCategoryStrings",
+    "com.ibm.websphere.samples.pbw.utils.Util.getFullShippingMethodStrings",
+    "com.ibm.websphere.samples.pbw.utils.Util.getInitialContext",
+    "com.ibm.websphere.samples.pbw.utils.Util.getProperties",
+    "com.ibm.websphere.samples.pbw.utils.Util.getProperty",
+    "com.ibm.websphere.samples.pbw.utils.Util.getShippingMethod",
+    "com.ibm.websphere.samples.pbw.utils.Util.getShippingMethodPrice",
+    "com.ibm.websphere.samples.pbw.utils.Util.getShippingMethodStrings",
+    "com.ibm.websphere.samples.pbw.utils.Util.getShippingMethodTime",
+    "com.ibm.websphere.samples.pbw.utils.Util.readProperties",
+    "com.ibm.websphere.samples.pbw.utils.Util.readTokens",
+    "com.ibm.websphere.samples.pbw.utils.Util.setDebug",
+    "com.ibm.websphere.samples.pbw.utils.Util.validateString",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.getCustomer",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.getLastOrderNum",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.getLoginInfo",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.getOrderInfo",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.init",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.isCheckingOut",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.isRegister",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.isUpdating",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performAccount",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performLogin",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.performRegister",
+    "com.ibm.websphere.samples.pbw.war.AccountBean.setLoginInfo",
+    "com.ibm.websphere.samples.pbw.war.AccountServlet.doGet",
+    "com.ibm.websphere.samples.pbw.war.AccountServlet.doPost",
+    "com.ibm.websphere.samples.pbw.war.AccountServlet.init",
+    "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+    "com.ibm.websphere.samples.pbw.war.AccountServlet.requestDispatch",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.doGet",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.doPost",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.init",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.performPopulate",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.requestDispatch",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.sendRedirect",
+    "com.ibm.websphere.samples.pbw.war.AdminServlet.updateSupplierInfo",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getBackOrderID",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getInventory",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getInventoryQuantity",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getLowDate",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getName",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getOrderDate",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getQuantity",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getStatus",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.getSupplierOrderID",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.setBackOrderID",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.setInventoryQuantity",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.setName",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.setQuantity",
+    "com.ibm.websphere.samples.pbw.war.BackOrderItem.setSupplierOrderID",
+    "com.ibm.websphere.samples.pbw.war.HelpBean.getDbDumpFile",
+    "com.ibm.websphere.samples.pbw.war.HelpBean.isDebug",
+    "com.ibm.websphere.samples.pbw.war.HelpBean.performDBReset",
+    "com.ibm.websphere.samples.pbw.war.HelpBean.performHelp",
+    "com.ibm.websphere.samples.pbw.war.HelpBean.setDbDumpFile",
+    "com.ibm.websphere.samples.pbw.war.HelpBean.setDebug",
+    "com.ibm.websphere.samples.pbw.war.ImageServlet.doGet",
+    "com.ibm.websphere.samples.pbw.war.ImageServlet.doPost",
+    "com.ibm.websphere.samples.pbw.war.ImageServlet.init",
+    "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.getCheckPassword",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.getEmail",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.getMessage",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.getPassword",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.setCheckPassword",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.setEmail",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.setMessage",
+    "com.ibm.websphere.samples.pbw.war.LoginInfo.setPassword",
+    "com.ibm.websphere.samples.pbw.war.MailAction.sendConfirmationMessage",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillAddr1",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillAddr2",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillCity",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillPhone",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillState",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillZip",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardExpMonth",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardExpYear",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardExpYears",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardNum",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardholderName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getID",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipAddr1",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipAddr2",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipCity",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipPhone",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipState",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipZip",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethod",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethodCount",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethodName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethods",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.initLists",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.isShipisbill",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setBillAddr1",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setBillAddr2",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setBillCity",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setBillName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setBillPhone",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setBillState",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setBillZip",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setCardExpMonth",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setCardExpYear",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setCardExpYears",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setCardName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setCardNum",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setCardholderName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setID",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipAddr1",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipAddr2",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipCity",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipName",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipPhone",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipState",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipZip",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShipisbill",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShippingMethod",
+    "com.ibm.websphere.samples.pbw.war.OrderInfo.setShippingMethodName",
+    "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+    "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+    "com.ibm.websphere.samples.pbw.war.ProductBean.getCategoryName",
+    "com.ibm.websphere.samples.pbw.war.ProductBean.getInventory",
+    "com.ibm.websphere.samples.pbw.war.ProductBean.getMenuString",
+    "com.ibm.websphere.samples.pbw.war.ProductBean.getPrice",
+    "com.ibm.websphere.samples.pbw.war.ProductBean.getQuantity",
+    "com.ibm.websphere.samples.pbw.war.ProductBean.setQuantity",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getCart",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getCartItems",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getProduct",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getProducts",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getShippingCost",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getShippingCostString",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getTotalCost",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.getTotalCostString",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.performAddToCart",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.performCart",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.performProductDetail",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.performRecalculate",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.setShippingCost",
+    "com.ibm.websphere.samples.pbw.war.ShoppingBean.wrapInventoryItems",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.equals",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getBackOrder",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getCategory",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getCost",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getDescription",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getHeading",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getID",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getImage",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getImgbytes",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getInventoryId",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getMaxThreshold",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getMinThreshold",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getName",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getNotes",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getPkginfo",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getPrice",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getQuantity",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.getSubtotalPrice",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.hashCode",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.increaseInventory",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.isPublic",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setBackOrder",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setCategory",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setCost",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setDescription",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setHeading",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setID",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setImage",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setImgbytes",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setInventoryId",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setIsPublic",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setMaxThreshold",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setMinThreshold",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setName",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setNotes",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setPkginfo",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setPrice",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setPrivacy",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.setQuantity",
+    "com.ibm.websphere.samples.pbw.war.ShoppingItem.toString",
+    "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+    "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage",
+    "java.io.BufferedReader.readLine",
+    "java.io.DataInputStream.readFully",
+    "java.io.FilterInputStream.available",
+    "java.io.OutputStream.write",
+    "java.io.PrintStream.println",
+    "java.lang.Boolean.booleanValue",
+    "java.lang.Class.getClassLoader",
+    "java.lang.Class.getSimpleName",
+    "java.lang.ClassLoader.getResource",
+    "java.lang.ClassLoader.getResourceAsStream",
+    "java.lang.Float.floatValue",
+    "java.lang.Integer.intValue",
+    "java.lang.Integer.parseInt",
+    "java.lang.Integer.toString",
+    "java.lang.Long.toString",
+    "java.lang.Object.equals",
+    "java.lang.Object.getClass",
+    "java.lang.Object.hashCode",
+    "java.lang.Object.toString",
+    "java.lang.String.endsWith",
+    "java.lang.String.equals",
+    "java.lang.String.hashCode",
+    "java.lang.String.indexOf",
+    "java.lang.String.startsWith",
+    "java.lang.String.trim",
+    "java.lang.StringBuffer.append",
+    "java.lang.StringBuffer.toString",
+    "java.lang.System.currentTimeMillis",
+    "java.lang.Thread.currentThread",
+    "java.lang.Thread.getContextClassLoader",
+    "java.lang.Throwable.getMessage",
+    "java.lang.Throwable.printStackTrace",
+    "java.net.URL.getPath",
+    "java.text.Format.format",
+    "java.text.NumberFormat.format",
+    "java.text.NumberFormat.getCurrencyInstance",
+    "java.util.ArrayList.add",
+    "java.util.ArrayList.iterator",
+    "java.util.ArrayList.remove",
+    "java.util.ArrayList.size",
+    "java.util.Calendar.get",
+    "java.util.Calendar.getInstance",
+    "java.util.Collection.add",
+    "java.util.Collection.iterator",
+    "java.util.Enumeration.hasMoreElements",
+    "java.util.Enumeration.nextElement",
+    "java.util.Hashtable.containsKey",
+    "java.util.Hashtable.get",
+    "java.util.Hashtable.keys",
+    "java.util.Hashtable.put",
+    "java.util.Hashtable.remove",
+    "java.util.Hashtable.size",
+    "java.util.Iterator.hasNext",
+    "java.util.Iterator.next",
+    "java.util.LinkedList.add",
+    "java.util.Map.get",
+    "java.util.Properties.containsKey",
+    "java.util.Properties.getProperty",
+    "java.util.Properties.setProperty",
+    "java.util.StringTokenizer.countTokens",
+    "java.util.StringTokenizer.nextToken",
+    "java.util.Vector.addElement",
+    "java.util.Vector.elementAt",
+    "java.util.Vector.isEmpty",
+    "java.util.Vector.size",
+    "javax.faces.application.Application.createValueBinding",
+    "javax.faces.application.Application.getProjectStage",
+    "javax.faces.application.FacesMessage.setDetail",
+    "javax.faces.application.FacesMessage.setSeverity",
+    "javax.faces.application.FacesMessage.setSummary",
+    "javax.faces.component.UIComponent.getAttributes",
+    "javax.faces.component.UIComponentBase.findComponent",
+    "javax.faces.component.UIInput.getValue",
+    "javax.faces.context.ExternalContext.getRequestParameterMap",
+    "javax.faces.context.FacesContext.getApplication",
+    "javax.faces.context.FacesContext.getCurrentInstance",
+    "javax.faces.context.FacesContext.getExternalContext",
+    "javax.faces.context.FacesContext.getViewRoot",
+    "javax.faces.el.ValueBinding.getValue",
+    "javax.mail.Multipart.addBodyPart",
+    "javax.mail.Transport.send",
+    "javax.mail.internet.InternetAddress.parse",
+    "javax.mail.internet.MimeBodyPart.setText",
+    "javax.mail.internet.MimeMessage.setContent",
+    "javax.mail.internet.MimeMessage.setFrom",
+    "javax.mail.internet.MimeMessage.setHeader",
+    "javax.mail.internet.MimeMessage.setRecipients",
+    "javax.mail.internet.MimeMessage.setSentDate",
+    "javax.mail.internet.MimeMessage.setSubject",
+    "javax.persistence.EntityManager.createNamedQuery",
+    "javax.persistence.EntityManager.find",
+    "javax.persistence.EntityManager.flush",
+    "javax.persistence.EntityManager.lock",
+    "javax.persistence.EntityManager.persist",
+    "javax.persistence.EntityManager.refresh",
+    "javax.persistence.EntityManager.remove",
+    "javax.persistence.Query.executeUpdate",
+    "javax.persistence.Query.getResultList",
+    "javax.persistence.Query.getSingleResult",
+    "javax.persistence.Query.setParameter",
+    "javax.servlet.GenericServlet.getServletConfig",
+    "javax.servlet.GenericServlet.init",
+    "javax.servlet.RequestDispatcher.forward",
+    "javax.servlet.RequestDispatcher.include",
+    "javax.servlet.ServletConfig.getServletContext",
+    "javax.servlet.ServletContext.getRequestDispatcher",
+    "javax.servlet.ServletRequest.getParameter",
+    "javax.servlet.ServletRequest.getParameterValues",
+    "javax.servlet.ServletRequest.setAttribute",
+    "javax.servlet.ServletResponse.getOutputStream",
+    "javax.servlet.ServletResponse.setContentType",
+    "javax.servlet.http.HttpServletRequest.getSession",
+    "javax.servlet.http.HttpServletResponse.encodeRedirectURL",
+    "javax.servlet.http.HttpServletResponse.sendRedirect",
+    "javax.servlet.http.HttpSession.getAttribute",
+    "javax.servlet.http.HttpSession.removeAttribute",
+    "javax.servlet.http.HttpSession.setAttribute",
+    "javax.transaction.UserTransaction.setRollbackOnly"
+  ],
+  "edges": [
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getQuantity",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipState"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.resetDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ProductBean.getPrice",
+      "target": "java.text.Format.format"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "javax.persistence.Query.getSingleResult"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrCity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.getSupplierOrderID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.io.BufferedReader.readLine"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.MimeBodyPart.setText"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.getTotalCostString",
+      "target": "java.text.NumberFormat.format"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.readProperties",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.lang.String.startsWith"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "java.lang.Thread.getContextClassLoader"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.readTokens"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Inventory.toString",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getShipCity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardExpMonth"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.util.Hashtable.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.InternetAddress.parse"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setQuantity",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderQuantity",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Customer.getFullName",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getLastName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.createCustomer"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.toString",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.toString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "java.lang.Thread.currentThread"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+      "target": "javax.faces.component.UIComponentBase.findComponent"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderQuantity",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccount",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.setMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getBackOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performCart",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingBean.wrapInventoryItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.addItem"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipPhone"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.debug",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.doPost",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.MimeMessage.setFrom"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.createCustomer"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemQuantity",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "javax.faces.application.Application.createValueBinding"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "javax.servlet.http.HttpServletRequest.getSession"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.verifyUserAndPassword",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderOrderDate",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "javax.persistence.EntityManager.persist"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeZeroQuantityItems",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemsByCategory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemsByCategory",
+      "target": "javax.persistence.EntityManager.createNamedQuery"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "java.lang.StringBuffer.toString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.doPost",
+      "target": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeZeroQuantityItems",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "java.util.Collection.add"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage",
+      "target": "javax.faces.application.FacesMessage.setSummary"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setHeading",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setHeading"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.readTokens",
+      "target": "java.util.StringTokenizer.countTokens"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderInventoryID",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.getInventory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setName",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.updateSupplierInfo"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.MailAction.sendConfirmationMessage",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performRecalculate",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeZeroQuantityItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setCost",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setCost"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getLastName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setMinThreshold",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setMinThreshold"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getImgbytes",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getImgbytes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.createSupplier",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderInventoryID",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getShipAddr2"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.getInventory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getProperties",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "com.ibm.websphere.samples.pbw.bean.EMailMessage.getEmailReceiver"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+      "target": "javax.faces.context.FacesContext.getCurrentInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipAddr1"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getImage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getImage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setBackOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Supplier.setStreet"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.sendRedirect"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getFullShippingMethodStrings",
+      "target": "java.text.Format.format"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setCategory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setCategory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performPopulate",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.sendRedirect"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "java.lang.Integer.parseInt"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createSubjectLine",
+      "target": "java.lang.StringBuffer.toString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.util.Properties.containsKey"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getMinThreshold"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.setShippingMethodName",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.getShippingMethodStrings"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setPrice",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setPrice"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInvUpdate",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "javax.faces.context.ExternalContext.getRequestParameterMap"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Customer.getFullName",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getFirstName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.addItem"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.findSuppliers",
+      "target": "javax.persistence.Query.getResultList"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "com.ibm.websphere.samples.pbw.bean.EMailMessage.getSubject"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties",
+      "target": "java.util.Hashtable.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getSubtotalPrice",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getPrice"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.addItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getShipZip"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "javax.persistence.Query.setParameter"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.PopulateDBBean.initDB",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.requestDispatch"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.removeItem",
+      "target": "java.util.Hashtable.remove"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ProductBean.getPrice",
+      "target": "java.text.NumberFormat.getCurrencyInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll",
+      "target": "javax.persistence.EntityManager.createNamedQuery"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.init",
+      "target": "javax.servlet.GenericServlet.init"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.http.HttpSession.setAttribute"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.GenericServlet.getServletConfig"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountServlet.requestDispatch"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.getStatus"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.validateString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.util.Vector.addElement"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setInventoryId",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setInventoryId"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemInventory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.ServletConfig.getServletContext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getPhone"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccount"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.OrderKey.hashCode",
+      "target": "java.lang.String.hashCode"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddr2"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemInventory",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "java.lang.Boolean.booleanValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.OrderItem.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "java.lang.Thread.getContextClassLoader"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.getCustomer"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "com.ibm.websphere.samples.pbw.utils.ListProperties.readTokens"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.size",
+      "target": "java.util.Hashtable.size"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getMaxThreshold",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getMaxThreshold"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.OrderItem.PK.hashCode",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.readTokens",
+      "target": "java.util.StringTokenizer.countTokens"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.createSupplier",
+      "target": "javax.persistence.EntityManager.persist"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getShipState"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setAddr1"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderQuantity",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.util.Hashtable.put"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.getShippingCostString",
+      "target": "java.text.NumberFormat.format"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemImageBytes",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInv"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.getSupplier",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.verifyUserAndPassword",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.verifyPassword"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+      "target": "javax.faces.component.UIComponent.getAttributes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performAddToCart",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.requestDispatch",
+      "target": "javax.servlet.RequestDispatcher.include"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.setShippingMethodName",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.deleteBackOrder",
+      "target": "javax.persistence.EntityManager.remove"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "javax.faces.context.FacesContext.getExternalContext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setAddrCity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.getOrderDate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "javax.faces.el.ValueBinding.getValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Supplier.setZip"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "javax.persistence.EntityManager.lock"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Supplier.setCity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setNotes",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setNotes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getHeading",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getHeading"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.updateItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getSubtotalCost",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getSize",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemQuantity",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInvUpdate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "javax.persistence.EntityManager.refresh"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.deleteBackOrder",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillCity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.ServletRequest.setAttribute"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.initLists",
+      "target": "java.util.Calendar.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.http.HttpSession.getAttribute"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getProperty",
+      "target": "java.util.Properties.getProperty"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.requestDispatch"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getPkginfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getPkginfo"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.war.Populate.addImage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.OrderItem.setOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getSellDate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.getCustomer",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties",
+      "target": "java.util.Hashtable.containsKey"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethodName",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethods"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Customer.verifyPassword",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getPassword"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethodCount",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.getShippingMethodStrings"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.addItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Customer.verifyPassword",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "java.lang.Throwable.getMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.verifyUserAndPassword",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performAddToCart",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performCart"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddr1"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setPhone"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.initLists",
+      "target": "java.util.Calendar.getInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.updateSupplierInfo",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.Multipart.addBodyPart"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setAddr2"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.requestDispatch",
+      "target": "javax.servlet.RequestDispatcher.forward"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.requestDispatch"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.ServletRequest.getParameter"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "java.net.URL.getPath"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage",
+      "target": "javax.faces.application.FacesMessage.setSeverity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setAddrState"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.OrderKey.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.verifyUserAndPassword"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.initLists",
+      "target": "java.lang.Integer.toString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.updateItem",
+      "target": "java.util.Hashtable.put"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "java.lang.StringBuffer.append"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.createSupplier",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+      "target": "javax.faces.context.FacesContext.getApplication"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "javax.persistence.EntityManager.flush"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.http.HttpSession.removeAttribute"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethod"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.getQuantity",
+      "target": "java.util.Hashtable.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.getSupplier",
+      "target": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.findSuppliers"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getName",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.getPassword"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillAddr2"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setPrivacy",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setPrivacy"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.getInventoryID",
+      "target": "java.util.Enumeration.hasMoreElements"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.addItem",
+      "target": "javax.persistence.EntityManager.persist"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeItem",
+      "target": "java.util.ArrayList.remove"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performRecalculate",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "com.ibm.websphere.samples.pbw.bean.MailerBean.createSubjectLine"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getProperties",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.lang.String.trim"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.deleteBackOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemImageBytes",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getImgbytes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.PopulateDBBean.initDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performAddToCart",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.addItem"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setImage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setImage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.addItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardholderName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createSubjectLine",
+      "target": "java.lang.StringBuffer.append"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeItem",
+      "target": "java.lang.Object.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.isPublic",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.isPublic"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.debug",
+      "target": "javax.faces.context.FacesContext.getApplication"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performProductDetail",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderStatus",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.setStatus"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.requestDispatch",
+      "target": "javax.servlet.ServletResponse.setContentType"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.readProperties",
+      "target": "java.lang.Class.getClassLoader"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.HelpBean.setDebug",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.setDebug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setAddrZip"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage",
+      "target": "javax.faces.component.UIComponent.getAttributes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInvUpdate",
+      "target": "javax.persistence.EntityManager.lock"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Inventory.setPrivacy",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setIsPublic"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "java.lang.Float.floatValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.createCustomer",
+      "target": "javax.persistence.EntityManager.persist"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.addItem",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ProductBean.getPrice",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getPrice"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getCustomerID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderQuantity",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrZip"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.validateString",
+      "target": "java.lang.String.indexOf"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.addItem",
+      "target": "java.util.Hashtable.put"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.MailAction.sendConfirmationMessage",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Inventory.increaseInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.getSupplier"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getProperties",
+      "target": "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.getCustomer"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "javax.servlet.http.HttpServletRequest.getSession"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getCustomerID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.findBackOrders",
+      "target": "javax.persistence.EntityManager.createNamedQuery"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performProductDetail",
+      "target": "javax.faces.context.FacesContext.getExternalContext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage",
+      "target": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrState"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getDescription",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getDescription"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "javax.faces.context.FacesContext.getCurrentInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getLastName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.OrderItem.PK.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountBean.isCheckingOut"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getInventoryItem"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.setName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "javax.servlet.http.HttpSession.setAttribute"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.readProperties",
+      "target": "java.lang.ClassLoader.getResourceAsStream"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setID",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.createCustomer"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.MimeMessage.setHeader"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "java.net.URL.getPath"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getInventoryItem",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "javax.faces.context.FacesContext.getCurrentInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+      "target": "javax.faces.context.FacesContext.getViewRoot"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemsByCategory",
+      "target": "javax.persistence.Query.setParameter"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "javax.servlet.GenericServlet.getServletConfig"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "javax.persistence.EntityManager.flush"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.updateItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.deleteBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getInventoryId",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getInventoryId"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemsByCategory",
+      "target": "javax.persistence.Query.getResultList"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.doGet",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "java.io.DataInputStream.readFully"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.getTotalCostString",
+      "target": "java.text.NumberFormat.getCurrencyInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ProductBean.getMenuString",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.getCustomer",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountBean.isRegister"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.MimeMessage.setContent"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillPhone"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setMaxThreshold",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setMaxThreshold"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "javax.servlet.ServletConfig.getServletContext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.util.Properties.getProperty"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getProperty",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.BackOrder.increateQuantity",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties",
+      "target": "java.util.Vector.size"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.removeAllItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemImageBytes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setPkginfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setPkginfo"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getNotes",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getNotes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.getLowDate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getProperty",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.readProperties"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.util.Vector.isEmpty"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.getSupplier",
+      "target": "java.util.Collection.iterator"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+      "target": "javax.servlet.ServletRequest.getParameter"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.updateSupplierInfo",
+      "target": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getInventoryId"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performCart",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.getStatus"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+      "target": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getSubtotalPrice",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemInventory",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getFirstName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "javax.servlet.ServletRequest.getParameterValues"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getFullShippingMethodStrings",
+      "target": "java.text.NumberFormat.getCurrencyInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.addItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getInventoryId"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.debug",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.setDebug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipZip"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll",
+      "target": "javax.transaction.UserTransaction.setRollbackOnly"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.debug",
+      "target": "javax.faces.application.Application.getProjectStage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "java.util.LinkedList.add"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+      "target": "java.io.OutputStream.write"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+      "target": "javax.faces.application.Application.createValueBinding"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performAddToCart",
+      "target": "com.ibm.websphere.samples.pbw.war.ProductBean.getInventory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.updateStock",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderStatus"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillState"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.createCustomer"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.util.Properties.setProperty"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "java.lang.Integer.parseInt"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.setDebug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setLastName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties",
+      "target": "java.util.Vector.elementAt"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+      "target": "javax.servlet.ServletResponse.getOutputStream"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.getEmail"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.HelpBean.performDBReset",
+      "target": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.resetDB"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+      "target": "javax.servlet.ServletResponse.setContentType"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.findSuppliers",
+      "target": "javax.persistence.EntityManager.createNamedQuery"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getID",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "com.ibm.websphere.samples.pbw.bean.EMailMessage.getHtmlContents"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getMinThreshold",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getMinThreshold"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.doGet",
+      "target": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.OrderItem.setOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.MimeMessage.setSubject"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.getInventoryID",
+      "target": "java.util.Hashtable.keys"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipCity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties",
+      "target": "java.util.Properties.getProperty"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.OrderItem.PK.hashCode",
+      "target": "java.lang.String.hashCode"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderInventoryID",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemImageBytes",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInvUpdate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.requestDispatch",
+      "target": "javax.servlet.ServletContext.getRequestDispatcher"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performProductDetail",
+      "target": "javax.faces.context.ExternalContext.getRequestParameterMap"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.requestDispatch",
+      "target": "javax.servlet.ServletResponse.setContentType"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemsByCategory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Supplier.setUsstate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.addItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ProductBean.getCategoryName",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getCategory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "java.lang.Boolean.booleanValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performProductDetail",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemInventory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "javax.servlet.GenericServlet.getServletConfig"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.removeItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll",
+      "target": "javax.persistence.EntityManager.flush"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "javax.persistence.EntityManager.persist"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.OrderItem.updatePK"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderStatus",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "javax.servlet.ServletConfig.getServletContext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getShipName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.Transport.send"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getSubtotalCost",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getPrice"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "java.lang.Integer.parseInt"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrCity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderOrderDate",
+      "target": "java.lang.System.currentTimeMillis"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.MailAction.sendConfirmationMessage",
+      "target": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemImageBytes",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setImgbytes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "java.io.FilterInputStream.available"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderQuantity",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "javax.servlet.ServletRequest.getParameter"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.getInventoryID",
+      "target": "java.util.Enumeration.nextElement"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.getProperties",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.readProperties"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddr1"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderOrderDate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.setOrderDate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performProductDetail",
+      "target": "javax.faces.context.FacesContext.getCurrentInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "javax.servlet.http.HttpSession.setAttribute"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethods",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.getFullShippingMethodStrings"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "javax.servlet.GenericServlet.getServletConfig"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "java.io.DataInputStream.readFully"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.wrapInventoryItems",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderInventoryID",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getInventoryId"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "java.lang.Integer.parseInt"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll",
+      "target": "javax.persistence.Query.executeUpdate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.BackOrder.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "javax.servlet.ServletConfig.getServletContext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.MimeMessage.setSentDate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillAddr1"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.getTotalCost",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getSubtotalCost"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.getPassword"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getCategory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getCategory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemImageBytes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipAddr2"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrState"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillZip"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.getShippingCostString",
+      "target": "java.text.NumberFormat.getCurrencyInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "java.lang.ClassLoader.getResource"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getPhone"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInvUpdate",
+      "target": "javax.persistence.EntityManager.refresh"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getItemImageBytes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddr2"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "java.lang.Boolean.booleanValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setDescription",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setDescription"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.getProperties"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.checkInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getInventoryId"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.setItemQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getInventoryId"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "javax.persistence.EntityManager.lock"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderInventoryID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.getTotalCostString",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingBean.getTotalCost"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderOrderDate",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getCustomerID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setImgbytes",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setImgbytes"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.updateStock"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.getInv",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderQuantity",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "javax.faces.context.FacesContext.getApplication"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLogin",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.setMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShippingMethod"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "javax.persistence.EntityManager.refresh"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardNum"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+      "target": "javax.faces.el.ValueBinding.getValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Supplier.setName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getCost",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getCost"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.increaseInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.increaseInventory"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.getBackOrderQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getCustomerID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.readTokens",
+      "target": "java.util.StringTokenizer.nextToken"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performPopulate",
+      "target": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setIsPublic",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setIsPublic"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.lang.String.endsWith"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performRecalculate",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingBean.wrapInventoryItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.readProperties",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.getBackOrderID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.createSupplier"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.addImage",
+      "target": "java.lang.Thread.currentThread"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.equals",
+      "target": "java.lang.Object.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.readProperties",
+      "target": "com.ibm.websphere.samples.pbw.utils.ListProperties.load"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "java.lang.Float.floatValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.getSupplier",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.debug",
+      "target": "javax.faces.context.FacesContext.getCurrentInstance"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createMessage",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getShipAddr1"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.addItem",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "javax.servlet.http.HttpServletRequest.getSession"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.doPost",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.setMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Supplier.setPhone"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getAddrZip"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.getProperties"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "javax.servlet.ServletRequest.getParameter"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "javax.persistence.EntityManager.persist"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CatalogMgr.addItem",
+      "target": "javax.persistence.EntityManager.flush"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getShipName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.load",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.getFirstName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getCardExpYear"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.MailerBean.createAndSendMail",
+      "target": "javax.mail.internet.MimeMessage.setRecipients"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.getSupplier",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.OrderItem.updatePK",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Order.getOrderID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.sendRedirect",
+      "target": "javax.servlet.http.HttpServletResponse.sendRedirect"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performOrderInfo",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.setMessage"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.addItem",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatePasswords.validate",
+      "target": "javax.faces.component.UIInput.getValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.getQuantity",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.updateUser",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Customer.setFirstName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "java.lang.Long.toString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Inventory.toString",
+      "target": "java.lang.Class.getSimpleName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performLoginComplete",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountBean.isUpdating"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performRecalculate",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performCart"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "java.util.ArrayList.iterator"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "java.io.FilterInputStream.available"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.findBackOrders"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.getPrice",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getPrice"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.sendRedirect"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.setBackOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setBackOrder"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performAddToCart",
+      "target": "com.ibm.websphere.samples.pbw.war.ProductBean.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.getShippingMethodPrice"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.populateDB",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.readTokens"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performSupplierConfig",
+      "target": "javax.servlet.ServletRequest.getParameter"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ProductBean.getMenuString",
+      "target": "com.ibm.websphere.samples.pbw.war.ProductBean.getCategoryName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.updateSupplier",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Supplier.setUrl"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ValidatorUtils.addErrorMessage",
+      "target": "javax.faces.application.FacesMessage.setDetail"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.bean.SuppliersBean.createSupplier"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.BackOrder.increateQuantity",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performAccountUpdate",
+      "target": "com.ibm.websphere.samples.pbw.war.LoginInfo.getEmail"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.HelpBean.isDebug",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debugOn"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.createCustomer",
+      "target": "javax.persistence.EntityManager.flush"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.requestDispatch",
+      "target": "javax.servlet.ServletContext.getRequestDispatcher"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.doGet",
+      "target": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.ListProperties.getProperties",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.backOrder",
+      "target": "javax.persistence.EntityManager.find"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.getBackOrders",
+      "target": "com.ibm.websphere.samples.pbw.war.BackOrderItem.setInventoryQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.init",
+      "target": "javax.servlet.GenericServlet.init"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCheckoutFinal",
+      "target": "com.ibm.websphere.samples.pbw.war.ShoppingBean.setShippingCost"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getSize",
+      "target": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.getItems"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.utils.Util.readTokens",
+      "target": "java.util.StringTokenizer.nextToken"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountBean.performCompleteCheckout",
+      "target": "com.ibm.websphere.samples.pbw.war.OrderInfo.getBillName"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.doPopulate",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AccountServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.bean.CustomerMgr.verifyUserAndPassword"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.jpa.Inventory.increaseInventory",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.setQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean.createOrder",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getQuantity"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingItem.hashCode",
+      "target": "java.lang.Object.hashCode"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.Populate.addImage",
+      "target": "java.lang.ClassLoader.getResource"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ProductBean.getCategoryName",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.getCategoryString"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ShoppingBean.performShopping",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.isPublic"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent.addItem",
+      "target": "com.ibm.websphere.samples.pbw.jpa.Inventory.getID"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.findBackOrders",
+      "target": "javax.persistence.Query.getResultList"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.resetDB",
+      "target": "com.ibm.websphere.samples.pbw.bean.ResetDBBean.deleteAll"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.performTask",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.sendRedirect",
+      "target": "javax.servlet.http.HttpServletResponse.encodeRedirectURL"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.createBackOrder",
+      "target": "javax.persistence.EntityManager.createNamedQuery"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.AdminServlet.performTask",
+      "target": "com.ibm.websphere.samples.pbw.war.AdminServlet.performPopulate"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr.setBackOrderStatus",
+      "target": "com.ibm.websphere.samples.pbw.utils.Util.debug"
+    },
+    {
+      "source": "com.ibm.websphere.samples.pbw.war.ImageServlet.init",
+      "target": "javax.servlet.GenericServlet.init"
+    }
+  ]
+}

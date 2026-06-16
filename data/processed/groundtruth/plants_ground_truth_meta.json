@@ -1,0 +1,176 @@
+{
+  "authority": {
+    "note": "PlantsByWebSphere (PBW) ground truth rebuilt using package-layer rules (bean/jpa/war) and bounded keyword fallbacks.",
+    "repo": "data/raw/plantsbywebsphere"
+  },
+  "cluster_legend": {
+    "-1": "infra/unmatched",
+    "0": "customer",
+    "1": "catalog",
+    "2": "order/cart",
+    "3": "web/ui"
+  },
+  "rules_applied": {
+    "forced_mappings": [
+      {
+        "class": "com.ibm.websphere.samples.pbw.bean.BackOrderMgr",
+        "rule": "pbw.bean:order/cart",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.bean.CatalogMgr",
+        "rule": "pbw.bean:catalog/supplier",
+        "to": 1
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.bean.CustomerMgr",
+        "rule": "pbw.bean:customer",
+        "to": 0
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean",
+        "rule": "pbw.bean:order/cart",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent",
+        "rule": "pbw.bean:order/cart",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.bean.SuppliersBean",
+        "rule": "pbw.bean:catalog/supplier",
+        "to": 1
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.jpa.BackOrder",
+        "rule": "pbw.jpa:order",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.jpa.Customer",
+        "rule": "pbw.jpa:customer",
+        "to": 0
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.jpa.Inventory",
+        "rule": "pbw.jpa:catalog",
+        "to": 1
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.jpa.Order",
+        "rule": "pbw.jpa:order",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.jpa.OrderItem",
+        "rule": "pbw.jpa:order",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.jpa.OrderKey",
+        "rule": "pbw.jpa:order",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.jpa.Supplier",
+        "rule": "pbw.jpa:catalog",
+        "to": 1
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.AccountBean",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.AccountServlet",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.AdminServlet",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.BackOrderItem",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.HelpBean",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.ImageServlet",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.LoginInfo",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.MailAction",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.OrderInfo",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.Populate",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.ProductBean",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.ShoppingBean",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.ShoppingItem",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.pbw.war.ValidatePasswords",
+        "rule": "pbw.war:web/ui",
+        "to": 3
+      }
+    ],
+    "notes": [
+      "Primary mapping uses PBW package layers: pbw.bean/pbw.jpa/pbw.war.",
+      "Fallback keyword rules are bounded and recorded for audit."
+    ]
+  },
+  "summary": {
+    "business_context_coverage": {
+      "business_labeled": 31,
+      "business_ratio": 1.0,
+      "infra_or_excluded": 0,
+      "infra_ratio": 0.0
+    },
+    "class_count": 31,
+    "cluster_counts": {
+      "0": 2,
+      "1": 4,
+      "2": 7,
+      "3": 18
+    },
+    "coverage_ratio": 1.0,
+    "covered_labeled": 31,
+    "covered_unlabeled": 0,
+    "largest_cluster": 18
+  },
+  "system": "plants"
+}

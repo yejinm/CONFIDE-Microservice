@@ -44,7 +44,7 @@ git clone https://github.com/KimJongSung/jPetStore.git
 
 ## Using the provided snapshot (paper reproduction)
 
-If you only want to reproduce the paper’s main tables/figures, you do **not** need to download these raw subject systems.
+If you only want to reproduce the paper's main tables/figures, you do **not** need to download these raw subject systems.
 Use the curated processed snapshot and run:
 
 ```powershell

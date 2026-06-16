@@ -1,0 +1,327 @@
+{
+  "com.acmeair.wxs.utils.WXSSessionManager": {
+    "com.ibm.websphere.objectgrid.ObjectGridManagerFactory": 1.0,
+    "com.ibm.websphere.objectgrid.Session": 1.0,
+    "com.ibm.websphere.objectgrid.security.config.ClientSecurityConfigurationFactory": 1.0,
+    "com.acmeair.service.TransactionService": 1.0,
+    "com.ibm.websphere.objectgrid.spring.SpringLocalTxManager": 1.0,
+    "com.ibm.websphere.objectgrid.config.PluginType": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGridManager": 1.0,
+    "com.ibm.websphere.objectgrid.config.Plugin": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGrid": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGridException": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGridRuntimeException": 1.0,
+    "com.ibm.websphere.objectgrid.config.BackingMapConfiguration": 1.0,
+    "com.ibm.websphere.objectgrid.security.plugins.CredentialGenerator": 1.0,
+    "com.ibm.websphere.objectgrid.security.plugins.builtins.UserPasswordCredentialGenerator": 1.0,
+    "com.ibm.websphere.objectgrid.BackingMap": 1.0,
+    "com.ibm.websphere.objectgrid.config.ObjectGridConfiguration": 1.0,
+    "com.acmeair.wxs.WXSConstants": 1.0,
+    "com.ibm.websphere.objectgrid.ClientClusterContext": 1.0,
+    "com.ibm.websphere.objectgrid.config.ObjectGridConfigFactory": 1.0,
+    "com.ibm.websphere.objectgrid.security.config.ClientSecurityConfiguration": 1.0,
+    "com.acmeair.service.DataService": 1.0
+  },
+  "com.acmeair.wxs.service.BookingServiceImpl": {
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.wxs.entities.FlightPKImpl": 1.0,
+    "com.acmeair.entities.Customer": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.index.MapIndex": 1.0,
+    "com.acmeair.wxs.entities.BookingImpl": 1.0,
+    "com.acmeair.service.CustomerService": 1.0,
+    "com.acmeair.entities.Booking": 1.0,
+    "com.acmeair.service.DataService": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectMap": 1.0,
+    "com.acmeair.service.BookingService": 1.0,
+    "com.ibm.websphere.objectgrid.Session": 1.0,
+    "com.acmeair.service.FlightService": 1.0,
+    "com.ibm.websphere.objectgrid.UndefinedMapException": 1.0,
+    "com.acmeair.wxs.utils.WXSSessionManager": 1.0,
+    "com.acmeair.wxs.WXSConstants": 1.0,
+    "com.acmeair.service.ServiceLocator": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.TransactionCallbackException": 1.0,
+    "com.acmeair.wxs.entities.BookingPKImpl": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGrid": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGridException": 1.0,
+    "com.acmeair.service.KeyGenerator": 1.0
+  },
+  "com.acmeair.wxs.service.FlightServiceImpl": {
+    "com.ibm.websphere.objectgrid.UndefinedMapException": 1.0,
+    "com.acmeair.wxs.utils.WXSSessionManager": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.TransactionCallbackException": 1.0,
+    "com.acmeair.wxs.entities.FlightSegmentImpl": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGrid": 1.0,
+    "com.acmeair.wxs.entities.AirportCodeMappingImpl": 1.0,
+    "com.acmeair.entities.AirportCodeMapping": 1.0,
+    "com.acmeair.wxs.WXSConstants": 1.0,
+    "com.acmeair.service.KeyGenerator": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGridException": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.index.MapIndex": 1.0,
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.service.DataService": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectMap": 1.0,
+    "com.acmeair.service.BookingService": 1.0,
+    "com.ibm.websphere.objectgrid.Session": 1.0,
+    "com.acmeair.entities.FlightSegment": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.index.MapIndexPlugin": 1.0,
+    "com.acmeair.wxs.entities.FlightImpl": 1.0,
+    "com.acmeair.service.FlightService": 1.0
+  },
+  "com.acmeair.wxs.utils.MapPutAllAgent": {
+    "com.ibm.websphere.objectgrid.ObjectMap": 1.0,
+    "com.ibm.websphere.objectgrid.Session": 1.0,
+    "com.ibm.websphere.objectgrid.datagrid.MapGridAgent": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGridException": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.io.dataobject.SerializedKey": 1.0
+  },
+  "com.acmeair.morphia.entities.CustomerSessionImpl": {
+    "com.acmeair.entities.CustomerSession": 1.0
+  },
+  "com.acmeair.wxs.entities.BookingPKImpl": {
+    "com.ibm.websphere.objectgrid.plugins.PartitionableKey": 1.0,
+    "com.acmeair.entities.BookingPK": 1.0
+  },
+  "com.acmeair.wxs.entities.FlightImpl": {
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.entities.FlightSegment": 1.0
+  },
+  "com.acmeair.wxs.service.CustomerServiceImpl": {
+    "com.acmeair.entities.Customer.MemberShipStatus": 1.0,
+    "com.acmeair.wxs.WXSConstants": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.TransactionCallbackException": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGrid": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectGridException": 1.0,
+    "com.acmeair.service.KeyGenerator": 1.0,
+    "com.acmeair.entities.CustomerAddress": 1.0,
+    "com.acmeair.wxs.entities.CustomerSessionImpl": 1.0,
+    "com.acmeair.wxs.entities.CustomerAddressImpl": 1.0,
+    "com.acmeair.entities.Customer": 1.0,
+    "com.acmeair.service.DataService": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.index.MapIndex": 1.0,
+    "com.acmeair.entities.Customer.PhoneType": 1.0,
+    "com.acmeair.service.BookingService": 1.0,
+    "com.acmeair.service.CustomerService": 1.0,
+    "com.ibm.websphere.objectgrid.plugins.index.MapIndexPlugin": 1.0,
+    "com.acmeair.wxs.utils.WXSSessionManager": 1.0,
+    "com.ibm.websphere.objectgrid.ObjectMap": 1.0,
+    "com.ibm.websphere.objectgrid.Session": 1.0,
+    "com.acmeair.wxs.entities.CustomerImpl": 1.0,
+    "com.acmeair.entities.CustomerSession": 1.0,
+    "com.ibm.websphere.objectgrid.UndefinedMapException": 1.0
+  },
+  "com.acmeair.loader.CustomerLoader": {
+    "com.acmeair.entities.Customer": 1.0,
+    "com.acmeair.entities.Customer.PhoneType": 1.0,
+    "com.acmeair.service.CustomerService": 1.0,
+    "com.acmeair.entities.CustomerAddress": 1.0
+  },
+  "com.acmeair.morphia.entities.FlightSegmentImpl": {
+    "com.acmeair.entities.FlightSegment": 1.0
+  },
+  "com.acmeair.wxs.entities.BookingImpl": {
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.entities.Booking": 1.0,
+    "com.acmeair.entities.Customer": 1.0
+  },
+  "com.acmeair.web.RESTCookieSessionFilter": {
+    "com.acmeair.service.TransactionService": 1.0,
+    "com.acmeair.entities.CustomerSession": 1.0,
+    "com.acmeair.service.ServiceLocator": 1.0,
+    "com.acmeair.service.CustomerService": 1.0
+  },
+  "com.acmeair.web.dto.FlightSegmentInfo": {
+    "com.acmeair.entities.FlightSegment": 1.0
+  },
+  "com.acmeair.web.FlightsREST": {
+    "com.acmeair.web.dto.TripLegInfo": 1.0,
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.web.dto.TripFlightOptions": 1.0,
+    "com.acmeair.service.FlightService": 1.0,
+    "com.acmeair.service.ServiceLocator": 1.0
+  },
+  "com.acmeair.morphia.entities.FlightImpl": {
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.entities.FlightSegment": 1.0
+  },
+  "com.acmeair.wxs.entities.CustomerAddressImpl": {
+    "com.acmeair.entities.CustomerAddress": 1.0
+  },
+  "com.acmeair.web.dto.BookingInfo": {
+    "com.acmeair.entities.Booking": 1.0
+  },
+  "com.acmeair.config.AcmeAirConfiguration": {
+    "com.acmeair.service.ServiceLocator": 1.0,
+    "com.acmeair.service.CustomerService": 1.0,
+    "com.acmeair.service.BookingService": 1.0,
+    "com.acmeair.service.FlightService": 1.0
+  },
+  "com.acmeair.reporter.ReportGenerator": {
+    "com.acmeair.reporter.parser.component.JmeterSummariserParser": 1.0,
+    "com.acmeair.reporter.parser.ResultParser": 1.0,
+    "com.acmeair.reporter.util.Messages": 1.0,
+    "com.acmeair.reporter.util.StatResult": 1.0,
+    "com.acmeair.reporter.parser.component.NmonParser": 1.0,
+    "com.acmeair.reporter.parser.ResultParserHelper": 1.0,
+    "com.acmeair.reporter.parser.component.JtlTotals": 1.0,
+    "com.acmeair.reporter.parser.component.JmeterJTLParser": 1.0,
+    "com.acmeair.reporter.parser.IndividualChartResults": 1.0
+  },
+  "com.acmeair.web.BookingsREST": {
+    "com.acmeair.web.dto.BookingReceiptInfo": 1.0,
+    "com.acmeair.entities.Booking": 1.0,
+    "com.acmeair.service.BookingService": 1.0,
+    "com.acmeair.web.dto.BookingInfo": 1.0,
+    "com.acmeair.service.ServiceLocator": 1.0
+  },
+  "com.acmeair.wxs.entities.CustomerImpl": {
+    "com.acmeair.entities.CustomerAddress": 1.0,
+    "com.acmeair.entities.Customer": 1.0
+  },
+  "com.acmeair.web.dto.CustomerInfo": {
+    "com.acmeair.entities.Customer": 1.0
+  },
+  "com.acmeair.morphia.services.BookingServiceImpl": {
+    "com.acmeair.service.ServiceLocator": 1.0,
+    "com.acmeair.service.KeyGenerator": 1.0,
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.service.DataService": 1.0,
+    "com.acmeair.entities.Customer": 1.0,
+    "com.acmeair.morphia.MorphiaConstants": 1.0,
+    "com.acmeair.service.BookingService": 1.0,
+    "com.acmeair.service.CustomerService": 1.0,
+    "com.acmeair.entities.Booking": 1.0,
+    "com.acmeair.morphia.services.util.MongoConnectionManager": 1.0,
+    "com.acmeair.morphia.entities.BookingImpl": 1.0,
+    "com.acmeair.service.FlightService": 1.0
+  },
+  "com.acmeair.loader.Loader": {
+    "com.acmeair.service.ServiceLocator": 1.0,
+    "com.acmeair.service.CustomerService": 1.0,
+    "com.acmeair.service.FlightService": 1.0
+  },
+  "com.acmeair.web.LoginREST": {
+    "com.acmeair.entities.CustomerSession": 1.0
+  },
+  "com.acmeair.loader.FlightLoader": {
+    "com.acmeair.entities.AirportCodeMapping": 1.0,
+    "com.acmeair.service.FlightService": 1.0
+  },
+  "com.acmeair.reporter.parser.component.JmeterSummariserParser": {
+    "com.acmeair.reporter.parser.IndividualChartResults": 1.0,
+    "com.acmeair.reporter.parser.ResultParser": 1.0,
+    "com.acmeair.reporter.parser.ResultParserHelper": 1.0
+  },
+  "com.acmeair.reporter.parser.component.NmonParser": {
+    "com.acmeair.reporter.parser.ResultParserHelper": 1.0,
+    "com.acmeair.reporter.parser.IndividualChartResults": 1.0,
+    "com.acmeair.reporter.parser.ResultParser": 1.0
+  },
+  "com.acmeair.morphia.services.CustomerServiceImpl": {
+    "com.acmeair.morphia.entities.CustomerAddressImpl": 1.0,
+    "com.acmeair.entities.CustomerAddress": 1.0,
+    "com.acmeair.morphia.entities.CustomerSessionImpl": 1.0,
+    "com.acmeair.service.DataService": 1.0,
+    "com.acmeair.entities.Customer": 1.0,
+    "com.acmeair.entities.Customer.PhoneType": 1.0,
+    "com.acmeair.morphia.MorphiaConstants": 1.0,
+    "com.acmeair.service.CustomerService": 1.0,
+    "com.acmeair.morphia.services.util.MongoConnectionManager": 1.0,
+    "com.acmeair.morphia.entities.CustomerImpl": 1.0,
+    "com.acmeair.entities.CustomerSession": 1.0,
+    "com.acmeair.entities.Customer.MemberShipStatus": 1.0
+  },
+  "com.acmeair.service.FlightService": {
+    "com.acmeair.entities.AirportCodeMapping": 1.0,
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.entities.FlightSegment": 1.0
+  },
+  "com.acmeair.service.BookingService": {
+    "com.acmeair.entities.Booking": 1.0
+  },
+  "com.acmeair.service.CustomerService": {
+    "com.acmeair.entities.CustomerAddress": 1.0,
+    "com.acmeair.entities.Customer": 1.0,
+    "com.acmeair.entities.Customer.PhoneType": 1.0,
+    "com.acmeair.entities.CustomerSession": 1.0,
+    "com.acmeair.entities.Customer.MemberShipStatus": 1.0
+  },
+  "com.acmeair.morphia.MorphiaConstants": {
+    "com.acmeair.AcmeAirConstants": 1.0
+  },
+  "com.acmeair.wxs.entities.FlightPKImpl": {
+    "com.ibm.websphere.objectgrid.plugins.PartitionableKey": 1.0,
+    "com.acmeair.entities.FlightPK": 1.0
+  },
+  "com.acmeair.reporter.parser.component.JmeterJTLParser": {
+    "com.acmeair.reporter.util.Messages": 1.0
+  },
+  "com.acmeair.morphia.DatastoreFactory": {
+    "com.acmeair.entities.FlightSegment": 1.0,
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.entities.Booking": 1.0
+  },
+  "com.acmeair.morphia.services.FlightServiceImpl": {
+    "com.acmeair.entities.AirportCodeMapping": 1.0,
+    "com.acmeair.service.KeyGenerator": 1.0,
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.morphia.entities.FlightImpl": 1.0,
+    "com.acmeair.morphia.entities.AirportCodeMappingImpl": 1.0,
+    "com.acmeair.service.DataService": 1.0,
+    "com.acmeair.morphia.MorphiaConstants": 1.0,
+    "com.acmeair.entities.FlightSegment": 1.0,
+    "com.acmeair.morphia.services.util.MongoConnectionManager": 1.0,
+    "com.acmeair.morphia.entities.FlightSegmentImpl": 1.0,
+    "com.acmeair.service.FlightService": 1.0
+  },
+  "com.acmeair.morphia.entities.CustomerImpl": {
+    "com.acmeair.entities.CustomerAddress": 1.0,
+    "com.acmeair.entities.Customer": 1.0
+  },
+  "com.acmeair.config.LoaderREST": {
+    "com.acmeair.loader.Loader": 1.0
+  },
+  "com.acmeair.web.CustomerREST": {
+    "com.acmeair.entities.CustomerAddress": 1.0,
+    "com.acmeair.entities.Customer": 1.0
+  },
+  "com.acmeair.morphia.entities.CustomerAddressImpl": {
+    "com.acmeair.entities.CustomerAddress": 1.0
+  },
+  "com.acmeair.wxs.entities.FlightSegmentImpl": {
+    "com.acmeair.entities.FlightSegment": 1.0
+  },
+  "com.acmeair.morphia.services.util.MongoConnectionManager": {
+    "com.acmeair.morphia.BigDecimalConverter": 1.0,
+    "com.acmeair.morphia.MorphiaConstants": 1.0
+  },
+  "com.acmeair.web.AppConfig": {
+    "com.acmeair.config.AcmeAirConfiguration": 1.0,
+    "com.acmeair.config.LoaderREST": 1.0
+  },
+  "com.acmeair.reporter.parser.ResultParser": {
+    "com.acmeair.reporter.parser.component.NmonParser": 1.0
+  },
+  "com.acmeair.web.dto.TripLegInfo": {
+    "com.acmeair.entities.Flight": 1.0
+  },
+  "com.acmeair.web.dto.AddressInfo": {
+    "com.acmeair.entities.CustomerAddress": 1.0
+  },
+  "com.acmeair.morphia.entities.BookingImpl": {
+    "com.acmeair.entities.Flight": 1.0,
+    "com.acmeair.entities.Booking": 1.0,
+    "com.acmeair.entities.Customer": 1.0
+  },
+  "com.acmeair.web.dto.FlightInfo": {
+    "com.acmeair.entities.Flight": 1.0
+  },
+  "com.acmeair.wxs.entities.AirportCodeMappingImpl": {
+    "com.acmeair.entities.AirportCodeMapping": 1.0
+  },
+  "com.acmeair.morphia.entities.AirportCodeMappingImpl": {
+    "com.acmeair.entities.AirportCodeMapping": 1.0
+  },
+  "com.acmeair.wxs.entities.CustomerSessionImpl": {
+    "com.acmeair.entities.CustomerSession": 1.0
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "authority": {
+    "note": "High-coverage GT aligned to IBM DayTrader microservices using entity-centered mapping; prims/websocket/test/build excluded as infra (-1). Entities/ejb3/direct/core forced to be covered.",
+    "repo": "data/raw/sample.daytrader.microservices-main",
+    "workloads": [
+      "accounts",
+      "quotes",
+      "portfolios",
+      "gateway",
+      "web"
+    ]
+  },
+  "cluster_legend": {
+    "-1": "infra/unmatched",
+    "0": "accounts",
+    "1": "quotes",
+    "2": "portfolios",
+    "3": "gateway",
+    "4": "web"
+  },
+  "rules_applied": {
+    "forced_coverage_assignments": [],
+    "notes": [
+      "Entities and ejb3/direct/core classes are force-covered to avoid evidence loss (per user directive)."
+    ],
+    "semantic_or_entity_forced": [
+      {
+        "class": "com.ibm.websphere.samples.daytrader.beans.MarketSummaryDataBean",
+        "rule": "semantic:MarketSummary->quotes",
+        "to": 1
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.beans.RunStatsDataBean",
+        "rule": "semantic:RunStats->gateway",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.entities.AccountDataBean",
+        "rule": "entity-prefix:Account*",
+        "to": 0
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.entities.AccountProfileDataBean",
+        "rule": "entity-prefix:Account*",
+        "to": 0
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.entities.HoldingDataBean",
+        "rule": "entity-prefix:Holding*/Order*",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.entities.OrderDataBean",
+        "rule": "entity-prefix:Holding*/Order*",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.TradeAppServlet",
+        "rule": "semantic:web entry->gateway",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.TradeScenarioServlet",
+        "rule": "semantic:web entry->gateway",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.TradeServletAction",
+        "rule": "semantic:web entry->gateway",
+        "to": 3
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.jsf.AccountDataJSF",
+        "rule": "web.jsf:account/login->accounts",
+        "to": 0
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.jsf.HoldingData",
+        "rule": "web.jsf:portfolio/order/holding->portfolios",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.jsf.LoginValidator",
+        "rule": "web.jsf:account/login->accounts",
+        "to": 0
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.jsf.MarketSummaryJSF",
+        "rule": "web.jsf:quotes/market->quotes",
+        "to": 1
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.jsf.OrderData",
+        "rule": "web.jsf:portfolio/order/holding->portfolios",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.jsf.OrderDataJSF",
+        "rule": "web.jsf:portfolio/order/holding->portfolios",
+        "to": 2
+      },
+      {
+        "class": "com.ibm.websphere.samples.daytrader.web.jsf.PortfolioJSF",
+        "rule": "web.jsf:portfolio/order/holding->portfolios",
+        "to": 2
+      }
+    ]
+  },
+  "summary": {
+    "business_context_coverage": {
+      "business_labeled": 34,
+      "business_ratio": 0.34,
+      "infra_or_excluded": 66,
+      "infra_ratio": 0.66
+    },
+    "class_count": 100,
+    "cluster_counts": {
+      "0": 4,
+      "1": 2,
+      "2": 6,
+      "3": 14,
+      "4": 8
+    },
+    "coverage_ratio": 0.34,
+    "covered_labeled": 34,
+    "covered_unlabeled": 66,
+    "largest_cluster": 14
+  },
+  "system": "daytrader"
+}

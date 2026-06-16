@@ -1,0 +1,367 @@
+{
+  "org.springframework.samples.jpetstore.dao.AccountDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.CategoryDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ItemDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.OrderDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ProductDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.MsSqlOrderDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.OracleSequenceDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.Sequence": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapAccountDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapCategoryDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao.ProductSearch": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapSequenceDao": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.Account": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.Cart": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.CartItem": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.Category": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.Item": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.LineItem": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.Order": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.Product": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.logic.AccountValidator": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.logic.OrderService": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.logic.OrderValidator": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.domain.logic.SendOrderConfirmationEmailAdvice": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.service.JaxRpcOrderService": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.service.client.OrderServiceClient": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.AccountForm": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.AccountFormController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.AddItemToCartController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.ListOrdersController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.OrderForm": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.OrderFormController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.RemoveItemFromCartController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.SearchProductsController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.SignoffController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.SignonController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.SignonInterceptor": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.UpdateCartQuantitiesController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.UserSession": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewCartController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewCategoryController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewItemController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewOrderController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewProductController": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.AccountActionForm": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.AddItemToCartAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.BaseAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.BaseActionForm": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.CartActionForm": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.DoNothingAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.EditAccountAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.EditAccountFormAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.ListOrdersAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewAccountAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewAccountFormAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewOrderAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewOrderFormAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.OrderActionForm": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.RemoveItemFromCartAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.SearchProductsAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.SecureBaseAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.SignonAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.UpdateCartQuantitiesAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewCartAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewCategoryAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewItemAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewOrderAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewProductAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  }
+}

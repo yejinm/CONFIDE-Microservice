@@ -107,6 +107,36 @@ def resolve_class_indices(
             if idx is not None:
                 out.add(idx)
 
+    def _extract_query_action_key(attrs: Dict[str, str]) -> str:
+        """Best-effort extraction of a 'controller/action' key from OpenTelemetry url.query.
+
+        OpenTelemetry may provide:
+        - a raw query string in 'url.query' (e.g., 'viewItem=&itemId=EST-1')
+        - a parsed JSON string in 'url.query' (e.g., '{"viewItem":"","itemId":"EST-1"}')
+
+        We normalize to the *first* query key (action) and strip '_', '-' then lowercase.
+        """
+        raw = (attrs.get("url.query", "") or "").strip()
+        if not raw:
+            return ""
+
+        # Case A: parsed JSON string
+        if raw.startswith("{") and raw.endswith("}"):
+            try:
+                obj = json.loads(raw)
+                if isinstance(obj, dict) and obj:
+                    k0 = next(iter(obj.keys()))
+                    return str(k0).strip()
+            except Exception:
+                pass
+
+        # Case B: regular query string
+        # Prefer first key before '&' and before '='
+        tok = raw.split("&", 1)[0].strip()
+        if not tok:
+            return ""
+        return tok.split("=", 1)[0].strip()
+
     # 0) Existing AcmeAir URL longest-prefix mapping (single class)
     target = (
         span_attrs.get("http.route")
@@ -128,16 +158,14 @@ def resolve_class_indices(
                 break
 
     # 1) JPetStore actions from url.query
-    q = (span_attrs.get("url.query", "") or "").strip()
-    if q:
-        action_key = q.split("&", 1)[0].split("=", 1)[0].strip()
-        if action_key:
-            action_norm = action_key.replace("_", "").replace("-", "").lower()
-            mapper = globals().get("JPETSTORE_ACTION_TO_CONTROLLER")
-            if isinstance(mapper, dict):
-                mapped = mapper.get(action_norm)
-                if mapped:
-                    _add_fqcn_list(mapped)
+    action_key = _extract_query_action_key(span_attrs)
+    if action_key:
+        action_norm = action_key.replace("_", "").replace("-", "").lower()
+        mapper = globals().get("JPETSTORE_ACTION_TO_CONTROLLER")
+        if isinstance(mapper, dict):
+            mapped = mapper.get(action_norm)
+            if mapped:
+                _add_fqcn_list(mapped)
 
     # 2) JPetStore JSP internal span name anchors
     sname = (span_name or "").lower()
@@ -830,6 +858,44 @@ PLANTS_PATH_TO_CLASSES: Dict[str, list[str]] = {
         "com.ibm.websphere.samples.pbw.bean.CatalogMgr",
         "com.ibm.websphere.samples.pbw.jpa.Inventory",
     ],
+}
+
+
+# JPetStore: query-key/JSP-name anchors -> controllers
+# Notes:
+# - Observed OTEL spans have url.path like '/jpetstore/actions/Catalog.action'
+#   and url.query like 'search=' or 'viewCategory=&categoryId=FISH'.
+# - We treat the *first query key* as the action signal.
+JPETSTORE_ACTION_TO_CONTROLLER: Dict[str, list[str]] = {
+    # Catalog
+    "search": ["org.springframework.samples.jpetstore.web.spring.SearchProductsController"],
+    "viewcategory": ["org.springframework.samples.jpetstore.web.spring.ViewCategoryController"],
+    "viewproduct": ["org.springframework.samples.jpetstore.web.spring.ViewProductController"],
+    "viewitem": ["org.springframework.samples.jpetstore.web.spring.ViewItemController"],
+    # Cart
+    "viewcart": ["org.springframework.samples.jpetstore.web.spring.ViewCartController"],
+    "additemtocart": ["org.springframework.samples.jpetstore.web.spring.AddItemToCartController"],
+    "removeitemfromcart": ["org.springframework.samples.jpetstore.web.spring.RemoveItemFromCartController"],
+    "updatecartquantities": ["org.springframework.samples.jpetstore.web.spring.UpdateCartQuantitiesController"],
+    # Account / auth
+    "signon": ["org.springframework.samples.jpetstore.web.spring.SignonController"],
+    "signoff": ["org.springframework.samples.jpetstore.web.spring.SignoffController"],
+    "newaccount": ["org.springframework.samples.jpetstore.web.spring.AccountFormController"],
+    "editaccount": ["org.springframework.samples.jpetstore.web.spring.AccountFormController"],
+    # Orders
+    "listorders": ["org.springframework.samples.jpetstore.web.spring.ListOrdersController"],
+    "neworder": ["org.springframework.samples.jpetstore.web.spring.OrderFormController"],
+    "vieworder": ["org.springframework.samples.jpetstore.web.spring.ViewOrderController"],
+}
+
+# JPetStore: JSP compilation spans (scope io.opentelemetry.jsp-2.3)
+# Example span.name: 'Compile /WEB-INF/jsp/catalog/Category.jsp'
+JPETSTORE_JSP_TO_CONTROLLER: Dict[str, list[str]] = {
+    "main.jsp": ["org.springframework.samples.jpetstore.web.spring.SearchProductsController"],
+    "category.jsp": ["org.springframework.samples.jpetstore.web.spring.ViewCategoryController"],
+    "product.jsp": ["org.springframework.samples.jpetstore.web.spring.ViewProductController"],
+    "item.jsp": ["org.springframework.samples.jpetstore.web.spring.ViewItemController"],
+    "cart.jsp": ["org.springframework.samples.jpetstore.web.spring.ViewCartController"],
 }
 
 

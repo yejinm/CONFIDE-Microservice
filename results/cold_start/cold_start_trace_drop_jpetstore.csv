@@ -1,0 +1,15 @@
+system,drop_rate,seed,traces_before,traces_kept,traces_dropped,method,bcubed_f1,mojosim,pred_k,gt_k,run_dir
+jpetstore,0.0,1337,0,0,0,COGCN_SimpleFusion,0.342096931505264,38.35616438356164,3,4,results/cold_start/run_rate_0.00
+jpetstore,0.0,1337,0,0,0,Ours_CAC_withU,0.4317962385055742,46.57534246575342,3,4,results/cold_start/run_rate_0.00
+jpetstore,0.2,1337,0,0,0,COGCN_SimpleFusion,0.342096931505264,32.87671232876712,3,4,results/cold_start/run_rate_0.20
+jpetstore,0.2,1337,0,0,0,Ours_CAC_withU,0.4317962385055742,46.57534246575342,3,4,results/cold_start/run_rate_0.20
+jpetstore,0.4,1337,0,0,0,COGCN_SimpleFusion,0.3420969315052641,32.87671232876712,3,4,results/cold_start/run_rate_0.40
+jpetstore,0.4,1337,0,0,0,Ours_CAC_withU,0.4317962385055742,46.57534246575342,3,4,results/cold_start/run_rate_0.40
+jpetstore,0.6,1337,0,0,0,COGCN_SimpleFusion,0.342096931505264,32.87671232876712,3,4,results/cold_start/run_rate_0.60
+jpetstore,0.6,1337,0,0,0,Ours_CAC_withU,0.4317962385055742,46.57534246575342,3,4,results/cold_start/run_rate_0.60
+jpetstore,0.8,1337,0,0,0,COGCN_SimpleFusion,0.342096931505264,32.87671232876712,3,4,results/cold_start/run_rate_0.80
+jpetstore,0.8,1337,0,0,0,Ours_CAC_withU,0.4317962385055741,46.57534246575342,3,4,results/cold_start/run_rate_0.80
+jpetstore,0.9,1337,0,0,0,COGCN_SimpleFusion,0.342096931505264,32.87671232876712,3,4,results/cold_start/run_rate_0.90
+jpetstore,0.9,1337,0,0,0,Ours_CAC_withU,0.4317962385055741,46.57534246575342,3,4,results/cold_start/run_rate_0.90
+jpetstore,0.95,1337,0,0,0,COGCN_SimpleFusion,0.3420969315052639,38.35616438356164,3,4,results/cold_start/run_rate_0.95
+jpetstore,0.95,1337,0,0,0,Ours_CAC_withU,0.4317962385055741,46.57534246575342,3,4,results/cold_start/run_rate_0.95

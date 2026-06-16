@@ -94,13 +94,16 @@ def _save_partition_copy_from(system: str, method: str, *, phase3_tag: str) -> P
     return dst
 
 
-def _eval(system: str, pred: Path, *, method: str) -> Dict[str, Any]:
+def _eval(system: str, pred: Path, *, method: str, out_dir: Path | None = None) -> Dict[str, Any]:
     gt = ROOT / "data" / "processed" / "groundtruth" / f"{system}_ground_truth.json"
     order = ROOT / "data" / "processed" / "fusion" / f"{system}_class_order.json"
     dep = ROOT / "data" / "processed" / "dependency" / f"{system}_dependency_matrix.json"
     safe_method = "".join(ch if (ch.isalnum() or ch in ("-", "_")) else "_" for ch in str(method))
-    out_json = ROOT / "results" / "ablation" / "baseline" / "_tmp" / f"metrics_{system}_{safe_method}.json"
-    out_json.parent.mkdir(parents=True, exist_ok=True)
+
+    base_dir = out_dir if out_dir is not None else (ROOT / "results" / "ablation" / "baseline")
+    tmp_dir = base_dir / "_tmp"
+    tmp_dir.mkdir(parents=True, exist_ok=True)
+    out_json = tmp_dir / f"metrics_{system}_{safe_method}.json"
 
     cmd = [
         _python(),
@@ -196,6 +199,13 @@ def main() -> None:
         nargs="*",
         help="Systems to run (e.g., daytrader plants acmeair jpetstore). If empty, run a single default system.",
     )
+    # NEW: redirect outputs to keep experimental runs isolated
+    ap.add_argument(
+        "--out_dir",
+        type=str,
+        default=None,
+        help="If set, write mono_baselines_vs_ours_<system>.csv/.md and metrics JSON under this directory (no overwrite of baseline artifacts).",
+    )
     ap.add_argument("--cap", type=float, default=None, help="Override cap for a single-system run. If omitted, per-system defaults are used.")
     ap.add_argument("--mu_daytrader", type=float, default=0.30, help="(Single-system override) mu_override for DayTrader (default: 0.30).")
     ap.add_argument(
@@ -219,6 +229,16 @@ def main() -> None:
     ap.add_argument("--k_lock", action="store_true", default=True, help="Use --target_from_gt for all methods.")
     args = ap.parse_args()
 
+    systems = [s.lower().strip() for s in (args.systems or []) if str(s).strip()]
+    if not systems:
+        # Backward-compatible: if user calls with no systems, run daytrader
+        systems = ["daytrader"]
+
+    # NOTE: no timestamps => overwrite stable artifact filenames within *out_dir*
+    # (baseline artifacts remain safe if caller passes a dedicated --out_dir)
+    out_dir = (Path(args.out_dir).resolve() if args.out_dir else (ROOT / "results" / "ablation" / "baseline"))
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     # Per-system pinned defaults (artifact/repro)
     DEFAULTS = {
         # daytrader: cap=0.18, ours mu=0.3 (as in the current best table)
@@ -230,15 +250,6 @@ def main() -> None:
         # jpetstore: cap=0.14, ours mu=0.10
         "jpetstore": {"cap": 0.14, "ours_mu": 0.10},
     }
-
-    systems = [s.lower().strip() for s in (args.systems or []) if str(s).strip()]
-    if not systems:
-        # Backward-compatible: if user calls with no systems, run daytrader
-        systems = ["daytrader"]
-
-    # NOTE: no timestamps => overwrite stable artifact filenames (clean and reproducible)
-    out_dir = ROOT / "results" / "ablation" / "baseline"
-    out_dir.mkdir(parents=True, exist_ok=True)
 
     for system in systems:
         if system not in DEFAULTS:
@@ -326,7 +337,109 @@ def main() -> None:
             ) else "cac-final"
 
             pred = _save_partition_copy_from(system, name, phase3_tag=phase3_tag)
-            m = _eval(system, pred, method=name)
+            m = _eval(system, pred, method=name, out_dir=out_dir)
+            rows.append(
+                {
+                    "system": system,
+                    "method": name,
+                    "cap": cap,
+                    "u_ablation": u_ab,
+                    "mu_override": ("-" if mu is None else float(mu)),
+                    "pred_path": str(pred.relative_to(ROOT)).replace("\\", "/"),
+                    "bcubed_f1": float(m.get("bcubed_f1", 0.0)),
+                    "mojosim": float(m.get("mojosim", 0.0)),
+                    "pred_k": int(m.get("pred_k", 0)),
+                    "gt_k": int(m.get("gt_k", 0)),
+                    "k_diff": int(m.get("pred_k", 0)) - int(m.get("gt_k", 0)),
+                    "ifn": (None if m.get("ifn") is None else float(m.get("ifn"))),
+                    "ned": (None if m.get("ned") is None else float(m.get("ned"))),
+                    "sm": (None if m.get("sm") is None else float(m.get("sm"))),
+                    "icp": (None if m.get("icp") is None else float(m.get("icp"))),
+                }
+            )
+
+        # --- Extra ablation methods (not covered by the simple configs list) ---
+        methods = [
+            {
+                "name": "Ours_noDADE_withU",
+                "cap": None,  # uses CLI --cap
+                "u_ablation": "with_u",
+                "mu": ours_mu,
+                "phase3_extra": ["--no_dade_sem"],
+            }
+        ]
+
+        for mdef in methods:
+            name = mdef["name"]
+            u_ab = mdef["u_ablation"]
+            mu = mdef["mu"]
+            phase3_extra = list(mdef.get("phase3_extra", []) or [])
+
+            # Skip if this method variant was already run (configs overlap)
+            if name in {c[0] for c in configs}:
+                continue
+
+            # JPetStore: optional strict K=4 only for the withU variant (default: accept K=3)
+            tmin = None
+            tmax = None
+            if system == "jpetstore" and bool(args.jpetstore_force_k4) and name == "Ours_noDADE_withU":
+                tmin, tmax = 4, 4
+
+            # Phase3 invocation (must include phase3_extra, e.g., --no_dade_sem)
+            cmd = [
+                _python(),
+                str(PHASE3),
+                system,
+                "--mode",
+                "sigmoid",
+                "--alpha",
+                "15",
+                "--dpep_cap",
+                str(cap),
+                "--u_ablation",
+                u_ab,
+            ]
+            if bool(args.k_lock):
+                cmd.append("--target_from_gt")
+            if tmin is not None:
+                cmd += ["--target_min", str(int(tmin))]
+            if tmax is not None:
+                cmd += ["--target_max", str(int(tmax))]
+            cmd += ["--merge_small_clusters", "--min_cluster_size", "3"]
+            if mu is not None:
+                cmd += ["--mu_override", str(mu)]
+            cmd += phase3_extra
+            _run(cmd)
+
+            # Apply any extra pinned Phase3 arguments (AcmeAir stability pins)
+            extra = list(pinned.get("phase3_extra", []) or [])
+            if extra:
+                cmd2 = [
+                    _python(),
+                    str(PHASE3),
+                    system,
+                    "--mode",
+                    "sigmoid",
+                    "--alpha",
+                    "15",
+                    "--dpep_cap",
+                    str(cap),
+                    "--u_ablation",
+                    u_ab,
+                ]
+                if bool(args.k_lock):
+                    cmd2.append("--target_from_gt")
+                cmd2 += ["--merge_small_clusters", "--min_cluster_size", "3"]
+                if mu is not None:
+                    cmd2 += ["--mu_override", str(mu)]
+                cmd2 += phase3_extra
+                cmd2 += extra
+                _run(cmd2)
+
+            # IMPORTANT: Baseline-equivalent rows should use Phase3's *Baseline* partition (clustering on S only).
+            # Ours variants should use Phase3's *CAC-Final* partition.
+            pred = _save_partition_copy_from(system, name, phase3_tag="cac-final")
+            m = _eval(system, pred, method=name, out_dir=out_dir)
             rows.append(
                 {
                     "system": system,

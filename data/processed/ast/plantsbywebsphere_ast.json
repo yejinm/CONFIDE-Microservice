@@ -1,0 +1,206 @@
+{
+  "com.ibm.websphere.samples.pbw.jpa.Inventory": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.jpa.Cloneable",
+      "com.ibm.websphere.samples.pbw.jpa.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.bean.ResetDBBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.jpa.PK": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.jpa.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.HelpBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.utils.Util": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.war.LoginInfo": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.war.ShoppingBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.ValidatorUtils": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.bean.BackOrderMgr": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.jpa.Customer": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.bean.MailerAppException": {
+    "bases": [
+      "com.ibm.websphere.samples.pbw.bean.Exception"
+    ],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.bean.EMailMessage": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.jpa.Supplier": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.bean.CatalogMgr": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.BackOrderItem": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.jpa.Order": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.war.OrderInfo": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.bean.CustomerMgr": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.bean.SuppliersBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.ProductBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.Populate": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.war.ValidatePasswords": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Validator"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.utils.ListProperties": {
+    "bases": [
+      "com.ibm.websphere.samples.pbw.utils.Properties"
+    ],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.jpa.OrderKey": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.jpa.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.AdminServlet": {
+    "bases": [
+      "com.ibm.websphere.samples.pbw.war.HttpServlet"
+    ],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.war.AccountBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.ShoppingItem": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Cloneable",
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.bean.MailerBean": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.bean.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.bean.NoSupplierException": {
+    "bases": [
+      "com.ibm.websphere.samples.pbw.bean.Exception"
+    ],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.bean.PopulateDBBean": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.war.MailAction": {
+    "bases": [],
+    "interfaces": [
+      "com.ibm.websphere.samples.pbw.war.Serializable"
+    ]
+  },
+  "com.ibm.websphere.samples.pbw.war.AccountServlet": {
+    "bases": [
+      "com.ibm.websphere.samples.pbw.war.HttpServlet"
+    ],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.war.ImageServlet": {
+    "bases": [
+      "com.ibm.websphere.samples.pbw.war.HttpServlet"
+    ],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.jpa.OrderItem": {
+    "bases": [],
+    "interfaces": []
+  },
+  "com.ibm.websphere.samples.pbw.jpa.BackOrder": {
+    "bases": [],
+    "interfaces": []
+  }
+}

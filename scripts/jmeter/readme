@@ -6,7 +6,7 @@
 2. Wait until the application is fully started (homepage is accessible), then run the JMeter scripts.
 
 # Enter the directory that contains docker-compose.yml
-cd D:\multimodal_microservice_extraction\docker
+cd .\docker
 
 # Stop and remove all containers
 docker compose down
@@ -22,8 +22,8 @@ docker logs jpetstore
 
 ## 1. Prerequisites
 
-1. JMeter 5.6.3 is installed, e.g., `D:\apache-jmeter-5.6.3`.
-2. The current working directory is the project root: `D:\multimodal_microservice_extraction`.
+1. JMeter 5.6.3 is installed, and `$env:JMETER_HOME` points to that installation.
+2. The current working directory is the repository root.
 3. The JMeter test plans (.jmx) in this repository are archived under: `scripts\jmeter\`.
 4. In each `.jmx`, ensure the target URL and local ports match your environment (e.g., JPetStore uses `http://localhost:8083/jpetstore`).
 
@@ -31,47 +31,45 @@ docker logs jpetstore
 
 Run the following commands **in PowerShell** in order (note: use backtick ` as the line continuation character).
 
-> Tip: you can `cd D:\apache-jmeter-5.6.3\bin` first and then reference the `.jmx` files via relative paths.
+> Tip: set `$JMETER_HOME` to your local JMeter install and run these commands from the repository root.
 
 ### 2.1 JPetStore
 
-cd D:\apache-jmeter-5.6.3\bin
-
 ```powershell
-D:\apache-jmeter-5.6.3\bin\jmeter.bat -n `
-  -t "D:\multimodal_microservice_extraction\scripts\jmeter\jpetstore.jmx" `
-  -l "D:\multimodal_microservice_extraction\results\jmeter\jpetstore_results.jtl" `
-  -j "D:\multimodal_microservice_extraction\results\jmeter\jpetstore_jmeter.log" `
+& "$env:JMETER_HOME\bin\jmeter.bat" -n `
+  -t "scripts\jmeter\jpetstore.jmx" `
+  -l "results\jmeter\jpetstore_results.jtl" `
+  -j "results\jmeter\jpetstore_jmeter.log" `
 
 ```
 
 ### 2.2 Plants
 
 ```powershell
-D:\apache-jmeter-5.6.3\bin\jmeter.bat -n `
-  -t "D:\multimodal_microservice_extraction\scripts\jmeter\plants.jmx" `
-  -l "D:\multimodal_microservice_extraction\results\jmeter\plants_results.jtl" `
-  -j "D:\multimodal_microservice_extraction\results\jmeter\plants_jmeter.log" `
+& "$env:JMETER_HOME\bin\jmeter.bat" -n `
+  -t "scripts\jmeter\plants.jmx" `
+  -l "results\jmeter\plants_results.jtl" `
+  -j "results\jmeter\plants_jmeter.log" `
 
 ```
 
 ### 2.3 DayTrader
 
 ```powershell
-D:\apache-jmeter-5.6.3\bin\jmeter.bat -n `
-  -t "D:\multimodal_microservice_extraction\scripts\jmeter\daytrader.jmx" `
-  -l "D:\multimodal_microservice_extraction\results\jmeter\daytrader_results.jtl" `
-  -j "D:\multimodal_microservice_extraction\results\jmeter\daytrader_jmeter.log" `
+& "$env:JMETER_HOME\bin\jmeter.bat" -n `
+  -t "scripts\jmeter\daytrader.jmx" `
+  -l "results\jmeter\daytrader_results.jtl" `
+  -j "results\jmeter\daytrader_jmeter.log" `
 
 ```
 
 ### 2.4 AcmeAir
 
 ```powershell
-D:\apache-jmeter-5.6.3\bin\jmeter.bat -n `
-  -t "D:\multimodal_microservice_extraction\scripts\jmeter\acmeair1.jmx" `
-  -l "D:\multimodal_microservice_extraction\results\jmeter\acmeair1_results.jtl" `
-  -j "D:\multimodal_microservice_extraction\results\jmeter\acmeair1_jmeter.log" `
+& "$env:JMETER_HOME\bin\jmeter.bat" -n `
+  -t "scripts\jmeter\acmeair.jmx" `
+  -l "results\jmeter\acmeair_results.jtl" `
+  -j "results\jmeter\acmeair_jmeter.log" `
 
 ```
 
@@ -81,4 +79,4 @@ D:\apache-jmeter-5.6.3\bin\jmeter.bat -n `
 - JMeter log: `results/jmeter/<system>_jmeter.log`
 - HTML report: `results/jmeter/<system>_html_report/`
 
-Where `<system> ∈ {acmeair, jpetstore, daytrader, plants}`.
+Where `<system>` is one of `acmeair`, `jpetstore`, `daytrader`, or `plants`.

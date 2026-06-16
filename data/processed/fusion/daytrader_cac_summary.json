@@ -1,0 +1,33 @@
+{
+  "system": "daytrader",
+  "target_range": [
+    5,
+    25
+  ],
+  "baseline": {
+    "Q": 0.06523070269099529,
+    "IFN": 449,
+    "IFN_Ratio": 0.8032200357781754,
+    "Services": 5,
+    "Resolution": 1.1000000000000005
+  },
+  "cac_final": {
+    "Q": 0.04436476529185607,
+    "IFN": 354,
+    "IFN_Ratio": 0.6424682395644283,
+    "Services": 5,
+    "Resolution": 0.9000000000000002
+  },
+  "params": {
+    "mode": "exp",
+    "k": 6.0,
+    "n_power": 4.0,
+    "edge_min_weight": 0.02,
+    "res_min": 0.1,
+    "res_max": 8.0,
+    "res_step": 0.05,
+    "autotune": false,
+    "autotune_budget": "default",
+    "best_resolution": 0.9000000000000002
+  }
+}

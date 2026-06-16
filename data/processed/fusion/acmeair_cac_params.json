@@ -1,0 +1,11 @@
+{
+  "mode": "sigmoid",
+  "k": 6.0,
+  "n_power": 4.0,
+  "edge_min_weight": 0.05,
+  "res_min": 0.2,
+  "res_max": 8.0,
+  "res_step": 0.05,
+  "autotune": false,
+  "autotune_budget": "default"
+}

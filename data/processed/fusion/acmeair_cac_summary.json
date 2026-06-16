@@ -1,0 +1,26 @@
+{
+  "system": "acmeair",
+  "target_range": [
+    3,
+    3
+  ],
+  "baseline": {
+    "Q": 0.06857789782083529,
+    "IFN": 349,
+    "IFN_Ratio": 0.5530903328050714,
+    "Services": 3,
+    "Resolution": 0.9499999999999997
+  },
+  "cac_final": null,
+  "params": {
+    "mode": "sigmoid",
+    "k": 6.0,
+    "n_power": 4.0,
+    "edge_min_weight": 0.05,
+    "res_min": 0.2,
+    "res_max": 8.0,
+    "res_step": 0.05,
+    "autotune": false,
+    "autotune_budget": "default"
+  }
+}

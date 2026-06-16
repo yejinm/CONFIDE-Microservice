@@ -8,6 +8,7 @@ __pycache__/
 venv/
 .env/
 .venv/
+.venv*/
 *.env
 
 # Data files
@@ -16,6 +17,11 @@ venv/
 *.csv
 *.json
 *.graphml
+!results/cold_start/*.csv
+!results/llm_baseline/*.csv
+!results/llm_baseline/cached/*.json
+!data/processed/
+!data/processed/**
 
 # Logs
 logs/
@@ -24,3 +30,21 @@ logs/
 # IDE files
 .idea/
 .vscode/
+
+# Python/tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated build outputs
+target/
+tools/target/
+tools/cp.txt
+
+# Local/intermediate experiment outputs
+results/_tmp/
+results/**/_tmp/
+results/cold_start/run_rate_*/
+results/cold_start/_bak_fusion/
+results/paper_snapshot/
+data/processed/**/*_drop95.npy

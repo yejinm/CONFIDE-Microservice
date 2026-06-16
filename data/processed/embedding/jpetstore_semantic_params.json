@@ -1,0 +1,9 @@
+{
+  "input": "data\\processed\\semantic\\jpetstore_semantic.json",
+  "output": "data\\processed\\embedding\\jpetstore.pt",
+  "distill_mode": "legacy",
+  "use_arch_stopwords": true,
+  "use_domain_focus_filter": false,
+  "extra_arch_stopwords": "",
+  "extra_domain_stopwords": ""
+}

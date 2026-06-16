@@ -1,0 +1,167 @@
+{
+  "com.ibm.websphere.samples.pbw.bean.BackOrderMgr": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.CatalogMgr": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.CustomerMgr": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.MailerAppException": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.ibm.websphere.samples.pbw.bean.MailerBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.NoSupplierException": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.ibm.websphere.samples.pbw.bean.PopulateDBBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.ResetDBBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.ShoppingCartBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.ShoppingCartContent": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.bean.SuppliersBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.BackOrder": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.Customer": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.Inventory": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.Order": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.OrderItem": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.OrderItem.PK": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.OrderKey": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.jpa.Supplier": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.AccountBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.AccountServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.AdminServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.BackOrderItem": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.HelpBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.ImageServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.LoginInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.MailAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.OrderInfo": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.Populate": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.ProductBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.ShoppingBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.ShoppingItem": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.pbw.war.ValidatePasswords": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  }
+}

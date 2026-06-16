@@ -1,0 +1,527 @@
+{
+  "com.ibm.websphere.samples.daytrader.TradeAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.TradeServices": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.beans.MarketSummaryDataBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.beans.RunStatsDataBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.direct.KeySequenceDirect": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.direct.TradeDirect": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.ejb3.DTBroker3MDB": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.ejb3.DTStreamer3MDB": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.ejb3.MarketSummarySingleton": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.ejb3.TradeSLSBBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.ejb3.TradeSLSBLocal": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.ejb3.TradeSLSBRemote": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.entities.AccountDataBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.entities.AccountProfileDataBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.entities.HoldingDataBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.entities.OrderDataBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.OrdersAlertFilter": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.TestServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.TradeAppServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.TradeBuildDB": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.TradeConfigServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.TradeScenarioServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.TradeServletAction": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.TradeWebContextListener": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.AccountDataJSF": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.ExternalContextProducer": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.HoldingData": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.JSFLoginFilter": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.LoginValidator": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.MarketSummaryJSF": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.OrderData": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.OrderDataJSF": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.PortfolioJSF": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.TradeActionProducer": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.TradeAppJSF": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.jsf.TradeConfigJSF": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ExplicitGC": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingCDIBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingCDIJSFBean": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingEJBIFace": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingEJBLocal": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingEJBLocalDecorator": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingInterceptor": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingInterceptorBinding": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingJDBCRead": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingJDBCRead2JSP": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingJDBCWrite": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingJSONP": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingManagedExecutor": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingManagedExecutor.Anonymous-7cdc9d3a-1a17-43f3-8726-f2f228220e8a": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": false
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingManagedThread": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingManagedThread.Anonymous-f63cf65a-66aa-42d2-ae30-f075a156fa63": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": false
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingReentryServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2DB": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2Include": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2IncludeRcv": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2JNDI": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2Jsp": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2PDF": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2Servlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet2ServletRcv": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet30Async": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async.ReadListenerImpl": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async.WriteListenerImpl": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet31AsyncRead": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServlet31AsyncRead.ReadListenerImpl": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServletCDI": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServletCDIBeanManagerViaCDICurrent": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServletCDIBeanManagerViaJNDI": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServletLargeContentLength": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServletSetContentLength": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingServletWriter": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingSession1": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingSession2": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingSession3": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingSession3Object": {
+    "has_callgraph": false,
+    "has_dependency": true,
+    "has_semantic": false
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet.Handler": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet.Listener": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketBinary": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketJson": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketJson.Anonymous-ae2ae31a-342f-4d6c-b4c8-abaf4820c7ca": {
+    "has_callgraph": true,
+    "has_dependency": false,
+    "has_semantic": false
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketTextAsync": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketTextSync": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Entity": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2MDBQueue": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2MDBTopic": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2CMROne2Many": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2CMROne2One": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2Entity": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2Entity2JSP": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2EntityCollection": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2SessionLocal": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2SessionRemote": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2TwoPhase": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.websocket.ActionDecoder": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.websocket.ActionMessage": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.websocket.JsonDecoder": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.websocket.JsonEncoder": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.websocket.JsonMessage": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.websocket.MarketSummaryWebSocket": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  },
+  "com.ibm.websphere.samples.daytrader.web.websocket.RecentStockChangeList": {
+    "has_callgraph": true,
+    "has_dependency": true,
+    "has_semantic": true
+  }
+}

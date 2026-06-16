@@ -4,7 +4,7 @@ This is used to build a strict OpenTelemetry Java agent
 `otel.instrumentation.methods.include` configuration that does NOT rely on `[*]`.
 
 Usage (PowerShell):
-  python .\scripts\temporal\extract_public_methods.py --base "D:\\multimodal_microservice_extraction\\data\\raw\\jPetStore\\src\\main\\java" --files \
+  python .\scripts\temporal\extract_public_methods.py --base "data\\raw\\jPetStore\\src\\main\\java" --files \
       org/springframework/samples/jpetstore/domain/logic/PetStoreFacade.java \
       org/springframework/samples/jpetstore/domain/logic/PetStoreImpl.java
 

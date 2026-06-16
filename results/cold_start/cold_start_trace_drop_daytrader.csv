@@ -1,0 +1,15 @@
+system,drop_rate,seed,traces_before,traces_kept,traces_dropped,method,bcubed_f1,mojosim,pred_k,gt_k,run_dir
+daytrader,0.0,1337,1600,1600,0,COGCN_SimpleFusion,0.4777884152884153,37.5,4,5,results/cold_start/run_rate_0.00
+daytrader,0.0,1337,1600,1600,0,Ours_CAC_withU,0.5138735677176002,50.0,6,5,results/cold_start/run_rate_0.00
+daytrader,0.2,1337,1600,1280,320,COGCN_SimpleFusion,0.4777884152884153,37.5,4,5,results/cold_start/run_rate_0.20
+daytrader,0.2,1337,1600,1280,320,Ours_CAC_withU,0.5138735677176001,50.0,6,5,results/cold_start/run_rate_0.20
+daytrader,0.4,1337,1600,960,640,COGCN_SimpleFusion,0.4777884152884153,37.5,4,5,results/cold_start/run_rate_0.40
+daytrader,0.4,1337,1600,960,640,Ours_CAC_withU,0.5138735677176002,50.0,6,5,results/cold_start/run_rate_0.40
+daytrader,0.6,1337,1600,640,960,COGCN_SimpleFusion,0.4777884152884153,37.5,4,5,results/cold_start/run_rate_0.60
+daytrader,0.6,1337,1600,640,960,Ours_CAC_withU,0.5138735677176001,50.0,6,5,results/cold_start/run_rate_0.60
+daytrader,0.8,1337,1600,320,1280,COGCN_SimpleFusion,0.4777884152884153,37.5,4,5,results/cold_start/run_rate_0.80
+daytrader,0.8,1337,1600,320,1280,Ours_CAC_withU,0.5138735677176002,50.0,6,5,results/cold_start/run_rate_0.80
+daytrader,0.9,1337,1600,160,1440,COGCN_SimpleFusion,0.4777884152884153,37.5,4,5,results/cold_start/run_rate_0.90
+daytrader,0.9,1337,1600,160,1440,Ours_CAC_withU,0.5138735677176002,50.0,6,5,results/cold_start/run_rate_0.90
+daytrader,0.95,1337,1600,80,1520,COGCN_SimpleFusion,0.4777884152884153,37.5,4,5,results/cold_start/run_rate_0.95
+daytrader,0.95,1337,1600,80,1520,Ours_CAC_withU,0.5138735677176001,50.0,6,5,results/cold_start/run_rate_0.95

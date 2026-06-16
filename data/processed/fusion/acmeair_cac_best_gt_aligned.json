@@ -1,0 +1,146 @@
+{
+  "system": "acmeair",
+  "sweep": {
+    "enabled": true,
+    "dpep_cap": 0.14,
+    "caps": [
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22
+    ]
+  },
+  "universe_policy": {
+    "gt_filter_negative": true,
+    "gt_path": "data/processed/groundtruth/acmeair_ground_truth.json",
+    "n_nodes": 41
+  },
+  "target_policy": {
+    "target_from_gt": true,
+    "target_range": [
+      3,
+      5
+    ],
+    "gt_k": 4
+  },
+  "dpep": {
+    "enabled": true,
+    "percentile": 70.0,
+    "cap": 0.14,
+    "tau": 0.14,
+    "edge_min_weight_final": 0.14
+  },
+  "cac": {
+    "alpha": 15.0,
+    "beta": 0.14298115432623462,
+    "beta_policy": "median",
+    "mode": "sigmoid",
+    "k_policy": "fixed",
+    "k_used": 6.0,
+    "median_u": null,
+    "n_power": 4.0,
+    "edge_min_weight": 0.14,
+    "res_min": 0.1,
+    "res_max": 8.0,
+    "res_step": 0.05,
+    "autotune": false,
+    "autotune_budget": "default"
+  },
+  "cluster_size_stats": {
+    "Baseline": {
+      "before_merge": {
+        "n_clusters": 3,
+        "n_nodes": 41,
+        "sizes": [
+          3,
+          13,
+          25
+        ],
+        "min": 3,
+        "p25": 8,
+        "median": 13,
+        "p75": 19,
+        "max": 25,
+        "n_singletons": 0,
+        "top10": [
+          25,
+          13,
+          3
+        ]
+      },
+      "after_merge": {
+        "n_clusters": 3,
+        "n_nodes": 41,
+        "sizes": [
+          3,
+          13,
+          25
+        ],
+        "min": 3,
+        "p25": 8,
+        "median": 13,
+        "p75": 19,
+        "max": 25,
+        "n_singletons": 0,
+        "top10": [
+          25,
+          13,
+          3
+        ]
+      }
+    },
+    "CAC-Final": {
+      "before_merge": {
+        "n_clusters": 5,
+        "n_nodes": 41,
+        "sizes": [
+          1,
+          1,
+          1,
+          13,
+          25
+        ],
+        "min": 1,
+        "p25": 1,
+        "median": 1,
+        "p75": 13,
+        "max": 25,
+        "n_singletons": 3,
+        "top10": [
+          25,
+          13,
+          1,
+          1,
+          1
+        ]
+      },
+      "after_merge": {
+        "n_clusters": 5,
+        "n_nodes": 41,
+        "sizes": [
+          1,
+          1,
+          1,
+          13,
+          25
+        ],
+        "min": 1,
+        "p25": 1,
+        "median": 1,
+        "p75": 13,
+        "max": 25,
+        "n_singletons": 3,
+        "top10": [
+          25,
+          13,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  }
+}

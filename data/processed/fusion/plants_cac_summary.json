@@ -1,0 +1,33 @@
+{
+  "system": "plants",
+  "target_range": [
+    3,
+    8
+  ],
+  "baseline": {
+    "Q": 0.02637443673125802,
+    "IFN": 235,
+    "IFN_Ratio": 0.5097613882863341,
+    "Services": 3,
+    "Resolution": 0.9000000000000002
+  },
+  "cac_final": {
+    "Q": 0.012802498536439607,
+    "IFN": 186,
+    "IFN_Ratio": 0.4142538975501114,
+    "Services": 4,
+    "Resolution": 0.8500000000000002
+  },
+  "params": {
+    "mode": "exp",
+    "k": 6.0,
+    "n_power": 4.0,
+    "edge_min_weight": 0.02,
+    "res_min": 0.1,
+    "res_max": 8.0,
+    "res_step": 0.05,
+    "autotune": false,
+    "autotune_budget": "default",
+    "best_resolution": 0.8500000000000002
+  }
+}

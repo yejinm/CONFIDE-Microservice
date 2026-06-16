@@ -18,8 +18,8 @@ services:
     command: ["--config=/etc/otel-collector-config.yaml"]
     volumes:
       - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml:ro
-      - D:/multimodal_microservice_extraction/data/processed/traces:/traces
-      - D:/multimodal_microservice_extraction/data/processed/logs:/logs
+      - ../data/processed/traces:/traces
+      - ../data/processed/logs:/logs
     ports:
       - "4317:4317"
       - "4318:4318"

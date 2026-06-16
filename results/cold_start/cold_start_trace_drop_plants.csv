@@ -1,0 +1,15 @@
+system,drop_rate,seed,traces_before,traces_kept,traces_dropped,method,bcubed_f1,mojosim,pred_k,gt_k,run_dir
+plants,0.0,1337,1860,1860,0,COGCN_SimpleFusion,0.7140152167177332,67.74193548387098,3,4,results/cold_start/run_rate_0.00
+plants,0.0,1337,1860,1860,0,Ours_CAC_withU,0.4541327660555997,51.61290322580645,5,4,results/cold_start/run_rate_0.00
+plants,0.2,1337,1860,1488,372,COGCN_SimpleFusion,0.7140152167177333,67.74193548387098,3,4,results/cold_start/run_rate_0.20
+plants,0.2,1337,1860,1488,372,Ours_CAC_withU,0.4564424770955062,41.93548387096774,5,4,results/cold_start/run_rate_0.20
+plants,0.4,1337,1860,1116,744,COGCN_SimpleFusion,0.7140152167177332,67.74193548387098,3,4,results/cold_start/run_rate_0.40
+plants,0.4,1337,1860,1116,744,Ours_CAC_withU,0.4021515966805642,38.70967741935484,5,4,results/cold_start/run_rate_0.40
+plants,0.6,1337,1860,744,1116,COGCN_SimpleFusion,0.7140152167177333,67.74193548387098,3,4,results/cold_start/run_rate_0.60
+plants,0.6,1337,1860,744,1116,Ours_CAC_withU,0.4004569204775948,38.70967741935484,5,4,results/cold_start/run_rate_0.60
+plants,0.8,1337,1860,372,1488,COGCN_SimpleFusion,0.7140152167177332,67.74193548387098,3,4,results/cold_start/run_rate_0.80
+plants,0.8,1337,1860,372,1488,Ours_CAC_withU,0.4962736713500305,51.61290322580645,5,4,results/cold_start/run_rate_0.80
+plants,0.9,1337,1860,186,1674,COGCN_SimpleFusion,0.7140152167177334,67.74193548387098,3,4,results/cold_start/run_rate_0.90
+plants,0.9,1337,1860,186,1674,Ours_CAC_withU,0.529209110978855,48.38709677419355,4,4,results/cold_start/run_rate_0.90
+plants,0.95,1337,1860,93,1767,COGCN_SimpleFusion,0.7140152167177333,67.74193548387098,3,4,results/cold_start/run_rate_0.95
+plants,0.95,1337,1860,93,1767,Ours_CAC_withU,0.529209110978855,48.38709677419355,4,4,results/cold_start/run_rate_0.95

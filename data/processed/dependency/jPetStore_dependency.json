@@ -1,0 +1,446 @@
+{
+  "nodes": [
+    "org.springframework.samples.jpetstore.dao.AccountDao",
+    "org.springframework.samples.jpetstore.dao.CategoryDao",
+    "org.springframework.samples.jpetstore.dao.ItemDao",
+    "org.springframework.samples.jpetstore.dao.OrderDao",
+    "org.springframework.samples.jpetstore.dao.ProductDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.MsSqlOrderDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.OracleSequenceDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.Sequence",
+    "org.springframework.samples.jpetstore.dao.ibatis.SqlMapAccountDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.SqlMapCategoryDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao",
+    "org.springframework.samples.jpetstore.dao.ibatis.SqlMapSequenceDao",
+    "org.springframework.samples.jpetstore.domain.Account",
+    "org.springframework.samples.jpetstore.domain.Cart",
+    "org.springframework.samples.jpetstore.domain.CartItem",
+    "org.springframework.samples.jpetstore.domain.Category",
+    "org.springframework.samples.jpetstore.domain.Item",
+    "org.springframework.samples.jpetstore.domain.LineItem",
+    "org.springframework.samples.jpetstore.domain.Order",
+    "org.springframework.samples.jpetstore.domain.Product",
+    "org.springframework.samples.jpetstore.domain.logic.AccountValidator",
+    "org.springframework.samples.jpetstore.domain.logic.OrderService",
+    "org.springframework.samples.jpetstore.domain.logic.OrderValidator",
+    "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+    "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+    "org.springframework.samples.jpetstore.domain.logic.SendOrderConfirmationEmailAdvice",
+    "org.springframework.samples.jpetstore.service.JaxRpcOrderService",
+    "org.springframework.samples.jpetstore.service.client.OrderServiceClient",
+    "org.springframework.samples.jpetstore.web.spring.AccountForm",
+    "org.springframework.samples.jpetstore.web.spring.AccountFormController",
+    "org.springframework.samples.jpetstore.web.spring.AddItemToCartController",
+    "org.springframework.samples.jpetstore.web.spring.ListOrdersController",
+    "org.springframework.samples.jpetstore.web.spring.OrderForm",
+    "org.springframework.samples.jpetstore.web.spring.OrderFormController",
+    "org.springframework.samples.jpetstore.web.spring.RemoveItemFromCartController",
+    "org.springframework.samples.jpetstore.web.spring.SearchProductsController",
+    "org.springframework.samples.jpetstore.web.spring.SignoffController",
+    "org.springframework.samples.jpetstore.web.spring.SignonController",
+    "org.springframework.samples.jpetstore.web.spring.SignonInterceptor",
+    "org.springframework.samples.jpetstore.web.spring.UpdateCartQuantitiesController",
+    "org.springframework.samples.jpetstore.web.spring.UserSession",
+    "org.springframework.samples.jpetstore.web.spring.ViewCartController",
+    "org.springframework.samples.jpetstore.web.spring.ViewCategoryController",
+    "org.springframework.samples.jpetstore.web.spring.ViewItemController",
+    "org.springframework.samples.jpetstore.web.spring.ViewOrderController",
+    "org.springframework.samples.jpetstore.web.spring.ViewProductController",
+    "org.springframework.samples.jpetstore.web.struts.AccountActionForm",
+    "org.springframework.samples.jpetstore.web.struts.AddItemToCartAction",
+    "org.springframework.samples.jpetstore.web.struts.BaseAction",
+    "org.springframework.samples.jpetstore.web.struts.BaseActionForm",
+    "org.springframework.samples.jpetstore.web.struts.CartActionForm",
+    "org.springframework.samples.jpetstore.web.struts.DoNothingAction",
+    "org.springframework.samples.jpetstore.web.struts.EditAccountAction",
+    "org.springframework.samples.jpetstore.web.struts.EditAccountFormAction",
+    "org.springframework.samples.jpetstore.web.struts.ListOrdersAction",
+    "org.springframework.samples.jpetstore.web.struts.NewAccountAction",
+    "org.springframework.samples.jpetstore.web.struts.NewAccountFormAction",
+    "org.springframework.samples.jpetstore.web.struts.NewOrderAction",
+    "org.springframework.samples.jpetstore.web.struts.NewOrderFormAction",
+    "org.springframework.samples.jpetstore.web.struts.OrderActionForm",
+    "org.springframework.samples.jpetstore.web.struts.RemoveItemFromCartAction",
+    "org.springframework.samples.jpetstore.web.struts.SearchProductsAction",
+    "org.springframework.samples.jpetstore.web.struts.SecureBaseAction",
+    "org.springframework.samples.jpetstore.web.struts.SignonAction",
+    "org.springframework.samples.jpetstore.web.struts.UpdateCartQuantitiesAction",
+    "org.springframework.samples.jpetstore.web.struts.ViewCartAction",
+    "org.springframework.samples.jpetstore.web.struts.ViewCategoryAction",
+    "org.springframework.samples.jpetstore.web.struts.ViewItemAction",
+    "org.springframework.samples.jpetstore.web.struts.ViewOrderAction",
+    "org.springframework.samples.jpetstore.web.struts.ViewProductAction"
+  ],
+  "edges": [
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao",
+      "target": "org.springframework.samples.jpetstore.dao.ProductDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.dao.OrderDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao",
+      "target": "org.springframework.samples.jpetstore.dao.OrderDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.dao.CategoryDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.dao.AccountDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+      "target": "org.springframework.samples.jpetstore.domain.Category"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.ViewItemAction",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+      "target": "org.springframework.samples.jpetstore.domain.Product"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.UserSession",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapCategoryDao",
+      "target": "org.springframework.samples.jpetstore.domain.Category"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.SendOrderConfirmationEmailAdvice",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.AccountActionForm",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.service.client.OrderServiceClient",
+      "target": "org.springframework.samples.jpetstore.domain.LineItem"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.OrderDao",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.EditAccountAction",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewItemController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.OrderValidator",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ProductDao",
+      "target": "org.springframework.samples.jpetstore.domain.Product"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.RemoveItemFromCartController",
+      "target": "org.springframework.samples.jpetstore.domain.Cart"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.NewAccountAction",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.service.JaxRpcOrderService",
+      "target": "org.springframework.samples.jpetstore.domain.logic.OrderService"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewCategoryController",
+      "target": "org.springframework.samples.jpetstore.domain.Category"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.CategoryDao",
+      "target": "org.springframework.samples.jpetstore.domain.Category"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.CartActionForm",
+      "target": "org.springframework.samples.jpetstore.domain.Cart"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.OrderFormController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.OrderValidator"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.MsSqlOrderDao",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapCategoryDao",
+      "target": "org.springframework.samples.jpetstore.dao.CategoryDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ItemDao",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.NewAccountFormAction",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewCategoryController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.UpdateCartQuantitiesController",
+      "target": "org.springframework.samples.jpetstore.domain.CartItem"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.SignonController",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ListOrdersController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.dao.ProductDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ItemDao",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.UpdateCartQuantitiesAction",
+      "target": "org.springframework.samples.jpetstore.domain.CartItem"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.ViewOrderAction",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewOrderController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.OrderFormController",
+      "target": "org.springframework.samples.jpetstore.domain.Cart"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.domain.Category"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.domain.Product"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.AddItemToCartAction",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.EditAccountFormAction",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao",
+      "target": "org.springframework.samples.jpetstore.domain.LineItem"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.OrderActionForm",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.service.client.OrderServiceClient",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.AddItemToCartController",
+      "target": "org.springframework.samples.jpetstore.domain.Cart"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.OrderForm",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.AddItemToCartController",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewCartController",
+      "target": "org.springframework.samples.jpetstore.domain.Cart"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.dao.ItemDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.OrderFormController",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.AccountValidator",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.SignonController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewOrderController",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.BaseAction",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.AccountFormController",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.UpdateCartQuantitiesController",
+      "target": "org.springframework.samples.jpetstore.domain.Cart"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao",
+      "target": "org.springframework.samples.jpetstore.domain.Product"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.NewOrderFormAction",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewProductController",
+      "target": "org.springframework.samples.jpetstore.domain.Product"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapAccountDao",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.OrderService",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.SendOrderConfirmationEmailAdvice",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewProductController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.OrderFormController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.SearchProductsController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.ViewItemController",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao",
+      "target": "org.springframework.samples.jpetstore.domain.LineItem"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.AccountDao",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.service.client.OrderServiceClient",
+      "target": "org.springframework.samples.jpetstore.domain.logic.OrderService"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.NewOrderAction",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.AccountFormController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.ViewCategoryAction",
+      "target": "org.springframework.samples.jpetstore.domain.Category"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.service.JaxRpcOrderService",
+      "target": "org.springframework.samples.jpetstore.domain.Order"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.AccountForm",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.spring.AddItemToCartController",
+      "target": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.ViewProductAction",
+      "target": "org.springframework.samples.jpetstore.domain.Product"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao",
+      "target": "org.springframework.samples.jpetstore.dao.ItemDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.SignonAction",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.web.struts.AddItemToCartAction",
+      "target": "org.springframework.samples.jpetstore.domain.Cart"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapAccountDao",
+      "target": "org.springframework.samples.jpetstore.dao.AccountDao"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.MsSqlOrderDao",
+      "target": "org.springframework.samples.jpetstore.domain.LineItem"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+      "target": "org.springframework.samples.jpetstore.domain.Account"
+    },
+    {
+      "source": "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao",
+      "target": "org.springframework.samples.jpetstore.domain.Item"
+    }
+  ]
+}

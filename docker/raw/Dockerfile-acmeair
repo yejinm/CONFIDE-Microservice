@@ -1,0 +1,7 @@
+FROM openliberty/open-liberty:25.0.0.3-full-java8-ibmjava-ubi-amd64
+
+WORKDIR /config
+
+COPY acmeair-webapp/build/libs/acmeair-webapp-2.0.0-SNAPSHOT.war /config/dropins/acmeair.war
+
+EXPOSE 9080

@@ -1,0 +1,4257 @@
+{
+  "nodes": [
+    "com.acmeair.config.AcmeAirConfiguration.countAirports",
+    "com.acmeair.config.AcmeAirConfiguration.countBookings",
+    "com.acmeair.config.AcmeAirConfiguration.countCustomer",
+    "com.acmeair.config.AcmeAirConfiguration.countCustomerSessions",
+    "com.acmeair.config.AcmeAirConfiguration.countFlightSegments",
+    "com.acmeair.config.AcmeAirConfiguration.countFlights",
+    "com.acmeair.config.AcmeAirConfiguration.getActiveDataServiceInfo",
+    "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+    "com.acmeair.config.AcmeAirConfiguration.getRuntimeInfo",
+    "com.acmeair.config.AcmeAirConfiguration.initialization",
+    "com.acmeair.config.LoaderREST.loadDB",
+    "com.acmeair.config.LoaderREST.queryLoader",
+    "com.acmeair.entities.AirportCodeMapping.getAirportCode",
+    "com.acmeair.entities.AirportCodeMapping.getAirportName",
+    "com.acmeair.entities.AirportCodeMapping.setAirportCode",
+    "com.acmeair.entities.AirportCodeMapping.setAirportName",
+    "com.acmeair.entities.Booking.getBookingId",
+    "com.acmeair.entities.Booking.getCustomerId",
+    "com.acmeair.entities.Booking.getDateOfBooking",
+    "com.acmeair.entities.Booking.getFlightId",
+    "com.acmeair.entities.BookingPK.getCustomerId",
+    "com.acmeair.entities.BookingPK.getId",
+    "com.acmeair.entities.Customer.PhoneType.valueOf",
+    "com.acmeair.entities.Customer.getAddress",
+    "com.acmeair.entities.Customer.getCustomerId",
+    "com.acmeair.entities.Customer.getMiles_ytd",
+    "com.acmeair.entities.Customer.getPassword",
+    "com.acmeair.entities.Customer.getPhoneNumber",
+    "com.acmeair.entities.Customer.getPhoneNumberType",
+    "com.acmeair.entities.Customer.getStatus",
+    "com.acmeair.entities.Customer.getTotal_miles",
+    "com.acmeair.entities.Customer.getUsername",
+    "com.acmeair.entities.Customer.setAddress",
+    "com.acmeair.entities.Customer.setPassword",
+    "com.acmeair.entities.Customer.setPhoneNumber",
+    "com.acmeair.entities.Customer.setPhoneNumberType",
+    "com.acmeair.entities.Customer.setStatus",
+    "com.acmeair.entities.Customer.setUsername",
+    "com.acmeair.entities.CustomerAddress.getCity",
+    "com.acmeair.entities.CustomerAddress.getCountry",
+    "com.acmeair.entities.CustomerAddress.getPostalCode",
+    "com.acmeair.entities.CustomerAddress.getStateProvince",
+    "com.acmeair.entities.CustomerAddress.getStreetAddress1",
+    "com.acmeair.entities.CustomerAddress.getStreetAddress2",
+    "com.acmeair.entities.CustomerAddress.setCity",
+    "com.acmeair.entities.CustomerAddress.setCountry",
+    "com.acmeair.entities.CustomerAddress.setPostalCode",
+    "com.acmeair.entities.CustomerAddress.setStateProvince",
+    "com.acmeair.entities.CustomerAddress.setStreetAddress1",
+    "com.acmeair.entities.CustomerAddress.setStreetAddress2",
+    "com.acmeair.entities.CustomerSession.getCustomerid",
+    "com.acmeair.entities.CustomerSession.getId",
+    "com.acmeair.entities.CustomerSession.getLastAccessedTime",
+    "com.acmeair.entities.CustomerSession.getTimeoutTime",
+    "com.acmeair.entities.Flight.getAirplaneTypeId",
+    "com.acmeair.entities.Flight.getEconomyClassBaseCost",
+    "com.acmeair.entities.Flight.getFirstClassBaseCost",
+    "com.acmeair.entities.Flight.getFlightId",
+    "com.acmeair.entities.Flight.getFlightSegment",
+    "com.acmeair.entities.Flight.getFlightSegmentId",
+    "com.acmeair.entities.Flight.getNumEconomyClassSeats",
+    "com.acmeair.entities.Flight.getNumFirstClassSeats",
+    "com.acmeair.entities.Flight.getScheduledArrivalTime",
+    "com.acmeair.entities.Flight.getScheduledDepartureTime",
+    "com.acmeair.entities.Flight.setFlightId",
+    "com.acmeair.entities.Flight.setFlightSegment",
+    "com.acmeair.entities.FlightSegment.getDestPort",
+    "com.acmeair.entities.FlightSegment.getFlightName",
+    "com.acmeair.entities.FlightSegment.getMiles",
+    "com.acmeair.entities.FlightSegment.getOriginPort",
+    "com.acmeair.loader.CustomerLoader.loadCustomers",
+    "com.acmeair.loader.CustomerLoader.setCustomerService",
+    "com.acmeair.loader.FlightLoader.alreadyInCollection",
+    "com.acmeair.loader.FlightLoader.getArrivalTime",
+    "com.acmeair.loader.FlightLoader.loadFlights",
+    "com.acmeair.loader.FlightLoader.setFlightService",
+    "com.acmeair.loader.Loader.execute",
+    "com.acmeair.loader.Loader.getProperties",
+    "com.acmeair.loader.Loader.loadDB",
+    "com.acmeair.loader.Loader.lookupDefaults",
+    "com.acmeair.loader.Loader.main",
+    "com.acmeair.loader.Loader.queryLoader",
+    "com.acmeair.morphia.BigDecimalConverter.decode",
+    "com.acmeair.morphia.BigDecimalConverter.encode",
+    "com.acmeair.morphia.BigIntegerConverter.decode",
+    "com.acmeair.morphia.BigIntegerConverter.encode",
+    "com.acmeair.morphia.DatastoreFactory.getDatastore",
+    "com.acmeair.morphia.entities.AirportCodeMappingImpl.getAirportCode",
+    "com.acmeair.morphia.entities.AirportCodeMappingImpl.getAirportName",
+    "com.acmeair.morphia.entities.AirportCodeMappingImpl.setAirportCode",
+    "com.acmeair.morphia.entities.AirportCodeMappingImpl.setAirportName",
+    "com.acmeair.morphia.entities.BookingImpl.equals",
+    "com.acmeair.morphia.entities.BookingImpl.getBookingId",
+    "com.acmeair.morphia.entities.BookingImpl.getCustomerId",
+    "com.acmeair.morphia.entities.BookingImpl.getDateOfBooking",
+    "com.acmeair.morphia.entities.BookingImpl.getFlightId",
+    "com.acmeair.morphia.entities.BookingImpl.setBookingId",
+    "com.acmeair.morphia.entities.BookingImpl.setCustomer",
+    "com.acmeair.morphia.entities.BookingImpl.setDateOfBooking",
+    "com.acmeair.morphia.entities.BookingImpl.setFlightId",
+    "com.acmeair.morphia.entities.BookingImpl.toString",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.equals",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.getCity",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.getCountry",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.getPostalCode",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.getStateProvince",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.getStreetAddress1",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.getStreetAddress2",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.setCity",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.setCountry",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.setPostalCode",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.setStateProvince",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.setStreetAddress1",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.setStreetAddress2",
+    "com.acmeair.morphia.entities.CustomerAddressImpl.toString",
+    "com.acmeair.morphia.entities.CustomerImpl.equals",
+    "com.acmeair.morphia.entities.CustomerImpl.getAddress",
+    "com.acmeair.morphia.entities.CustomerImpl.getCustomerId",
+    "com.acmeair.morphia.entities.CustomerImpl.getMiles_ytd",
+    "com.acmeair.morphia.entities.CustomerImpl.getPassword",
+    "com.acmeair.morphia.entities.CustomerImpl.getPhoneNumber",
+    "com.acmeair.morphia.entities.CustomerImpl.getPhoneNumberType",
+    "com.acmeair.morphia.entities.CustomerImpl.getStatus",
+    "com.acmeair.morphia.entities.CustomerImpl.getTotal_miles",
+    "com.acmeair.morphia.entities.CustomerImpl.getUsername",
+    "com.acmeair.morphia.entities.CustomerImpl.setAddress",
+    "com.acmeair.morphia.entities.CustomerImpl.setMiles_ytd",
+    "com.acmeair.morphia.entities.CustomerImpl.setPassword",
+    "com.acmeair.morphia.entities.CustomerImpl.setPhoneNumber",
+    "com.acmeair.morphia.entities.CustomerImpl.setPhoneNumberType",
+    "com.acmeair.morphia.entities.CustomerImpl.setStatus",
+    "com.acmeair.morphia.entities.CustomerImpl.setTotal_miles",
+    "com.acmeair.morphia.entities.CustomerImpl.setUsername",
+    "com.acmeair.morphia.entities.CustomerImpl.toString",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.equals",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.getCustomerid",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.getId",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.getLastAccessedTime",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.getTimeoutTime",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.setCustomerid",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.setId",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.setLastAccessedTime",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.setTimeoutTime",
+    "com.acmeair.morphia.entities.CustomerSessionImpl.toString",
+    "com.acmeair.morphia.entities.FlightImpl.equals",
+    "com.acmeair.morphia.entities.FlightImpl.getAirplaneTypeId",
+    "com.acmeair.morphia.entities.FlightImpl.getEconomyClassBaseCost",
+    "com.acmeair.morphia.entities.FlightImpl.getFirstClassBaseCost",
+    "com.acmeair.morphia.entities.FlightImpl.getFlightId",
+    "com.acmeair.morphia.entities.FlightImpl.getFlightSegment",
+    "com.acmeair.morphia.entities.FlightImpl.getFlightSegmentId",
+    "com.acmeair.morphia.entities.FlightImpl.getNumEconomyClassSeats",
+    "com.acmeair.morphia.entities.FlightImpl.getNumFirstClassSeats",
+    "com.acmeair.morphia.entities.FlightImpl.getScheduledArrivalTime",
+    "com.acmeair.morphia.entities.FlightImpl.getScheduledDepartureTime",
+    "com.acmeair.morphia.entities.FlightImpl.setAirplaneTypeId",
+    "com.acmeair.morphia.entities.FlightImpl.setEconomyClassBaseCost",
+    "com.acmeair.morphia.entities.FlightImpl.setFirstClassBaseCost",
+    "com.acmeair.morphia.entities.FlightImpl.setFlightId",
+    "com.acmeair.morphia.entities.FlightImpl.setFlightSegment",
+    "com.acmeair.morphia.entities.FlightImpl.setFlightSegmentId",
+    "com.acmeair.morphia.entities.FlightImpl.setNumEconomyClassSeats",
+    "com.acmeair.morphia.entities.FlightImpl.setNumFirstClassSeats",
+    "com.acmeair.morphia.entities.FlightImpl.setScheduledArrivalTime",
+    "com.acmeair.morphia.entities.FlightImpl.setScheduledDepartureTime",
+    "com.acmeair.morphia.entities.FlightImpl.toString",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.equals",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.getDestPort",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.getFlightName",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.getMiles",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.getOriginPort",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.setDestPort",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.setFlightName",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.setMiles",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.setOriginPort",
+    "com.acmeair.morphia.entities.FlightSegmentImpl.toString",
+    "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+    "com.acmeair.morphia.services.BookingServiceImpl.cancelBooking",
+    "com.acmeair.morphia.services.BookingServiceImpl.count",
+    "com.acmeair.morphia.services.BookingServiceImpl.getBooking",
+    "com.acmeair.morphia.services.BookingServiceImpl.getBookingsByUser",
+    "com.acmeair.morphia.services.BookingServiceImpl.initialization",
+    "com.acmeair.morphia.services.CustomerServiceImpl.count",
+    "com.acmeair.morphia.services.CustomerServiceImpl.countSessions",
+    "com.acmeair.morphia.services.CustomerServiceImpl.createAddress",
+    "com.acmeair.morphia.services.CustomerServiceImpl.createCustomer",
+    "com.acmeair.morphia.services.CustomerServiceImpl.createSession",
+    "com.acmeair.morphia.services.CustomerServiceImpl.getCustomer",
+    "com.acmeair.morphia.services.CustomerServiceImpl.getCustomerByUsername",
+    "com.acmeair.morphia.services.CustomerServiceImpl.getSession",
+    "com.acmeair.morphia.services.CustomerServiceImpl.initialization",
+    "com.acmeair.morphia.services.CustomerServiceImpl.invalidateSession",
+    "com.acmeair.morphia.services.CustomerServiceImpl.removeSession",
+    "com.acmeair.morphia.services.CustomerServiceImpl.updateCustomer",
+    "com.acmeair.morphia.services.FlightServiceImpl.countAirports",
+    "com.acmeair.morphia.services.FlightServiceImpl.countFlightSegments",
+    "com.acmeair.morphia.services.FlightServiceImpl.countFlights",
+    "com.acmeair.morphia.services.FlightServiceImpl.createAirportCodeMapping",
+    "com.acmeair.morphia.services.FlightServiceImpl.createNewFlight",
+    "com.acmeair.morphia.services.FlightServiceImpl.getFlight",
+    "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+    "com.acmeair.morphia.services.FlightServiceImpl.getFlightSegment",
+    "com.acmeair.morphia.services.FlightServiceImpl.initialization",
+    "com.acmeair.morphia.services.FlightServiceImpl.storeAirportMapping",
+    "com.acmeair.morphia.services.FlightServiceImpl.storeFlightSegment",
+    "com.acmeair.morphia.services.util.MongoConnectionManager.getConnectionManager",
+    "com.acmeair.morphia.services.util.MongoConnectionManager.getDB",
+    "com.acmeair.morphia.services.util.MongoConnectionManager.getDatastore",
+    "com.acmeair.morphia.services.util.MongoConnectionManager.getDriverVersion",
+    "com.acmeair.morphia.services.util.MongoConnectionManager.getMongoVersion",
+    "com.acmeair.reporter.ReportGenerator.addCpuStats",
+    "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+    "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+    "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+    "com.acmeair.reporter.ReportGenerator.getTotals",
+    "com.acmeair.reporter.ReportGenerator.main",
+    "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+    "com.acmeair.reporter.ReportGenerator.process",
+    "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+    "com.acmeair.reporter.parser.IndividualChartResults.getFilesCount",
+    "com.acmeair.reporter.parser.IndividualChartResults.getInputList",
+    "com.acmeair.reporter.parser.IndividualChartResults.getTimeList",
+    "com.acmeair.reporter.parser.IndividualChartResults.getTitle",
+    "com.acmeair.reporter.parser.IndividualChartResults.incrementFiles",
+    "com.acmeair.reporter.parser.IndividualChartResults.setInputList",
+    "com.acmeair.reporter.parser.IndividualChartResults.setTimeList",
+    "com.acmeair.reporter.parser.IndividualChartResults.setTitle",
+    "com.acmeair.reporter.parser.MultipleChartResults.getCharStrings",
+    "com.acmeair.reporter.parser.MultipleChartResults.getMultipleChartTitle",
+    "com.acmeair.reporter.parser.MultipleChartResults.getMultipleChartYAxisLabel",
+    "com.acmeair.reporter.parser.MultipleChartResults.getResults",
+    "com.acmeair.reporter.parser.MultipleChartResults.setCharStrings",
+    "com.acmeair.reporter.parser.MultipleChartResults.setMultipleChartTitle",
+    "com.acmeair.reporter.parser.MultipleChartResults.setMultipleChartYAxisLabel",
+    "com.acmeair.reporter.parser.MultipleChartResults.setResults",
+    "com.acmeair.reporter.parser.OverallResults.getAllInputList",
+    "com.acmeair.reporter.parser.OverallResults.getAllTimeList",
+    "com.acmeair.reporter.parser.OverallResults.getOverallScale_max",
+    "com.acmeair.reporter.parser.OverallResults.getScale_max",
+    "com.acmeair.reporter.parser.OverallResults.setAllInputList",
+    "com.acmeair.reporter.parser.OverallResults.setAllTimeList",
+    "com.acmeair.reporter.parser.OverallResults.setOverallScale_max",
+    "com.acmeair.reporter.parser.OverallResults.setScale_max",
+    "com.acmeair.reporter.parser.ResultParser.addUp",
+    "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+    "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+    "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+    "com.acmeair.reporter.parser.ResultParser.getAllInputList",
+    "com.acmeair.reporter.parser.ResultParser.getAllTimeList",
+    "com.acmeair.reporter.parser.ResultParser.getCharStrings",
+    "com.acmeair.reporter.parser.ResultParser.getData",
+    "com.acmeair.reporter.parser.ResultParser.getFileName",
+    "com.acmeair.reporter.parser.ResultParser.getMultipleChartResults",
+    "com.acmeair.reporter.parser.ResultParser.getMultipleChartTitle",
+    "com.acmeair.reporter.parser.ResultParser.getMultipleYAxisLabel",
+    "com.acmeair.reporter.parser.ResultParser.getResults",
+    "com.acmeair.reporter.parser.ResultParser.processData",
+    "com.acmeair.reporter.parser.ResultParser.processDirectory",
+    "com.acmeair.reporter.parser.ResultParser.processFile",
+    "com.acmeair.reporter.parser.ResultParser.processLine",
+    "com.acmeair.reporter.parser.ResultParser.processMultiLineData",
+    "com.acmeair.reporter.parser.ResultParser.setFileName",
+    "com.acmeair.reporter.parser.ResultParser.setMultipleChartTitle",
+    "com.acmeair.reporter.parser.ResultParser.setMultipleYAxisLabel",
+    "com.acmeair.reporter.parser.ResultParserHelper.getColor",
+    "com.acmeair.reporter.parser.ResultParserHelper.scaleDown",
+    "com.acmeair.reporter.parser.ResultParserHelper.scaleInputsData",
+    "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+    "com.acmeair.reporter.parser.component.JmeterJTLParser.getResults",
+    "com.acmeair.reporter.parser.component.JmeterJTLParser.getResultsByUrl",
+    "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+    "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory",
+    "com.acmeair.reporter.parser.component.JmeterJTLParser.setLogFileName",
+    "com.acmeair.reporter.parser.component.JmeterSummariserParser.getFileName",
+    "com.acmeair.reporter.parser.component.JmeterSummariserParser.getTestDate",
+    "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+    "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+    "com.acmeair.reporter.parser.component.JmeterSummariserParser.setFileName",
+    "com.acmeair.reporter.parser.component.JtlTotals.add",
+    "com.acmeair.reporter.parser.component.JtlTotals.addFlightRetCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.addReturnCode",
+    "com.acmeair.reporter.parser.component.JtlTotals.addTime",
+    "com.acmeair.reporter.parser.component.JtlTotals.addTimestamp",
+    "com.acmeair.reporter.parser.component.JtlTotals.addToFlight",
+    "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+    "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+    "com.acmeair.reporter.parser.component.JtlTotals.get90thPrecentile",
+    "com.acmeair.reporter.parser.component.JtlTotals.getAverageResponseTime",
+    "com.acmeair.reporter.parser.component.JtlTotals.getAverageToFlights",
+    "com.acmeair.reporter.parser.component.JtlTotals.getCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.getElapsedTimeInSeconds",
+    "com.acmeair.reporter.parser.component.JtlTotals.getEmptyToFlightCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.getFailures",
+    "com.acmeair.reporter.parser.component.JtlTotals.getFilesCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.getFlightRetCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.getFlightToCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.getFlightToSum",
+    "com.acmeair.reporter.parser.component.JtlTotals.getMaxResponseTime",
+    "com.acmeair.reporter.parser.component.JtlTotals.getMillisMap",
+    "com.acmeair.reporter.parser.component.JtlTotals.getMinResponseTime",
+    "com.acmeair.reporter.parser.component.JtlTotals.getOneWayCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.getRequestsPerSecond",
+    "com.acmeair.reporter.parser.component.JtlTotals.getResponseTimeStepping",
+    "com.acmeair.reporter.parser.component.JtlTotals.getReturnCodeCounts",
+    "com.acmeair.reporter.parser.component.JtlTotals.getThreadMap",
+    "com.acmeair.reporter.parser.component.JtlTotals.incrementFailures",
+    "com.acmeair.reporter.parser.component.JtlTotals.incrementFiles",
+    "com.acmeair.reporter.parser.component.JtlTotals.incrementOneWayCount",
+    "com.acmeair.reporter.parser.component.JtlTotals.setResponseTimeStepping",
+    "com.acmeair.reporter.parser.component.JtlTotals.setThreadMap",
+    "com.acmeair.reporter.parser.component.NmonParser.getFileName",
+    "com.acmeair.reporter.parser.component.NmonParser.processFile",
+    "com.acmeair.reporter.parser.component.NmonParser.processLine",
+    "com.acmeair.reporter.parser.component.NmonParser.setFileName",
+    "com.acmeair.reporter.util.Messages.getConfiguration",
+    "com.acmeair.reporter.util.Messages.getString",
+    "com.acmeair.reporter.util.StatResult.getAverage",
+    "com.acmeair.reporter.util.StatResult.getCount",
+    "com.acmeair.reporter.util.StatResult.getMax",
+    "com.acmeair.reporter.util.StatResult.getMin",
+    "com.acmeair.reporter.util.StatResult.getNumberOfResults",
+    "com.acmeair.reporter.util.StatResult.getStatistics",
+    "com.acmeair.reporter.util.StatResult.getSum",
+    "com.acmeair.reporter.util.StatResult.setAverage",
+    "com.acmeair.reporter.util.StatResult.setCount",
+    "com.acmeair.reporter.util.StatResult.setMax",
+    "com.acmeair.reporter.util.StatResult.setMin",
+    "com.acmeair.reporter.util.StatResult.setNumberOfResults",
+    "com.acmeair.reporter.util.StatResult.setSum",
+    "com.acmeair.service.BookingService.bookFlight",
+    "com.acmeair.service.BookingService.cancelBooking",
+    "com.acmeair.service.BookingService.count",
+    "com.acmeair.service.BookingService.getBooking",
+    "com.acmeair.service.BookingService.getBookingsByUser",
+    "com.acmeair.service.CustomerService.count",
+    "com.acmeair.service.CustomerService.countSessions",
+    "com.acmeair.service.CustomerService.createAddress",
+    "com.acmeair.service.CustomerService.createCustomer",
+    "com.acmeair.service.CustomerService.createSession",
+    "com.acmeair.service.CustomerService.getCustomer",
+    "com.acmeair.service.CustomerService.getCustomerByUsername",
+    "com.acmeair.service.CustomerService.getCustomerByUsernameAndPassword",
+    "com.acmeair.service.CustomerService.getSession",
+    "com.acmeair.service.CustomerService.invalidateSession",
+    "com.acmeair.service.CustomerService.removeSession",
+    "com.acmeair.service.CustomerService.updateCustomer",
+    "com.acmeair.service.CustomerService.validateCustomer",
+    "com.acmeair.service.CustomerService.validateSession",
+    "com.acmeair.service.DataService.description",
+    "com.acmeair.service.DataService.name",
+    "com.acmeair.service.FlightService.countAirports",
+    "com.acmeair.service.FlightService.countFlightSegments",
+    "com.acmeair.service.FlightService.countFlights",
+    "com.acmeair.service.FlightService.createAirportCodeMapping",
+    "com.acmeair.service.FlightService.createNewFlight",
+    "com.acmeair.service.FlightService.getFlight",
+    "com.acmeair.service.FlightService.getFlightByAirports",
+    "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+    "com.acmeair.service.FlightService.getFlightByFlightId",
+    "com.acmeair.service.FlightService.getFlightBySegment",
+    "com.acmeair.service.FlightService.getFlightSegment",
+    "com.acmeair.service.FlightService.storeAirportMapping",
+    "com.acmeair.service.FlightService.storeFlightSegment",
+    "com.acmeair.service.KeyGenerator.generate",
+    "com.acmeair.service.ServiceLocator.getService",
+    "com.acmeair.service.ServiceLocator.getServiceType",
+    "com.acmeair.service.ServiceLocator.getServices",
+    "com.acmeair.service.ServiceLocator.initialization",
+    "com.acmeair.service.ServiceLocator.instance",
+    "com.acmeair.service.ServiceLocator.updateService",
+    "com.acmeair.service.TransactionService.prepareForTransaction",
+    "com.acmeair.web.AcmeAirApp.getClasses",
+    "com.acmeair.web.AppConfig.getClasses",
+    "com.acmeair.web.BookingsREST.bookFlights",
+    "com.acmeair.web.BookingsREST.cancelBookingsByNumber",
+    "com.acmeair.web.BookingsREST.getBookingByNumber",
+    "com.acmeair.web.BookingsREST.getBookingsByUser",
+    "com.acmeair.web.CustomerREST.getCustomer",
+    "com.acmeair.web.CustomerREST.putCustomer",
+    "com.acmeair.web.CustomerREST.validate",
+    "com.acmeair.web.FlightsREST.browseFlights",
+    "com.acmeair.web.FlightsREST.getTripFlights",
+    "com.acmeair.web.LoginREST.login",
+    "com.acmeair.web.LoginREST.logout",
+    "com.acmeair.web.RESTCookieSessionFilter.destroy",
+    "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+    "com.acmeair.web.RESTCookieSessionFilter.init",
+    "com.acmeair.web.dto.AddressInfo.equals",
+    "com.acmeair.web.dto.AddressInfo.getCity",
+    "com.acmeair.web.dto.AddressInfo.getCountry",
+    "com.acmeair.web.dto.AddressInfo.getPostalCode",
+    "com.acmeair.web.dto.AddressInfo.getStateProvince",
+    "com.acmeair.web.dto.AddressInfo.getStreetAddress1",
+    "com.acmeair.web.dto.AddressInfo.getStreetAddress2",
+    "com.acmeair.web.dto.AddressInfo.setCity",
+    "com.acmeair.web.dto.AddressInfo.setCountry",
+    "com.acmeair.web.dto.AddressInfo.setPostalCode",
+    "com.acmeair.web.dto.AddressInfo.setStateProvince",
+    "com.acmeair.web.dto.AddressInfo.setStreetAddress1",
+    "com.acmeair.web.dto.AddressInfo.setStreetAddress2",
+    "com.acmeair.web.dto.AddressInfo.toString",
+    "com.acmeair.web.dto.BookingInfo.getBookingId",
+    "com.acmeair.web.dto.BookingInfo.getCustomerId",
+    "com.acmeair.web.dto.BookingInfo.getDateOfBooking",
+    "com.acmeair.web.dto.BookingInfo.getFlightId",
+    "com.acmeair.web.dto.BookingInfo.getPkey",
+    "com.acmeair.web.dto.BookingInfo.setBookingId",
+    "com.acmeair.web.dto.BookingInfo.setCustomerId",
+    "com.acmeair.web.dto.BookingInfo.setDateOfBooking",
+    "com.acmeair.web.dto.BookingInfo.setFlightId",
+    "com.acmeair.web.dto.BookingPKInfo.getCustomerId",
+    "com.acmeair.web.dto.BookingPKInfo.getId",
+    "com.acmeair.web.dto.BookingPKInfo.setCustomerId",
+    "com.acmeair.web.dto.BookingPKInfo.setId",
+    "com.acmeair.web.dto.BookingReceiptInfo.getDepartBookingId",
+    "com.acmeair.web.dto.BookingReceiptInfo.getReturnBookingId",
+    "com.acmeair.web.dto.BookingReceiptInfo.isOneWay",
+    "com.acmeair.web.dto.BookingReceiptInfo.setDepartBookingId",
+    "com.acmeair.web.dto.BookingReceiptInfo.setOneWay",
+    "com.acmeair.web.dto.BookingReceiptInfo.setReturnBookingId",
+    "com.acmeair.web.dto.BookingReceiptInfo.toString",
+    "com.acmeair.web.dto.CustomerInfo.equals",
+    "com.acmeair.web.dto.CustomerInfo.getAddress",
+    "com.acmeair.web.dto.CustomerInfo.getMiles_ytd",
+    "com.acmeair.web.dto.CustomerInfo.getPassword",
+    "com.acmeair.web.dto.CustomerInfo.getPhoneNumber",
+    "com.acmeair.web.dto.CustomerInfo.getPhoneNumberType",
+    "com.acmeair.web.dto.CustomerInfo.getStatus",
+    "com.acmeair.web.dto.CustomerInfo.getTotal_miles",
+    "com.acmeair.web.dto.CustomerInfo.getUsername",
+    "com.acmeair.web.dto.CustomerInfo.setAddress",
+    "com.acmeair.web.dto.CustomerInfo.setMiles_ytd",
+    "com.acmeair.web.dto.CustomerInfo.setPassword",
+    "com.acmeair.web.dto.CustomerInfo.setPhoneNumber",
+    "com.acmeair.web.dto.CustomerInfo.setPhoneNumberType",
+    "com.acmeair.web.dto.CustomerInfo.setStatus",
+    "com.acmeair.web.dto.CustomerInfo.setTotal_miles",
+    "com.acmeair.web.dto.CustomerInfo.setUsername",
+    "com.acmeair.web.dto.CustomerInfo.toString",
+    "com.acmeair.web.dto.FlightInfo.getAirplaneTypeId",
+    "com.acmeair.web.dto.FlightInfo.getEconomyClassBaseCost",
+    "com.acmeair.web.dto.FlightInfo.getFirstClassBaseCost",
+    "com.acmeair.web.dto.FlightInfo.getFlightSegment",
+    "com.acmeair.web.dto.FlightInfo.getFlightSegmentId",
+    "com.acmeair.web.dto.FlightInfo.getNumEconomyClassSeats",
+    "com.acmeair.web.dto.FlightInfo.getNumFirstClassSeats",
+    "com.acmeair.web.dto.FlightInfo.getPkey",
+    "com.acmeair.web.dto.FlightInfo.getScheduledArrivalTime",
+    "com.acmeair.web.dto.FlightInfo.getScheduledDepartureTime",
+    "com.acmeair.web.dto.FlightInfo.get_id",
+    "com.acmeair.web.dto.FlightInfo.setAirplaneTypeId",
+    "com.acmeair.web.dto.FlightInfo.setEconomyClassBaseCost",
+    "com.acmeair.web.dto.FlightInfo.setFirstClassBaseCost",
+    "com.acmeair.web.dto.FlightInfo.setFlightSegment",
+    "com.acmeair.web.dto.FlightInfo.setFlightSegmentId",
+    "com.acmeair.web.dto.FlightInfo.setNumEconomyClassSeats",
+    "com.acmeair.web.dto.FlightInfo.setNumFirstClassSeats",
+    "com.acmeair.web.dto.FlightInfo.setScheduledArrivalTime",
+    "com.acmeair.web.dto.FlightInfo.setScheduledDepartureTime",
+    "com.acmeair.web.dto.FlightInfo.set_id",
+    "com.acmeair.web.dto.FlightPKInfo.getFlightSegmentId",
+    "com.acmeair.web.dto.FlightPKInfo.getId",
+    "com.acmeair.web.dto.FlightPKInfo.setFlightSegmentId",
+    "com.acmeair.web.dto.FlightPKInfo.setId",
+    "com.acmeair.web.dto.FlightSegmentInfo.getDestPort",
+    "com.acmeair.web.dto.FlightSegmentInfo.getMiles",
+    "com.acmeair.web.dto.FlightSegmentInfo.getOriginPort",
+    "com.acmeair.web.dto.FlightSegmentInfo.get_id",
+    "com.acmeair.web.dto.FlightSegmentInfo.setDestPort",
+    "com.acmeair.web.dto.FlightSegmentInfo.setMiles",
+    "com.acmeair.web.dto.FlightSegmentInfo.setOriginPort",
+    "com.acmeair.web.dto.FlightSegmentInfo.set_id",
+    "com.acmeair.web.dto.TripFlightOptions.getTripFlights",
+    "com.acmeair.web.dto.TripFlightOptions.getTripLegs",
+    "com.acmeair.web.dto.TripFlightOptions.setTripFlights",
+    "com.acmeair.web.dto.TripFlightOptions.setTripLegs",
+    "com.acmeair.web.dto.TripLegInfo.getCurrentPage",
+    "com.acmeair.web.dto.TripLegInfo.getFlightsOptions",
+    "com.acmeair.web.dto.TripLegInfo.getNumPages",
+    "com.acmeair.web.dto.TripLegInfo.getPageSize",
+    "com.acmeair.web.dto.TripLegInfo.isHasMoreOptions",
+    "com.acmeair.web.dto.TripLegInfo.setCurrentPage",
+    "com.acmeair.web.dto.TripLegInfo.setFlightsOptions",
+    "com.acmeair.web.dto.TripLegInfo.setHasMoreOptions",
+    "com.acmeair.web.dto.TripLegInfo.setNumPages",
+    "com.acmeair.web.dto.TripLegInfo.setPageSize",
+    "com.acmeair.wxs.entities.AirportCodeMappingImpl.getAirportCode",
+    "com.acmeair.wxs.entities.AirportCodeMappingImpl.getAirportName",
+    "com.acmeair.wxs.entities.AirportCodeMappingImpl.setAirportCode",
+    "com.acmeair.wxs.entities.AirportCodeMappingImpl.setAirportName",
+    "com.acmeair.wxs.entities.BookingImpl.equals",
+    "com.acmeair.wxs.entities.BookingImpl.getBookingId",
+    "com.acmeair.wxs.entities.BookingImpl.getCustomer",
+    "com.acmeair.wxs.entities.BookingImpl.getCustomerId",
+    "com.acmeair.wxs.entities.BookingImpl.getDateOfBooking",
+    "com.acmeair.wxs.entities.BookingImpl.getFlight",
+    "com.acmeair.wxs.entities.BookingImpl.getFlightId",
+    "com.acmeair.wxs.entities.BookingImpl.getFlightKey",
+    "com.acmeair.wxs.entities.BookingImpl.getPkey",
+    "com.acmeair.wxs.entities.BookingImpl.setCustomer",
+    "com.acmeair.wxs.entities.BookingImpl.setDateOfBooking",
+    "com.acmeair.wxs.entities.BookingImpl.setFlight",
+    "com.acmeair.wxs.entities.BookingImpl.setFlightKey",
+    "com.acmeair.wxs.entities.BookingImpl.setPkey",
+    "com.acmeair.wxs.entities.BookingImpl.toString",
+    "com.acmeair.wxs.entities.BookingPKImpl.equals",
+    "com.acmeair.wxs.entities.BookingPKImpl.getCustomerId",
+    "com.acmeair.wxs.entities.BookingPKImpl.getId",
+    "com.acmeair.wxs.entities.BookingPKImpl.hashCode",
+    "com.acmeair.wxs.entities.BookingPKImpl.ibmGetPartition",
+    "com.acmeair.wxs.entities.BookingPKImpl.setCustomerId",
+    "com.acmeair.wxs.entities.BookingPKImpl.setId",
+    "com.acmeair.wxs.entities.BookingPKImpl.toString",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.equals",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.getCity",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.getCountry",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.getPostalCode",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.getStateProvince",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.getStreetAddress1",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.getStreetAddress2",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.setCity",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.setCountry",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.setPostalCode",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.setStateProvince",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.setStreetAddress1",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.setStreetAddress2",
+    "com.acmeair.wxs.entities.CustomerAddressImpl.toString",
+    "com.acmeair.wxs.entities.CustomerImpl.equals",
+    "com.acmeair.wxs.entities.CustomerImpl.getAddress",
+    "com.acmeair.wxs.entities.CustomerImpl.getCustomerId",
+    "com.acmeair.wxs.entities.CustomerImpl.getMiles_ytd",
+    "com.acmeair.wxs.entities.CustomerImpl.getPassword",
+    "com.acmeair.wxs.entities.CustomerImpl.getPhoneNumber",
+    "com.acmeair.wxs.entities.CustomerImpl.getPhoneNumberType",
+    "com.acmeair.wxs.entities.CustomerImpl.getStatus",
+    "com.acmeair.wxs.entities.CustomerImpl.getTotal_miles",
+    "com.acmeair.wxs.entities.CustomerImpl.getUsername",
+    "com.acmeair.wxs.entities.CustomerImpl.setAddress",
+    "com.acmeair.wxs.entities.CustomerImpl.setMiles_ytd",
+    "com.acmeair.wxs.entities.CustomerImpl.setPassword",
+    "com.acmeair.wxs.entities.CustomerImpl.setPhoneNumber",
+    "com.acmeair.wxs.entities.CustomerImpl.setPhoneNumberType",
+    "com.acmeair.wxs.entities.CustomerImpl.setStatus",
+    "com.acmeair.wxs.entities.CustomerImpl.setTotal_miles",
+    "com.acmeair.wxs.entities.CustomerImpl.setUsername",
+    "com.acmeair.wxs.entities.CustomerImpl.toString",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.equals",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.getCustomerid",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.getId",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.getLastAccessedTime",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.getTimeoutTime",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.setCustomerid",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.setId",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.setLastAccessedTime",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.setTimeoutTime",
+    "com.acmeair.wxs.entities.CustomerSessionImpl.toString",
+    "com.acmeair.wxs.entities.FlightImpl.equals",
+    "com.acmeair.wxs.entities.FlightImpl.getAirplaneTypeId",
+    "com.acmeair.wxs.entities.FlightImpl.getEconomyClassBaseCost",
+    "com.acmeair.wxs.entities.FlightImpl.getFirstClassBaseCost",
+    "com.acmeair.wxs.entities.FlightImpl.getFlightId",
+    "com.acmeair.wxs.entities.FlightImpl.getFlightSegment",
+    "com.acmeair.wxs.entities.FlightImpl.getFlightSegmentId",
+    "com.acmeair.wxs.entities.FlightImpl.getNumEconomyClassSeats",
+    "com.acmeair.wxs.entities.FlightImpl.getNumFirstClassSeats",
+    "com.acmeair.wxs.entities.FlightImpl.getPkey",
+    "com.acmeair.wxs.entities.FlightImpl.getScheduledArrivalTime",
+    "com.acmeair.wxs.entities.FlightImpl.getScheduledDepartureTime",
+    "com.acmeair.wxs.entities.FlightImpl.setAirplaneTypeId",
+    "com.acmeair.wxs.entities.FlightImpl.setEconomyClassBaseCost",
+    "com.acmeair.wxs.entities.FlightImpl.setFirstClassBaseCost",
+    "com.acmeair.wxs.entities.FlightImpl.setFlightId",
+    "com.acmeair.wxs.entities.FlightImpl.setFlightSegment",
+    "com.acmeair.wxs.entities.FlightImpl.setNumEconomyClassSeats",
+    "com.acmeair.wxs.entities.FlightImpl.setNumFirstClassSeats",
+    "com.acmeair.wxs.entities.FlightImpl.setPkey",
+    "com.acmeair.wxs.entities.FlightImpl.setScheduledArrivalTime",
+    "com.acmeair.wxs.entities.FlightImpl.setScheduledDepartureTime",
+    "com.acmeair.wxs.entities.FlightImpl.toString",
+    "com.acmeair.wxs.entities.FlightPKImpl.equals",
+    "com.acmeair.wxs.entities.FlightPKImpl.getFlightSegmentId",
+    "com.acmeair.wxs.entities.FlightPKImpl.getId",
+    "com.acmeair.wxs.entities.FlightPKImpl.hashCode",
+    "com.acmeair.wxs.entities.FlightPKImpl.ibmGetPartition",
+    "com.acmeair.wxs.entities.FlightPKImpl.setFlightSegmentId",
+    "com.acmeair.wxs.entities.FlightPKImpl.setId",
+    "com.acmeair.wxs.entities.FlightPKImpl.toString",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.equals",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.getDestPort",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.getFlightName",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.getMiles",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.getOriginPort",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.setDestPort",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.setFlightName",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.setMiles",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.setOriginPort",
+    "com.acmeair.wxs.entities.FlightSegmentImpl.toString",
+    "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+    "com.acmeair.wxs.service.BookingServiceImpl.cancelBooking",
+    "com.acmeair.wxs.service.BookingServiceImpl.count",
+    "com.acmeair.wxs.service.BookingServiceImpl.getBooking",
+    "com.acmeair.wxs.service.BookingServiceImpl.getBookingsByUser",
+    "com.acmeair.wxs.service.BookingServiceImpl.initialization",
+    "com.acmeair.wxs.service.CustomerServiceImpl.count",
+    "com.acmeair.wxs.service.CustomerServiceImpl.countSessions",
+    "com.acmeair.wxs.service.CustomerServiceImpl.createAddress",
+    "com.acmeair.wxs.service.CustomerServiceImpl.createCustomer",
+    "com.acmeair.wxs.service.CustomerServiceImpl.createSession",
+    "com.acmeair.wxs.service.CustomerServiceImpl.getCustomer",
+    "com.acmeair.wxs.service.CustomerServiceImpl.getSession",
+    "com.acmeair.wxs.service.CustomerServiceImpl.initialization",
+    "com.acmeair.wxs.service.CustomerServiceImpl.invalidateSession",
+    "com.acmeair.wxs.service.CustomerServiceImpl.removeSession",
+    "com.acmeair.wxs.service.CustomerServiceImpl.updateCustomer",
+    "com.acmeair.wxs.service.FlightServiceImpl.areDatesSameWithNoTime",
+    "com.acmeair.wxs.service.FlightServiceImpl.countAirports",
+    "com.acmeair.wxs.service.FlightServiceImpl.countFlightSegments",
+    "com.acmeair.wxs.service.FlightServiceImpl.countFlights",
+    "com.acmeair.wxs.service.FlightServiceImpl.createAirportCodeMapping",
+    "com.acmeair.wxs.service.FlightServiceImpl.createNewFlight",
+    "com.acmeair.wxs.service.FlightServiceImpl.getDateWithNoTime",
+    "com.acmeair.wxs.service.FlightServiceImpl.getFlight",
+    "com.acmeair.wxs.service.FlightServiceImpl.getFlightBySegment",
+    "com.acmeair.wxs.service.FlightServiceImpl.getFlightSegment",
+    "com.acmeair.wxs.service.FlightServiceImpl.initialization",
+    "com.acmeair.wxs.service.FlightServiceImpl.storeAirportMapping",
+    "com.acmeair.wxs.service.FlightServiceImpl.storeFlightSegment",
+    "com.acmeair.wxs.utils.MapPutAllAgent.getObjectsToSave",
+    "com.acmeair.wxs.utils.MapPutAllAgent.process",
+    "com.acmeair.wxs.utils.MapPutAllAgent.processAllEntries",
+    "com.acmeair.wxs.utils.MapPutAllAgent.setObjectsToSave",
+    "com.acmeair.wxs.utils.WXSSessionManager.connectClient",
+    "com.acmeair.wxs.utils.WXSSessionManager.getBackingMap",
+    "com.acmeair.wxs.utils.WXSSessionManager.getDisableNearCacheNameString",
+    "com.acmeair.wxs.utils.WXSSessionManager.getGridConnectString",
+    "com.acmeair.wxs.utils.WXSSessionManager.getGridName",
+    "com.acmeair.wxs.utils.WXSSessionManager.getGridPassword",
+    "com.acmeair.wxs.utils.WXSSessionManager.getGridUsername",
+    "com.acmeair.wxs.utils.WXSSessionManager.getMapSuffix",
+    "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid",
+    "com.acmeair.wxs.utils.WXSSessionManager.getObjectGridSession",
+    "com.acmeair.wxs.utils.WXSSessionManager.getPartitionFieldName",
+    "com.acmeair.wxs.utils.WXSSessionManager.getPartitionFieldNameString",
+    "com.acmeair.wxs.utils.WXSSessionManager.getSessionManager",
+    "com.acmeair.wxs.utils.WXSSessionManager.getTxManager",
+    "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+    "com.acmeair.wxs.utils.WXSSessionManager.isIntegrateWithWASTransactions",
+    "com.acmeair.wxs.utils.WXSSessionManager.lookup",
+    "com.acmeair.wxs.utils.WXSSessionManager.prepareForTransaction",
+    "com.acmeair.wxs.utils.WXSSessionManager.setDisableNearCacheNameString",
+    "com.acmeair.wxs.utils.WXSSessionManager.setGridConnectString",
+    "com.acmeair.wxs.utils.WXSSessionManager.setGridName",
+    "com.acmeair.wxs.utils.WXSSessionManager.setGridPassword",
+    "com.acmeair.wxs.utils.WXSSessionManager.setGridUsername",
+    "com.acmeair.wxs.utils.WXSSessionManager.setIntegrateWithWASTransactions",
+    "com.acmeair.wxs.utils.WXSSessionManager.setMapSuffix",
+    "com.acmeair.wxs.utils.WXSSessionManager.setPartitionFieldNameString",
+    "com.acmeair.wxs.utils.WXSSessionManager.setTxManager",
+    "com.googlecode.charts4j.AbstractAxisChart.addXAxisLabels",
+    "com.googlecode.charts4j.AbstractAxisChart.addYAxisLabels",
+    "com.googlecode.charts4j.AbstractAxisChart.setGrid",
+    "com.googlecode.charts4j.AbstractGChart.setBackgroundFill",
+    "com.googlecode.charts4j.AbstractGChart.setDataEncoding",
+    "com.googlecode.charts4j.AbstractGChart.setSize",
+    "com.googlecode.charts4j.AbstractGChart.toURLString",
+    "com.googlecode.charts4j.AbstractGraphChart.setAreaFill",
+    "com.googlecode.charts4j.AbstractGraphChart.setTitle",
+    "com.googlecode.charts4j.AxisLabels.setAxisStyle",
+    "com.googlecode.charts4j.AxisLabelsFactory.newAxisLabels",
+    "com.googlecode.charts4j.AxisLabelsFactory.newNumericRangeAxisLabels",
+    "com.googlecode.charts4j.AxisStyle.newAxisStyle",
+    "com.googlecode.charts4j.Color.newColor",
+    "com.googlecode.charts4j.Data.newData",
+    "com.googlecode.charts4j.Fills.newLinearGradientFill",
+    "com.googlecode.charts4j.Fills.newSolidFill",
+    "com.googlecode.charts4j.GCharts.newLineChart",
+    "com.googlecode.charts4j.LinePlot.setLineStyle",
+    "com.googlecode.charts4j.LineStyle.newLineStyle",
+    "com.googlecode.charts4j.LinearGradientFill.addColorAndOffset",
+    "com.googlecode.charts4j.Plot.addShapeMarkers",
+    "com.googlecode.charts4j.Plots.newLine",
+    "com.mongodb.DB.command",
+    "com.mongodb.Mongo.getVersion",
+    "com.mongodb.MongoClient.getMongoClientOptions",
+    "com.mongodb.MongoClientOptions.Builder.connectionsPerHost",
+    "com.mongodb.MongoClientOptions.Builder.threadsAllowedToBlockForConnectionMultiplier",
+    "com.mongodb.MongoClientOptions.Builder.writeConcern",
+    "com.mongodb.MongoClientURI.getDatabase",
+    "java.io.BufferedReader.close",
+    "java.io.BufferedReader.readLine",
+    "java.io.File.getName",
+    "java.io.File.getPath",
+    "java.io.File.isDirectory",
+    "java.io.FilterInputStream.close",
+    "java.io.LineNumberReader.readLine",
+    "java.io.PrintStream.println",
+    "java.io.Writer.close",
+    "java.io.Writer.flush",
+    "java.lang.Class.getName",
+    "java.lang.Class.getResource",
+    "java.lang.Class.getResourceAsStream",
+    "java.lang.Double.doubleValue",
+    "java.lang.Double.parseDouble",
+    "java.lang.Integer.intValue",
+    "java.lang.Integer.parseInt",
+    "java.lang.Integer.valueOf",
+    "java.lang.Long.parseLong",
+    "java.lang.Long.toString",
+    "java.lang.Math.max",
+    "java.lang.Math.min",
+    "java.lang.Math.pow",
+    "java.lang.Math.round",
+    "java.lang.Object.equals",
+    "java.lang.Object.getClass",
+    "java.lang.Object.toString",
+    "java.lang.String.contains",
+    "java.lang.String.endsWith",
+    "java.lang.String.equals",
+    "java.lang.String.equalsIgnoreCase",
+    "java.lang.String.hashCode",
+    "java.lang.String.indexOf",
+    "java.lang.String.isEmpty",
+    "java.lang.String.length",
+    "java.lang.String.replace",
+    "java.lang.String.split",
+    "java.lang.String.startsWith",
+    "java.lang.String.substring",
+    "java.lang.String.toLowerCase",
+    "java.lang.String.trim",
+    "java.lang.StringBuffer.append",
+    "java.lang.StringBuffer.toString",
+    "java.lang.System.currentTimeMillis",
+    "java.lang.System.getProperty",
+    "java.lang.System.getenv",
+    "java.lang.System.setProperty",
+    "java.lang.Throwable.getMessage",
+    "java.lang.Throwable.printStackTrace",
+    "java.lang.annotation.Annotation.annotationType",
+    "java.math.BigDecimal.equals",
+    "java.net.URL.openStream",
+    "java.text.NumberFormat.format",
+    "java.util.ArrayList.add",
+    "java.util.ArrayList.addAll",
+    "java.util.ArrayList.get",
+    "java.util.ArrayList.isEmpty",
+    "java.util.ArrayList.iterator",
+    "java.util.ArrayList.remove",
+    "java.util.ArrayList.set",
+    "java.util.ArrayList.size",
+    "java.util.ArrayList.subList",
+    "java.util.Arrays.asList",
+    "java.util.Calendar.add",
+    "java.util.Calendar.getInstance",
+    "java.util.Calendar.getTime",
+    "java.util.Calendar.set",
+    "java.util.Calendar.setTime",
+    "java.util.Collection.iterator",
+    "java.util.Collections.max",
+    "java.util.Collections.sort",
+    "java.util.Date.before",
+    "java.util.Date.equals",
+    "java.util.Date.toString",
+    "java.util.HashMap.entrySet",
+    "java.util.HashMap.get",
+    "java.util.HashMap.put",
+    "java.util.HashMap.size",
+    "java.util.Iterator.hasNext",
+    "java.util.Iterator.next",
+    "java.util.List.add",
+    "java.util.List.get",
+    "java.util.List.size",
+    "java.util.Map.Entry.getKey",
+    "java.util.Map.Entry.getValue",
+    "java.util.Map.entrySet",
+    "java.util.Map.get",
+    "java.util.Map.keySet",
+    "java.util.Map.put",
+    "java.util.Map.putAll",
+    "java.util.Properties.getProperty",
+    "java.util.Properties.load",
+    "java.util.Set.iterator",
+    "java.util.StringTokenizer.hasMoreTokens",
+    "java.util.StringTokenizer.nextToken",
+    "java.util.UUID.randomUUID",
+    "java.util.UUID.toString",
+    "java.util.concurrent.ConcurrentHashMap.get",
+    "java.util.concurrent.ConcurrentHashMap.putIfAbsent",
+    "java.util.concurrent.atomic.AtomicReference.get",
+    "java.util.concurrent.atomic.AtomicReference.set",
+    "java.util.logging.Logger.fine",
+    "java.util.logging.Logger.finer",
+    "java.util.logging.Logger.finest",
+    "java.util.logging.Logger.info",
+    "java.util.logging.Logger.isLoggable",
+    "java.util.logging.Logger.severe",
+    "java.util.logging.Logger.warning",
+    "java.util.regex.Matcher.find",
+    "java.util.regex.Matcher.group",
+    "java.util.regex.Pattern.compile",
+    "java.util.regex.Pattern.matcher",
+    "javax.enterprise.inject.spi.Bean.getBeanClass",
+    "javax.enterprise.inject.spi.BeanAttributes.getQualifiers",
+    "javax.enterprise.inject.spi.BeanManager.createCreationalContext",
+    "javax.enterprise.inject.spi.BeanManager.getBeans",
+    "javax.enterprise.inject.spi.BeanManager.getReference",
+    "javax.naming.Context.lookup",
+    "javax.naming.InitialContext.lookup",
+    "javax.servlet.FilterChain.doFilter",
+    "javax.servlet.ServletRequest.getAttribute",
+    "javax.servlet.ServletRequest.setAttribute",
+    "javax.servlet.http.Cookie.getName",
+    "javax.servlet.http.Cookie.getValue",
+    "javax.servlet.http.HttpServletRequest.getContextPath",
+    "javax.servlet.http.HttpServletRequest.getCookies",
+    "javax.servlet.http.HttpServletRequest.getPathInfo",
+    "javax.servlet.http.HttpServletRequest.getServletPath",
+    "javax.servlet.http.HttpServletResponse.sendError",
+    "javax.ws.rs.core.Response.ResponseBuilder.build",
+    "javax.ws.rs.core.Response.ResponseBuilder.cookie",
+    "javax.ws.rs.core.Response.ok",
+    "javax.ws.rs.core.Response.status",
+    "org.apache.commons.configuration.AbstractConfiguration.getString",
+    "org.apache.commons.configuration.Configuration.getList",
+    "org.apache.commons.io.FileUtils.listFiles",
+    "org.apache.velocity.Template.merge",
+    "org.apache.velocity.app.VelocityEngine.getTemplate",
+    "org.apache.velocity.app.VelocityEngine.init",
+    "org.apache.velocity.app.VelocityEngine.setProperty",
+    "org.apache.velocity.context.AbstractContext.put",
+    "org.bson.BasicBSONObject.getString",
+    "org.mongodb.morphia.Datastore.delete",
+    "org.mongodb.morphia.Datastore.ensureIndex",
+    "org.mongodb.morphia.Datastore.find",
+    "org.mongodb.morphia.Datastore.getDB",
+    "org.mongodb.morphia.Datastore.getMongo",
+    "org.mongodb.morphia.Datastore.save",
+    "org.mongodb.morphia.Morphia.createDatastore",
+    "org.mongodb.morphia.query.FieldEnd.equal",
+    "org.mongodb.morphia.query.Query.disableValidation",
+    "org.mongodb.morphia.query.Query.field",
+    "org.mongodb.morphia.query.QueryResults.asList",
+    "org.mongodb.morphia.query.QueryResults.countAll",
+    "org.mongodb.morphia.query.QueryResults.get"
+  ],
+  "edges": [
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.countSessions",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.lookup",
+      "target": "javax.naming.Context.lookup"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.Color.newColor"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "java.util.Set.iterator"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.cookie"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.validateSession",
+      "target": "com.acmeair.entities.CustomerSession.getTimeoutTime"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.Plots.newLine"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.CustomerAddressImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomer",
+      "target": "com.acmeair.service.CustomerService.count"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "javax.ws.rs.core.Response.status"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "com.mongodb.MongoClientOptions.Builder.writeConcern"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addReturnCode",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.AxisLabelsFactory.newAxisLabels"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingPKImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightSegmentImpl.toString",
+      "target": "java.lang.StringBuffer.toString"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.updateCustomer",
+      "target": "org.mongodb.morphia.Datastore.save"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getMillisMap"
+    },
+    {
+      "source": "com.acmeair.config.LoaderREST.queryLoader",
+      "target": "com.acmeair.loader.Loader.queryLoader"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.getFlightId",
+      "target": "com.acmeair.wxs.entities.FlightPKImpl.getId"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "java.lang.System.getenv"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "java.lang.String.equalsIgnoreCase"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.cancelBookingsByNumber",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.validateSession",
+      "target": "com.acmeair.service.CustomerService.removeSession"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "org.mongodb.morphia.query.QueryResults.asList"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.CustomerSessionImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "com.mongodb.MongoClientOptions.Builder.threadsAllowedToBlockForConnectionMultiplier"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.initialization",
+      "target": "javax.naming.InitialContext.lookup"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirports",
+      "target": "com.acmeair.service.FlightService.getFlightBySegment"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.service.CustomerService.getCustomerByUsernameAndPassword"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.web.dto.TripFlightOptions.setTripLegs"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.Data.newData"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractAxisChart.setGrid"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.logout",
+      "target": "com.acmeair.service.CustomerService.invalidateSession"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.io.BufferedReader.close"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.getCustomer",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.processData"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.alreadyInCollection",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "java.util.Properties.load"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.addUp",
+      "target": "com.acmeair.reporter.parser.OverallResults.getAllInputList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomer",
+      "target": "org.mongodb.morphia.query.QueryResults.get"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightSegmentImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.createSession",
+      "target": "com.acmeair.service.KeyGenerator.generate"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.initialization",
+      "target": "com.acmeair.morphia.services.util.MongoConnectionManager.getConnectionManager"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.cancelBooking",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightPKImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.io.LineNumberReader.readLine"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getFlightToCount"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.loader.FlightLoader.getArrivalTime"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "java.util.logging.Logger.warning"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.setGridUsername"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.cancelBooking",
+      "target": "org.mongodb.morphia.Datastore.delete"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "java.util.Map.Entry.getValue"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "java.lang.String.isEmpty"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.regex.Matcher.group"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerSessionImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "javax.enterprise.inject.spi.BeanManager.getReference"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.getBookingsByUser",
+      "target": "com.acmeair.service.BookingService.getBookingsByUser"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.service.FlightService.createAirportCodeMapping"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParserHelper.scaleDown",
+      "target": "java.lang.Math.pow"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTimeList"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.setGridConnectString"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "java.util.List.size"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.component.JmeterSummariserParser.getTestDate"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "java.util.List.get"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.getCustomerByUsernameAndPassword",
+      "target": "com.acmeair.entities.Customer.getPassword"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory",
+      "target": "org.apache.commons.io.FileUtils.listFiles"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByFlightId",
+      "target": "java.util.concurrent.ConcurrentHashMap.get"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.AbstractAxisChart.addXAxisLabels"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getSessionManager"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+      "target": "java.util.logging.Logger.finer"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.validate",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.getBooking",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.loader.CustomerLoader.setCustomerService"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+      "target": "com.acmeair.reporter.parser.ResultParser.processDirectory"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.bookFlights",
+      "target": "com.acmeair.service.BookingService.bookFlight"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.util.Messages.getConfiguration"
+    },
+    {
+      "source": "com.acmeair.config.LoaderREST.loadDB",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "com.acmeair.service.CustomerService.validateCustomer"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getResults",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleChartResults"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "com.acmeair.reporter.parser.ResultParser.addUp"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getActiveDataServiceInfo",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.createCustomer",
+      "target": "org.mongodb.morphia.Datastore.save"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.LinePlot.setLineStyle"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getDisableNearCacheNameString"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "org.apache.velocity.app.VelocityEngine.init"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.invalidateSession",
+      "target": "org.mongodb.morphia.Datastore.delete"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.StringTokenizer.hasMoreTokens"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.http.HttpServletRequest.getCookies"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.setMultipleChartTitle",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.setMultipleChartTitle"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "com.mongodb.MongoClientURI.getDatabase"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.regex.Pattern.compile"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.connectClient"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setTitle"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getCharStrings",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getCharStrings"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getResults"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "java.util.List.add"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.initialization",
+      "target": "javax.naming.InitialContext.lookup"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "java.util.logging.Logger.isLoggable"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlights",
+      "target": "com.acmeair.service.FlightService.countFlights"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.util.Map.Entry.getValue"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "java.util.logging.Logger.fine"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.count",
+      "target": "org.mongodb.morphia.query.QueryResults.countAll"
+    },
+    {
+      "source": "com.acmeair.wxs.service.CustomerServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getSessionManager"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.HashMap.size"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "org.apache.velocity.context.AbstractContext.put"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "java.lang.String.startsWith"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.setFlightId",
+      "target": "com.acmeair.wxs.entities.FlightPKImpl.setId"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AxisLabelsFactory.newAxisLabels"
+    },
+    {
+      "source": "com.acmeair.morphia.services.util.MongoConnectionManager.getMongoVersion",
+      "target": "com.mongodb.DB.command"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.AxisLabelsFactory.newAxisLabels"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.LineStyle.newLineStyle"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightImpl.equals",
+      "target": "java.math.BigDecimal.equals"
+    },
+    {
+      "source": "com.acmeair.morphia.BigDecimalConverter.encode",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.setPartitionFieldNameString"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getActiveDataServiceInfo",
+      "target": "java.util.logging.Logger.fine"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.util.Map.Entry.getKey"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "java.lang.String.split"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParserHelper.scaleDown"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.equals",
+      "target": "java.math.BigDecimal.equals"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "javax.ws.rs.core.Response.status"
+    },
+    {
+      "source": "com.acmeair.wxs.service.CustomerServiceImpl.count",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.initialization",
+      "target": "java.util.logging.Logger.severe"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.web.dto.TripFlightOptions.setTripLegs"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.equals",
+      "target": "com.acmeair.wxs.entities.FlightPKImpl.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getInputList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.get90thPrecentile",
+      "target": "java.util.ArrayList.isEmpty"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.createSession",
+      "target": "java.util.Calendar.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.addFlightRetCount"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "java.util.logging.Logger.finest"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.util.Messages.getString"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.Fills.newSolidFill"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.LinearGradientFill.addColorAndOffset"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "org.apache.velocity.app.VelocityEngine.setProperty"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.util.Map.Entry.getKey"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setTitle"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.AddressInfo.getCountry"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "java.util.Map.putAll"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.bookFlights",
+      "target": "javax.ws.rs.core.Response.status"
+    },
+    {
+      "source": "com.acmeair.morphia.services.util.MongoConnectionManager.getConnectionManager",
+      "target": "java.util.concurrent.atomic.AtomicReference.set"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.util.Set.iterator"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+      "target": "com.acmeair.reporter.parser.ResultParser.setMultipleChartTitle"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingImpl.equals",
+      "target": "java.util.Date.equals"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.getProperties",
+      "target": "java.util.Properties.load"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.count",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countAirports",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.storeFlightSegment",
+      "target": "org.mongodb.morphia.Datastore.save"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.generateChartStrings"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractAxisChart.addYAxisLabels"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.AbstractAxisChart.addYAxisLabels"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.countFlightSegments",
+      "target": "org.mongodb.morphia.query.QueryResults.countAll"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getActiveDataServiceInfo",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "java.lang.Long.parseLong"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+      "target": "com.acmeair.reporter.parser.ResultParser.getCharStrings"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.countAirports",
+      "target": "org.mongodb.morphia.query.QueryResults.countAll"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.ReportGenerator.addCpuStats"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.getFlightSegmentId",
+      "target": "com.acmeair.wxs.entities.FlightPKImpl.getFlightSegmentId"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParser.processData"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.invalidateSession",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.StringTokenizer.nextToken"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countAirports",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "java.lang.String.substring"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.text.NumberFormat.format"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "org.mongodb.morphia.Morphia.createDatastore"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processData",
+      "target": "com.acmeair.reporter.parser.OverallResults.setOverallScale_max"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.Map.Entry.getKey"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractAxisChart.addXAxisLabels"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.loader.CustomerLoader.loadCustomers"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "javax.enterprise.inject.spi.BeanManager.getBeans"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.AbstractAxisChart.addXAxisLabels"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "java.util.Date.toString"
+    },
+    {
+      "source": "com.acmeair.morphia.BigDecimalConverter.decode",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "java.lang.String.contains"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "java.util.logging.Logger.fine"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.updateService",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.countFlights",
+      "target": "org.mongodb.morphia.query.QueryResults.countAll"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomer",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightSegment",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.countFlightSegments",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getFlight",
+      "target": "java.util.logging.Logger.finer"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.countAirports",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.getCustomerByUsername",
+      "target": "com.acmeair.entities.Customer.setPassword"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.invalidateSession",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processData",
+      "target": "com.acmeair.reporter.parser.OverallResults.getScale_max"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.Customer.setPhoneNumberType"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.addUp",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.util.Map.entrySet"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.CustomerREST.validate"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.lang.String.contains"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "com.acmeair.entities.FlightSegment.getFlightName"
+    },
+    {
+      "source": "com.acmeair.wxs.service.CustomerServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingImpl.getBookingId",
+      "target": "com.acmeair.wxs.entities.BookingPKImpl.getId"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.LinePlot.setLineStyle"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.countAirports",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.wxs.service.CustomerServiceImpl.countSessions",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.setPartitionFieldNameString",
+      "target": "java.util.HashMap.put"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.getCustomer",
+      "target": "com.acmeair.web.CustomerREST.validate"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.web.dto.TripFlightOptions.setTripFlights"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTime",
+      "target": "java.util.Map.put"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.service.FlightService.getFlightByFlightId"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.initialization",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.initialization",
+      "target": "java.util.logging.Logger.severe"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomer",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "com.acmeair.entities.CustomerSession.getId"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.acmeair.reporter.parser.ResultParser.getCharStrings"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getRuntimeInfo",
+      "target": "java.lang.System.getProperty"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.createSession",
+      "target": "java.util.Calendar.getTime"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.validateSession",
+      "target": "com.acmeair.service.CustomerService.getSession"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countAirports",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParser.getData"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.createSession",
+      "target": "java.util.Calendar.getInstance"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.countFlightSegments",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.queryLoader",
+      "target": "java.lang.System.getProperty"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.setMultipleYAxisLabel"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "com.acmeair.reporter.util.StatResult.setNumberOfResults"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParserHelper.scaleDown",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleChartResults"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.regex.Pattern.matcher"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.getCustomer",
+      "target": "com.acmeair.service.CustomerService.getCustomerByUsername"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "javax.enterprise.inject.spi.BeanManager.getBeans"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.setGridPassword"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.util.ArrayList.iterator"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.CustomerAddress.setPostalCode"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractGChart.setDataEncoding"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getPartitionFieldNameString"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "javax.enterprise.inject.spi.BeanAttributes.getQualifiers"
+    },
+    {
+      "source": "com.acmeair.service.KeyGenerator.generate",
+      "target": "java.util.UUID.toString"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.lang.Integer.valueOf"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBooking",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getResults"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.lang.String.equalsIgnoreCase"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getResults"
+    },
+    {
+      "source": "com.acmeair.morphia.services.util.MongoConnectionManager.getMongoVersion",
+      "target": "org.mongodb.morphia.Datastore.getDB"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.service.KeyGenerator.generate"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.loader.FlightLoader.alreadyInCollection"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.addUp",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.cancelBookingsByNumber",
+      "target": "javax.ws.rs.core.Response.status"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.getAllInputList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.addUp",
+      "target": "java.util.ArrayList.set"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setInputList"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.removeSession",
+      "target": "org.mongodb.morphia.Datastore.delete"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.count",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "com.acmeair.service.CustomerService.validateSession"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTitle"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightSegment",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "java.lang.String.toLowerCase"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGridSession",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.AddressInfo.getPostalCode"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.BookingImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.getCustomer",
+      "target": "javax.ws.rs.core.Response.status"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.main",
+      "target": "java.lang.System.setProperty"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "java.lang.annotation.Annotation.annotationType"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "com.acmeair.service.ServiceLocator.getServices"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "org.apache.velocity.Template.merge"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.CustomerAddressImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getMultipleChartTitle",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getMultipleChartTitle"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.http.HttpServletRequest.getContextPath"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightSegmentImpl.toString",
+      "target": "java.lang.StringBuffer.append"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParserHelper.scaleDown"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setTimeList"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.getSessionManager",
+      "target": "java.util.concurrent.atomic.AtomicReference.get"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.lang.String.toLowerCase"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingPKImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.util.HashMap.put"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.Customer.setPhoneNumber"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBookingsByUser",
+      "target": "org.mongodb.morphia.query.Query.disableValidation"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setTitle"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightSegmentImpl.toString",
+      "target": "java.lang.StringBuffer.toString"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.getArrivalTime",
+      "target": "java.util.Calendar.setTime"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.util.Set.iterator"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.validateCustomer",
+      "target": "com.acmeair.service.CustomerService.getCustomer"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.initialization",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "com.acmeair.service.FlightService.getFlightSegment"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.lookup"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "java.util.Map.keySet"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.getRequestsPerSecond",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getElapsedTimeInSeconds"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processData",
+      "target": "com.acmeair.reporter.parser.OverallResults.getOverallScale_max"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "java.io.File.getPath"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "javax.enterprise.inject.spi.BeanAttributes.getQualifiers"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.io.BufferedReader.close"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.setMultipleChartTitle"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.util.Map.keySet"
+    },
+    {
+      "source": "com.acmeair.web.dto.AddressInfo.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "java.lang.System.currentTimeMillis"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.lang.Class.getName"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countAirports",
+      "target": "com.acmeair.service.FlightService.countAirports"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.loader.Loader.execute"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.CustomerInfo.getPhoneNumberType"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.getCharStrings"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.getCustomerByUsernameAndPassword",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.queryLoader",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.getProperties",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerAddressImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.countFlights",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setNumPages"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processDirectory",
+      "target": "com.acmeair.reporter.parser.ResultParser.getFileName"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightSegmentImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlight",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "com.acmeair.service.DataService.description"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.CustomerAddress.setStateProvince"
+    },
+    {
+      "source": "com.acmeair.web.dto.CustomerInfo.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightImpl.equals",
+      "target": "java.lang.Object.equals"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.instance",
+      "target": "java.util.concurrent.atomic.AtomicReference.get"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.BookingImpl.equals",
+      "target": "java.util.Date.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "com.acmeair.service.CustomerService.createSession"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processData",
+      "target": "com.acmeair.reporter.parser.OverallResults.setScale_max"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.main",
+      "target": "com.acmeair.loader.Loader.execute"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.lang.String.trim"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.HashMap.put"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processDirectory",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "java.lang.Throwable.getMessage"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "java.lang.String.equalsIgnoreCase"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.main",
+      "target": "java.lang.System.currentTimeMillis"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.lookup",
+      "target": "java.lang.String.replace"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.addTime"
+    },
+    {
+      "source": "com.acmeair.morphia.services.util.MongoConnectionManager.getMongoVersion",
+      "target": "org.bson.BasicBSONObject.getString"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.acmeair.reporter.parser.ResultParser.processMultiLineData"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getSessionManager"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getFlight",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "java.util.regex.Matcher.group"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.setMapSuffix"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "java.lang.String.trim"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightSegment",
+      "target": "org.mongodb.morphia.query.QueryResults.get"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.service.CustomerService.updateCustomer"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.main",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getFlightToSum"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.ReportGenerator.reorderTestcases"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "com.acmeair.entities.FlightSegment.getFlightName"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleChartResults"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTimeList"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.web.dto.TripFlightOptions.setTripFlights"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.AddressInfo.getStreetAddress1"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParserHelper.scaleDown",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.util.Map.Entry.getKey"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingImpl.equals",
+      "target": "com.acmeair.wxs.entities.BookingPKImpl.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.io.Writer.flush"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getAllInputList",
+      "target": "com.acmeair.reporter.parser.OverallResults.getAllInputList"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "org.mongodb.morphia.Datastore.ensureIndex"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.Plots.newLine"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleChartResults"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getFlight",
+      "target": "java.util.logging.Logger.warning"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getActiveDataServiceInfo",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomerByUsername",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.FilterChain.doFilter"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.acmeair.reporter.parser.OverallResults.getOverallScale_max"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.util.ArrayList.addAll"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.createNewFlight",
+      "target": "com.acmeair.service.KeyGenerator.generate"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.GCharts.newLineChart"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.alreadyInCollection",
+      "target": "com.acmeair.entities.AirportCodeMapping.getAirportCode"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.http.HttpServletRequest.getServletPath"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParserHelper.scaleDown"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.getPartitionFieldName",
+      "target": "java.util.HashMap.get"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.add"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getDateWithNoTime",
+      "target": "java.util.Calendar.set"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.getBookingByNumber",
+      "target": "com.acmeair.service.BookingService.getBooking"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processMultiLineData",
+      "target": "com.acmeair.reporter.parser.OverallResults.getOverallScale_max"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.incrementFailures"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setTimeList"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "java.util.Map.entrySet"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getTotals",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "com.acmeair.service.ServiceLocator.instance"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBooking",
+      "target": "org.mongodb.morphia.query.QueryResults.get"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.instance",
+      "target": "java.util.concurrent.atomic.AtomicReference.set"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "com.acmeair.entities.CustomerSession.getCustomerid"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTime",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.util.ArrayList.remove"
+    },
+    {
+      "source": "com.acmeair.loader.CustomerLoader.loadCustomers",
+      "target": "com.acmeair.service.CustomerService.createAddress"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.prepareForTransaction"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+      "target": "java.util.ArrayList.subList"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.getArrivalTime",
+      "target": "java.util.Calendar.add"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "org.apache.commons.configuration.Configuration.getList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getInputList"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setPageSize"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "java.lang.String.equalsIgnoreCase"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory",
+      "target": "java.util.Collection.iterator"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.logout",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getCount"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "java.util.logging.Logger.severe"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParserHelper.scaleDown",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.util.Map.Entry.getValue"
+    },
+    {
+      "source": "com.acmeair.wxs.service.CustomerServiceImpl.count",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setCurrentPage"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "java.lang.System.getProperty"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "java.lang.String.trim"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getOneWayCount"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "java.lang.String.startsWith"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.addUp",
+      "target": "java.util.ArrayList.isEmpty"
+    },
+    {
+      "source": "com.acmeair.web.AppConfig.getClasses",
+      "target": "java.util.Arrays.asList"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getSession",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.HashMap.get"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.createNewFlight",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightPKImpl.hashCode",
+      "target": "java.lang.String.hashCode"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.service.ServiceLocator.instance"
+    },
+    {
+      "source": "com.acmeair.config.LoaderREST.loadDB",
+      "target": "com.acmeair.loader.Loader.loadDB"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractGraphChart.setTitle"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getRuntimeInfo",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.bookFlights",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getFailures"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.setDisableNearCacheNameString"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.initialization",
+      "target": "com.acmeair.morphia.services.util.MongoConnectionManager.getDatastore"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.ArrayList.isEmpty"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getDateWithNoTime",
+      "target": "java.util.Calendar.setTime"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.CustomerAddress.setStreetAddress2"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.count",
+      "target": "org.mongodb.morphia.query.QueryResults.countAll"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.CustomerAddress.setCity"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setFlightsOptions"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.cancelBooking",
+      "target": "com.acmeair.wxs.entities.BookingImpl.getPkey"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "javax.enterprise.inject.spi.Bean.getBeanClass"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.getBookingsByUser",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.morphia.services.util.MongoConnectionManager.getDriverVersion",
+      "target": "org.mongodb.morphia.Datastore.getMongo"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setNumPages"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingImpl.equals",
+      "target": "com.acmeair.wxs.entities.FlightPKImpl.equals"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.lookupDefaults",
+      "target": "com.acmeair.loader.Loader.getProperties"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processData",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.lang.Integer.parseInt"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "com.acmeair.service.DataService.name"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+      "target": "com.acmeair.reporter.parser.ResultParser.getResults"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.Map.put"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.component.JmeterJTLParser.getResults"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlight",
+      "target": "org.mongodb.morphia.query.QueryResults.get"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.service.FlightService.createNewFlight"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.util.Set.iterator"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.loader.FlightLoader.loadFlights"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTime",
+      "target": "java.lang.Math.max"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings"
+    },
+    {
+      "source": "com.acmeair.web.dto.TripLegInfo.setFlightsOptions",
+      "target": "java.util.List.add"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.processDirectory"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.GCharts.newLineChart"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setHasMoreOptions"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractGChart.setSize"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBookingsByUser",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.getBookingsByUser",
+      "target": "java.util.List.add"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.logout",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.get90thPrecentile",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTitle"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.countAirports",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getRuntimeInfo",
+      "target": "java.util.logging.Logger.fine"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomerByUsername",
+      "target": "com.acmeair.entities.Customer.setPassword"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addReturnCode",
+      "target": "java.util.Map.put"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightSegment",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "java.net.URL.openStream"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.count",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.Calendar.set"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTimeList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.Data.newData"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.CustomerImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.entities.AirportCodeMapping.getAirportCode"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.getArrivalTime",
+      "target": "java.util.Calendar.getTime"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.Customer.PhoneType.valueOf"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getCharStrings",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleChartResults"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.component.JmeterSummariserParser.setFileName"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setTitle"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.getBooking",
+      "target": "com.acmeair.wxs.entities.BookingImpl.getPkey"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParserHelper.scaleInputsData",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.getArrivalTime",
+      "target": "java.util.Calendar.getInstance"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+      "target": "java.util.logging.Logger.isLoggable"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomerSessions",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.initialization",
+      "target": "com.acmeair.morphia.services.util.MongoConnectionManager.getDatastore"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.BookingImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "com.acmeair.reporter.parser.OverallResults.setAllTimeList"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.Plot.addShapeMarkers"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "java.lang.Class.getName"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.queryLoader",
+      "target": "com.acmeair.loader.Loader.lookupDefaults"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "org.mongodb.morphia.Datastore.getMongo"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "java.util.logging.Logger.fine"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getFlightRetCount"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.CustomerAddress.setCountry"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getEmptyToFlightCount"
+    },
+    {
+      "source": "com.acmeair.reporter.util.StatResult.getStatistics",
+      "target": "java.lang.Double.doubleValue"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBookingsByUser",
+      "target": "org.mongodb.morphia.query.QueryResults.asList"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightSegmentImpl.toString",
+      "target": "java.lang.StringBuffer.append"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlightSegments",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+      "target": "com.acmeair.reporter.parser.component.NmonParser.setFileName"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "com.acmeair.service.DataService.name"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.setPartitionFieldNameString",
+      "target": "java.lang.String.length"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getReturnCodeCounts"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.countFlightSegments",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.bookFlights",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.config.LoaderREST.queryLoader",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.logging.Logger.finer"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.List.size"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomerSessions",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+      "target": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTimeList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processData",
+      "target": "java.util.Collections.max"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processDirectory",
+      "target": "com.acmeair.reporter.parser.ResultParser.processFile"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlights",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getRuntimeInfo",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.AddressInfo.getCity"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.addUp",
+      "target": "com.acmeair.reporter.parser.OverallResults.setAllInputList"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.areDatesSameWithNoTime",
+      "target": "com.acmeair.wxs.service.FlightServiceImpl.getDateWithNoTime"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.getBackingMap",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.validateCustomer",
+      "target": "com.acmeair.entities.Customer.getPassword"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomerByUsername",
+      "target": "org.mongodb.morphia.query.QueryResults.get"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.validateSession",
+      "target": "java.util.Date.before"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerImpl.equals",
+      "target": "java.lang.Object.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTime",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.acmeair.web.dto.AddressInfo.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.loadDB",
+      "target": "java.lang.Long.toString"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.http.Cookie.getValue"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+      "target": "java.util.HashMap.put"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirports",
+      "target": "com.acmeair.service.FlightService.getFlightSegment"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByFlightId",
+      "target": "com.acmeair.service.FlightService.getFlight"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.ReportGenerator.generateHtmlfile"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "java.util.Properties.getProperty"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBooking",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.count",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.logout",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.cookie"
+    },
+    {
+      "source": "com.acmeair.web.dto.CustomerInfo.equals",
+      "target": "com.acmeair.web.dto.AddressInfo.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.incrementOneWayCount"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.setPartitionFieldNameString",
+      "target": "java.lang.String.split"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTime",
+      "target": "java.lang.Math.min"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+      "target": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processData",
+      "target": "com.acmeair.reporter.parser.ResultParserHelper.scaleInputsData"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerAddressImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getInputList"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightSegmentImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.initialization",
+      "target": "com.acmeair.morphia.services.util.MongoConnectionManager.getConnectionManager"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.Calendar.setTime"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.entities.AirportCodeMapping.setAirportCode"
+    },
+    {
+      "source": "com.acmeair.reporter.util.StatResult.getStatistics",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.cancelBookingsByNumber",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.web.dto.CustomerInfo.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTimeList"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "com.acmeair.entities.Flight.setFlightSegment"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "java.lang.annotation.Annotation.annotationType"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomerSessions",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBooking",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "com.mongodb.MongoClientOptions.Builder.connectionsPerHost"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "java.util.HashMap.put"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "java.util.Map.Entry.getKey"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.getCustomer",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.CustomerInfo.getAddress"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "java.lang.String.trim"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.Map.put"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.lang.Class.getResourceAsStream"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.LineStyle.newLineStyle"
+    },
+    {
+      "source": "com.acmeair.morphia.services.util.MongoConnectionManager.getDriverVersion",
+      "target": "com.mongodb.Mongo.getVersion"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.get90thPrecentile",
+      "target": "java.lang.Math.round"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setHasMoreOptions"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTime",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "java.lang.Class.getResource"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "com.acmeair.service.FlightService.getFlightBySegment"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processDirectory",
+      "target": "org.apache.commons.io.FileUtils.listFiles"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setPageSize"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countBookings",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.main",
+      "target": "com.acmeair.reporter.ReportGenerator.process"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleChartTitle"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getFlight",
+      "target": "com.acmeair.wxs.entities.FlightImpl.getFlightId"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getInputList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processMultiLineData",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParser.processData"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBookingsByUser",
+      "target": "java.util.List.add"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "com.mongodb.MongoClient.getMongoClientOptions"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlights",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.setThreadMap"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setCurrentPage"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.CustomerSessionImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.reporter.util.StatResult.getStatistics",
+      "target": "java.lang.Math.max"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.http.HttpServletResponse.sendError"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "org.mongodb.morphia.query.Query.disableValidation"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.ResultParser.getAllTimeList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.initialization",
+      "target": "com.acmeair.morphia.services.util.MongoConnectionManager.getConnectionManager"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.storeFlightSegment",
+      "target": "com.acmeair.morphia.services.FlightServiceImpl.storeFlightSegment"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.Customer.setPassword"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "java.lang.Long.parseLong"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.countFlights",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.incrementFiles"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.validate",
+      "target": "javax.servlet.ServletRequest.getAttribute"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "java.lang.String.indexOf"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.io.Writer.close"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "com.acmeair.reporter.parser.component.JmeterJTLParser.add"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getFlight",
+      "target": "java.util.logging.Logger.isLoggable"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countBookings",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.morphia.services.util.MongoConnectionManager.getConnectionManager",
+      "target": "java.util.concurrent.atomic.AtomicReference.get"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.addReturnCode"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.AbstractAxisChart.addYAxisLabels"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.loader.FlightLoader.setFlightService"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightSegmentImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getCount"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.wxs.entities.FlightPKImpl.getId"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.googlecode.charts4j.AxisLabelsFactory.newNumericRangeAxisLabels"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getSession",
+      "target": "org.mongodb.morphia.query.QueryResults.get"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.getSessionManager",
+      "target": "java.util.concurrent.atomic.AtomicReference.set"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "com.acmeair.service.DataService.description"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightImpl.equals",
+      "target": "java.util.Date.equals"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlight",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleChartResults"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.loadDB",
+      "target": "java.lang.System.setProperty"
+    },
+    {
+      "source": "com.acmeair.morphia.BigIntegerConverter.encode",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightPKImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.wxs.entities.BookingPKImpl.getId"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getMultipleYAxisLabel",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getMultipleChartYAxisLabel"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "java.util.concurrent.ConcurrentHashMap.putIfAbsent"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getInputList"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.reorderTestcases",
+      "target": "java.util.HashMap.put"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.FlightImpl.equals",
+      "target": "java.util.Date.equals"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlightSegments",
+      "target": "com.acmeair.service.FlightService.countFlightSegments"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.getTripFlights",
+      "target": "com.acmeair.web.dto.TripLegInfo.setFlightsOptions"
+    },
+    {
+      "source": "com.acmeair.morphia.DatastoreFactory.getDatastore",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getAllTimeList",
+      "target": "com.acmeair.reporter.parser.OverallResults.getAllTimeList"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.service.CustomerService.getCustomerByUsername"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.cancelBookingsByNumber",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.web.AcmeAirApp.getClasses",
+      "target": "java.util.Arrays.asList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processDirectory",
+      "target": "java.util.Iterator.next"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.main",
+      "target": "java.io.File.isDirectory"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.getCustomerByUsernameAndPassword",
+      "target": "com.acmeair.service.CustomerService.getCustomer"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerSessionImpl.equals",
+      "target": "java.lang.Object.getClass"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.lang.System.getProperty"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.ServletRequest.setAttribute"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateMultipleLinesCharString",
+      "target": "com.acmeair.reporter.parser.ResultParserHelper.getColor"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlight",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.getCustomer",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.ResultParser.getData"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+      "target": "org.mongodb.morphia.Datastore.save"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.addTimestamp"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.lang.Double.doubleValue"
+    },
+    {
+      "source": "com.acmeair.web.FlightsREST.browseFlights",
+      "target": "com.acmeair.service.FlightService.getFlightByAirports"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.parseNmonDirectory",
+      "target": "java.io.File.isDirectory"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.CustomerAddress.setStreetAddress1"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.acmeair.reporter.parser.OverallResults.getScale_max"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countBookings",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTimestamp",
+      "target": "java.lang.Math.max"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.wxs.entities.BookingImpl.getPkey"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.lookupDefaults",
+      "target": "java.lang.System.setProperty"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.createSession",
+      "target": "com.acmeair.service.CustomerService.createSession"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.CustomerSessionImpl.equals",
+      "target": "java.util.Date.equals"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomer",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTimeList"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "com.acmeair.reporter.util.StatResult.getStatistics"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.AddressInfo.getStateProvince"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.wxs.entities.FlightPKImpl.getFlightSegmentId"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.getCustomerByUsername",
+      "target": "com.acmeair.service.CustomerService.getCustomer"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.setDisableNearCacheNameString",
+      "target": "java.lang.String.length"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.setInputList"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processDirectory",
+      "target": "java.util.Collection.iterator"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "java.lang.Double.parseDouble"
+    },
+    {
+      "source": "com.acmeair.reporter.util.StatResult.getStatistics",
+      "target": "java.lang.Math.min"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processMultiLineData",
+      "target": "com.acmeair.reporter.parser.ResultParserHelper.scaleInputsData"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getActiveDataServiceInfo",
+      "target": "com.acmeair.service.ServiceLocator.instance"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getTitle"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.createSession",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomerByUsername",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.component.JmeterJTLParser.getResultsByUrl"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.invalidateSession",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomer",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getDateWithNoTime",
+      "target": "java.util.Calendar.getTime"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.loadDB",
+      "target": "com.acmeair.loader.Loader.execute"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.HashMap.put"
+    },
+    {
+      "source": "com.acmeair.config.LoaderREST.loadDB",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.CustomerInfo.getPassword"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.getDateWithNoTime",
+      "target": "java.util.Calendar.getInstance"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.getCombinedResultsList",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getInputList"
+    },
+    {
+      "source": "com.acmeair.morphia.BigIntegerConverter.decode",
+      "target": "java.lang.Object.toString"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerSessionImpl.equals",
+      "target": "java.util.Date.equals"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.cancelBooking",
+      "target": "com.acmeair.wxs.entities.BookingPKImpl.getId"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "java.lang.String.endsWith"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.get90thPrecentile",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.cancelBookingsByNumber",
+      "target": "com.acmeair.service.BookingService.cancelBooking"
+    },
+    {
+      "source": "com.acmeair.service.KeyGenerator.generate",
+      "target": "java.util.UUID.randomUUID"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.HashMap.entrySet"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "java.util.logging.Logger.fine"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.setDisableNearCacheNameString",
+      "target": "java.lang.String.split"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomer",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getCustomerByUsername",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addReturnCode",
+      "target": "java.lang.Integer.intValue"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.Fills.newLinearGradientFill"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getActiveDataServiceInfo",
+      "target": "com.acmeair.service.ServiceLocator.getServiceType"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.util.Map.Entry.getValue"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.Calendar.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "java.io.File.getPath"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.logout",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.lookup",
+      "target": "java.lang.System.getProperty"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParserHelper.scaleInputsData",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "java.io.FilterInputStream.close"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.util.List.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractGraphChart.setAreaFill"
+    },
+    {
+      "source": "com.acmeair.wxs.service.CustomerServiceImpl.countSessions",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateMulitpleLinesChart",
+      "target": "com.acmeair.reporter.parser.ResultParser.getMultipleYAxisLabel"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.getBookingByNumber",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlightSegments",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.storeAirportMapping",
+      "target": "org.mongodb.morphia.Datastore.save"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AxisStyle.newAxisStyle"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.getDataServiceInfo",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateChartStrings",
+      "target": "com.googlecode.charts4j.AxisLabelsFactory.newNumericRangeAxisLabels"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingImpl.getCustomerId",
+      "target": "com.acmeair.wxs.entities.BookingPKImpl.getCustomerId"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.setGridName"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory",
+      "target": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "com.acmeair.reporter.parser.IndividualChartResults.getInputList"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomer",
+      "target": "javax.ws.rs.core.Response.ok"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.addTimestamp",
+      "target": "java.lang.Math.min"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractGChart.setBackgroundFill"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.addToFlight"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.getBooking",
+      "target": "com.acmeair.wxs.entities.BookingPKImpl.getId"
+    },
+    {
+      "source": "com.acmeair.web.LoginREST.login",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.entities.Customer.getAddress"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "java.util.ArrayList.add"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.setMultipleYAxisLabel",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.setMultipleChartYAxisLabel"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.HashMap.get"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.loader.Loader.lookupDefaults"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlightSegments",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processFile",
+      "target": "java.io.File.getName"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "java.lang.String.indexOf"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.Map.Entry.getValue"
+    },
+    {
+      "source": "com.acmeair.web.BookingsREST.bookFlights",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.CustomerImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.add",
+      "target": "java.lang.Integer.parseInt"
+    },
+    {
+      "source": "com.acmeair.config.LoaderREST.queryLoader",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.CustomerInfo.getUsername"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.lang.System.currentTimeMillis"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.parser.component.JmeterJTLParser.processResultsDirectory"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "org.apache.velocity.app.VelocityEngine.getTemplate"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.AddressInfo.getStreetAddress2"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getMapSuffix"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.getElapsedTimeInSeconds",
+      "target": "java.lang.Math.round"
+    },
+    {
+      "source": "com.acmeair.wxs.service.BookingServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getMapSuffix"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.get90thPrecentile",
+      "target": "java.util.Collections.sort"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.service.FlightService.storeFlightSegment"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.http.Cookie.getName"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "javax.servlet.http.HttpServletRequest.getPathInfo"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getSession",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "java.io.BufferedReader.readLine"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countCustomerSessions",
+      "target": "com.acmeair.service.CustomerService.countSessions"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByAirportsAndDepartureDate",
+      "target": "java.util.concurrent.ConcurrentHashMap.get"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "com.acmeair.service.FlightService.storeAirportMapping"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.lang.System.getProperty"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AbstractGChart.toURLString"
+    },
+    {
+      "source": "com.acmeair.service.FlightService.getFlightByFlightId",
+      "target": "java.util.concurrent.ConcurrentHashMap.putIfAbsent"
+    },
+    {
+      "source": "com.acmeair.wxs.service.FlightServiceImpl.areDatesSameWithNoTime",
+      "target": "java.util.Date.equals"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.validateCustomer",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.reporter.util.StatResult.getStatistics",
+      "target": "java.util.ArrayList.size"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.text.NumberFormat.format"
+    },
+    {
+      "source": "com.acmeair.reporter.util.Messages.getString",
+      "target": "org.apache.commons.configuration.AbstractConfiguration.getString"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.ReportGenerator.getTotals"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.getProperties",
+      "target": "java.lang.Class.getResourceAsStream"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.initialization",
+      "target": "com.acmeair.morphia.services.util.MongoConnectionManager.getDatastore"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.io.PrintStream.println"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.generateHtmlfile",
+      "target": "java.util.Map.entrySet"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.CustomerImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.bookFlight",
+      "target": "com.acmeair.entities.Booking.getBookingId"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.MapPutAllAgent.process",
+      "target": "java.util.Set.iterator"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.countFlights",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.lookupDefaults",
+      "target": "java.util.Properties.getProperty"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.processDirectory",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.getSession",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.createNewFlight",
+      "target": "org.mongodb.morphia.Datastore.save"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "com.acmeair.reporter.util.StatResult.getStatistics"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.prepareForTransaction",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.Calendar.getTime"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "com.acmeair.service.TransactionService.prepareForTransaction"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.regex.Matcher.find"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getService",
+      "target": "javax.enterprise.inject.spi.BeanManager.createCreationalContext"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTime",
+      "target": "java.util.Map.entrySet"
+    },
+    {
+      "source": "com.acmeair.wxs.service.CustomerServiceImpl.initialization",
+      "target": "com.acmeair.wxs.utils.WXSSessionManager.getMapSuffix"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.getRequestsPerSecond",
+      "target": "java.lang.Math.round"
+    },
+    {
+      "source": "com.acmeair.loader.FlightLoader.loadFlights",
+      "target": "java.util.Calendar.getInstance"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getResults",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getResults"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.countSessions",
+      "target": "org.mongodb.morphia.query.QueryResults.countAll"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.lookup",
+      "target": "java.util.logging.Logger.info"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBookingsByUser",
+      "target": "org.mongodb.morphia.query.FieldEnd.equal"
+    },
+    {
+      "source": "com.acmeair.loader.CustomerLoader.loadCustomers",
+      "target": "com.acmeair.service.CustomerService.createCustomer"
+    },
+    {
+      "source": "com.acmeair.web.CustomerREST.putCustomer",
+      "target": "com.acmeair.web.dto.CustomerInfo.getPhoneNumber"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.io.BufferedReader.readLine"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.cntByTimeString",
+      "target": "java.util.Iterator.hasNext"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterSummariserParser.processLine",
+      "target": "java.lang.Double.parseDouble"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JtlTotals.add",
+      "target": "com.acmeair.reporter.parser.component.JtlTotals.getThreadMap"
+    },
+    {
+      "source": "com.acmeair.morphia.services.CustomerServiceImpl.createSession",
+      "target": "org.mongodb.morphia.Datastore.save"
+    },
+    {
+      "source": "com.acmeair.morphia.entities.FlightImpl.equals",
+      "target": "java.lang.String.equals"
+    },
+    {
+      "source": "com.acmeair.service.CustomerService.createSession",
+      "target": "java.util.Calendar.setTime"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countBookings",
+      "target": "com.acmeair.service.BookingService.count"
+    },
+    {
+      "source": "com.acmeair.loader.Loader.execute",
+      "target": "com.acmeair.service.ServiceLocator.getService"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.getData",
+      "target": "com.acmeair.reporter.parser.ResultParser.processLine"
+    },
+    {
+      "source": "com.acmeair.morphia.services.BookingServiceImpl.getBookingsByUser",
+      "target": "org.mongodb.morphia.query.Query.field"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.NmonParser.processLine",
+      "target": "java.lang.String.split"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.addCpuStats",
+      "target": "com.acmeair.reporter.parser.MultipleChartResults.getResults"
+    },
+    {
+      "source": "com.acmeair.reporter.ReportGenerator.process",
+      "target": "java.util.ArrayList.get"
+    },
+    {
+      "source": "com.acmeair.wxs.utils.WXSSessionManager.lookup",
+      "target": "java.lang.System.getenv"
+    },
+    {
+      "source": "com.acmeair.service.ServiceLocator.getServices",
+      "target": "java.lang.Class.getName"
+    },
+    {
+      "source": "com.acmeair.wxs.entities.BookingPKImpl.hashCode",
+      "target": "java.lang.String.hashCode"
+    },
+    {
+      "source": "com.acmeair.config.AcmeAirConfiguration.countFlights",
+      "target": "javax.ws.rs.core.Response.ResponseBuilder.build"
+    },
+    {
+      "source": "com.acmeair.morphia.services.FlightServiceImpl.getFlightBySegment",
+      "target": "org.mongodb.morphia.Datastore.find"
+    },
+    {
+      "source": "com.acmeair.web.RESTCookieSessionFilter.doFilter",
+      "target": "java.lang.Throwable.printStackTrace"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.component.JmeterJTLParser.parse",
+      "target": "java.util.Map.get"
+    },
+    {
+      "source": "com.acmeair.reporter.parser.ResultParser.generateDefaultChartSettings",
+      "target": "com.googlecode.charts4j.AxisLabels.setAxisStyle"
+    }
+  ]
+}

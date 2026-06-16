@@ -789,12 +789,12 @@ def main() -> int:
     ap.add_argument("--jtl", required=True, help="Path to *_results.jtl (CSV with headers)")
     ap.add_argument(
         "--traces",
-        default="d:/multimodal_microservice_extraction/data/processed/traces/all_traces.json",
+        default="data/processed/traces/all_traces.json",
         help="Path to all_traces.json (JSON array or JSONL)",
     )
     ap.add_argument(
         "--logs",
-        default="d:/multimodal_microservice_extraction/data/processed/logs/all_logs.json",
+        default="data/processed/logs/all_logs.json",
         help="Path to all_logs.json (used only for --scan-logs).",
     )
     ap.add_argument("--slack-ms", type=int, default=50, help="Allowed slack when checking containment")

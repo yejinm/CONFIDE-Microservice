@@ -8,8 +8,8 @@ Goals
 This script is intentionally conservative: it only deletes known derived folders/files.
 
 Usage (Windows PowerShell):
-  D:/multimodal_microservice_extraction/.venv/Scripts/python.exe scripts/multimodal/reset_and_rerun_pipeline.py --system all --reset
-  D:/multimodal_microservice_extraction/.venv/Scripts/python.exe scripts/multimodal/reset_and_rerun_pipeline.py --system acmeair --reset --run
+  python scripts/multimodal/reset_and_rerun_pipeline.py --system all --reset
+  python scripts/multimodal/reset_and_rerun_pipeline.py --system acmeair --reset --run
 
 Typical full rerun:
   python scripts/multimodal/reset_and_rerun_pipeline.py --system all --reset --run \

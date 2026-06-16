@@ -19,7 +19,7 @@ CG_DIR.mkdir(parents=True, exist_ok=True)
 DEP_DIR.mkdir(parents=True, exist_ok=True)
 
 
-MAVEN_CMD = r"D:\apache-maven-3.9.10\bin\mvn.cmd"
+MAVEN_CMD = os.environ.get("MM_MAVEN_CMD", "mvn").strip() or "mvn"
 
 
 APPS = ["acmeair", "daytrader7", "jPetStore", "plantsbywebsphere"]
@@ -78,6 +78,10 @@ def deduplicate_json(file_path: Path):
 # -------------------- Multi-module AST/CallGraph/Dependency extraction --------------------
 def run_ast_extractor(app_name, src_roots, output_path):
     AST_EXPORTER_JAR = TOOLS_DIR / "target" / "tools-fat.jar"
+    if not AST_EXPORTER_JAR.exists():
+        raise FileNotFoundError(
+            f"Missing extractor JAR: {AST_EXPORTER_JAR}. Build it first with: cd tools; mvn package"
+        )
     total_ast = {}
     for idx, src_dir in enumerate(src_roots):
         import tempfile

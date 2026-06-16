@@ -1,0 +1,12 @@
+{
+  "mode": "exp",
+  "k": 6.0,
+  "n_power": 4.0,
+  "edge_min_weight": 0.02,
+  "res_min": 0.1,
+  "res_max": 8.0,
+  "res_step": 0.05,
+  "autotune": false,
+  "autotune_budget": "default",
+  "best_resolution": 0.9500000000000003
+}

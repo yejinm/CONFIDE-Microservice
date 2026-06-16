@@ -1,6 +1,8 @@
-# CONFIDE (ICSME 2026) — Anonymous Reproducibility Package
+# CONFIDE - Reproducibility Package
 
-This repository is prepared for **double-anonymous review**.
+This repository contains the artifact for:
+
+**CONFIDE: Multimodal Conflict-aware Microservice Extraction via Evidential Deep Learning**
 
 ## Terminology note (Semantic Refiner vs DADE)
 
@@ -8,17 +10,17 @@ In the paper, we refer to the semantic post-processing component as **Semantic R
 In the implementation, the same component is historically named **DADE** (e.g., in script names, variables, and some output filenames such as `*sem_dade*`).
 Unless otherwise stated:
 
-- **SR (paper)** ≡ **DADE (code)**
+- **SR (paper)** ~= **DADE (code)**
 
 ## What is included
 
 - Source code for the CONFIDE pipeline (multi-modal similarity, **Semantic Refiner (SR)**, EDL uncertainty modeling, and conflict-aware clustering).
-- A **curated snapshot** of the minimal inputs required to reproduce the paper’s main results (Table III/IV and main figures) under:
-  - `data/processed/paper_inputs/<tag>/...`
+- A curated set of processed inputs required to reproduce the paper's main results (Table III/IV and main figures) under:
+  - `data/processed/...`
 
 ## What is NOT redistributed
 
-- Third-party subject systems (benchmark source code) and raw traces are **not** redistributed in this anonymous package.
+- Third-party subject systems (benchmark source code) and raw traces are **not** redistributed in this reproducibility package.
   See `data/raw/README.md` for upstream download links.
 
 ## Quickstart (copy/paste commands)
@@ -28,25 +30,16 @@ Unless otherwise stated:
 ### 1) Create an environment and install dependencies
 
 ```powershell
-cd d:\multimodal_microservice_extraction
+cd CONFIDE-Microservice
 
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-### 2) Use the provided paper input snapshot (recommended)
+### 2) Use the provided processed inputs
 
-Pick a snapshot tag (default: `paper_v1`) and copy the snapshot back to the canonical `data/processed/...` locations expected by scripts:
-
-```powershell
-$env:CONFIDE_PAPER_TAG = "paper_v1"
-$tag = $env:CONFIDE_PAPER_TAG
-
-Copy-Item -Recurse -Force "data\processed\paper_inputs\$tag\data\processed\*" "data\processed\"
-```
-
-> If you already have the canonical `data/processed/...` files present, you can skip this copy.
+The repository already includes the canonical `data/processed/...` files used by the reproduction scripts. If you generate a separate paper snapshot later, `scripts/reproduce_paper.ps1` can copy it back into these canonical locations.
 
 ### 3) Reproduce Table III (overall comparison)
 
@@ -88,9 +81,9 @@ Expected (common) figure output folders:
 - `results/paper/` (when a script is invoked with `--paper_mode`)
 - `results/plots/` (default for some plotting scripts)
 
-On Windows, the generated figures will be under:
-- `D:\multimodal_microservice_extraction\results\paper`
-- `D:\multimodal_microservice_extraction\results\plots`
+Generated figures are written under:
+- `results/paper/`
+- `results/plots/`
 
 ### One-command reproduction (recommended)
 
@@ -100,7 +93,7 @@ After installing dependencies, you can reproduce **Table III/IV + main figures**
 .\scripts\reproduce_paper.ps1 -Tag paper_v1
 ```
 
-This script will (1) copy the snapshot back to `data/processed/...`, then (2) run Phase3/Phase4/plotting steps, and finally (3) print whether the expected output files exist.
+This script will use the canonical `data/processed/...` inputs already present in the repository, or copy a snapshot first if `results/paper_snapshot/<tag>/` exists.
 
 ## Optional: regenerate a snapshot
 
@@ -110,7 +103,7 @@ Only needed if you regenerated canonical inputs locally and want to record hashe
 python scripts\multimodal\phase4\snapshot_paper_inputs.py --tag audit_local
 ```
 
-The snapshot will be written under `data/processed/paper_inputs/audit_local/`.
+The snapshot will be written under `results/paper_snapshot/audit_local/`.
 
 ## Notes on paths
 
@@ -121,11 +114,11 @@ Most scripts assume the repository root as the working directory and use relativ
 This package includes an automated pipeline that constructs high-fidelity multi-modal datasets from heterogeneous sources:
 
 - **Structural modality (static structure)**
-  - Java-based extractors live under `tools/` (built as a fat JAR via Maven).
+  - Java-based extractors live under `tools/` and are built as a fat JAR via Maven (`cd tools; mvn package`).
   - `scripts/structural/` invokes these extractors to generate base artifacts such as AST, call graph, and dependency graph (written under `data/processed/{ast,callgraph,dependency}/`).
 
 - **Semantic modality (code semantics)**
-  - `scripts/semantic/` uses the same `tools/target/tools-fat.jar` to extract method-level semantic signals (e.g., identifiers/comments/variables), then builds embeddings and semantic similarity matrices.
+  - `scripts/semantic/` uses the Maven-built extractor JAR to extract method-level semantic signals (e.g., identifiers/comments/variables), then builds embeddings and semantic similarity matrices.
 
 - **Multi-modal similarity matrices (Phase 1 fusion inputs)**
   - `scripts/multimodal/phase1/` (notably `build_multimodal_matrices.py`) constructs the aligned similarity matrices for each modality (semantic/structural/temporal) and writes them to `data/processed/fusion/`.
@@ -137,3 +130,54 @@ This package includes an automated pipeline that constructs high-fidelity multi-
 ### Claimed contribution (artifact)
 
 We develop an automated pipeline to construct high-fidelity multi-modal datasets from heterogeneous sources. By integrating non-intrusive instrumentation with domain-aware preprocessing, our pipeline provides auditable benchmarks that address the critical scarcity of multi-modal data and support reproducible research.
+
+## Reviewer-response add-ons (rebuttal-friendly)
+
+### Cold-start simulation (sparse runtime traces)
+
+To simulate scenarios where runtime data is scarce, we support **random trace dropping** when constructing the temporal matrix `S_temp`.
+
+- Script: `scripts/temporal/build_S_temp.py`
+- Options:
+  - `--trace_drop_rate` (0..1): fraction of traceIds to discard
+  - `--trace_drop_seed`: RNG seed for deterministic reproduction
+
+Example:
+
+```powershell
+# keep only 20% traces (drop 80%), deterministic
+python scripts\temporal\build_S_temp.py --system plants --trace_drop_rate 0.80 --trace_drop_seed 1337
+```
+
+### LLM baseline (cached outputs, offline reproducible)
+
+To address comparisons with prompt-based LLM baselines **without depending on external APIs**, this repository includes an *evaluation harness* that reads **cached LLM partitions**.
+
+- Script: `scripts/multimodal/phase4/run_llm_baseline_cached.py`
+- Cached predictions location: `results/llm_baseline/cached/<system>_llm_prompt_partition.json`
+
+Run all cached LLM predictions included in this repository:
+
+```powershell
+python scripts\multimodal\phase4\run_llm_baseline_cached.py
+```
+
+To evaluate specific systems, pass them explicitly. If a requested cached file is missing, the script will error and tell you which file to add.
+
+### End-to-end cold-start sweep (recommended for rebuttal)
+
+To report *end-to-end* robustness when runtime data is scarce, use the provided sweep runner. It will:
+
+1) Build `S_temp` with trace dropping
+2) Rebuild Phase1 fused matrix `S_final`
+3) Run Phase3 clustering
+4) Run Phase4 evaluation and extract **BCubedF1/MoJoSim**
+
+```powershell
+# Example: Plants, sweep drop rates (default: 0,0.2,0.4,0.6,0.8,0.9)
+python scripts\temporal\run_trace_drop_sweep_end2end.py --system plants
+```
+
+Outputs:
+- `results/cold_start/cold_start_trace_drop_<system>.csv`
+- `results/cold_start/cold_start_trace_drop_<system>.md`

@@ -1,7 +1,7 @@
 """Quick sanity check: can JPetStore traces map to class_order via url.query action keys?
 
 Usage (PowerShell):
-  python d:\multimodal_microservice_extraction\scripts\temporal\quick_jpetstore_mapping_check.py
+  python scripts\temporal\quick_jpetstore_mapping_check.py
 
 This reads:
 - data/processed/traces/jpetstore.json

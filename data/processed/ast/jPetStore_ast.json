@@ -1,0 +1,402 @@
+{
+  "org.springframework.samples.jpetstore.dao.CategoryDao": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.MsSqlOrderDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.DoNothingAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapItemDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapClientDaoSupport"
+    ],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.dao.ibatis.ItemDao"
+    ]
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapCategoryDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapClientDaoSupport"
+    ],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.dao.ibatis.CategoryDao"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.RemoveItemFromCartAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.ListOrdersController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.dao.ProductDao": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.Sequence": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.dao.ibatis.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.BaseAction": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.Action"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.SignonAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.service.JaxRpcOrderService": {
+    "bases": [
+      "org.springframework.samples.jpetstore.service.ServletEndpointSupport"
+    ],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.service.OrderService"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewOrderFormAction": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.SecureBaseAction"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.RemoveItemFromCartController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapSequenceDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapClientDaoSupport"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.SecureBaseAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewCartAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.Category": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.AddItemToCartController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.EditAccountFormAction": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.SecureBaseAction"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.OrderForm": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewCartController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.EditAccountAction": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.SecureBaseAction"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewItemController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.UpdateCartQuantitiesController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapOrderDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapClientDaoSupport"
+    ],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.dao.ibatis.OrderDao"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.AccountActionForm": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewAccountFormAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.dao.AccountDao": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.Cart": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.SearchProductsAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.SignonController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewCategoryController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewProductController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewCategoryAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.Item": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.SignoffController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.struts.BaseActionForm": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.ActionForm"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.ListOrdersAction": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.SecureBaseAction"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.OrderActionForm": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewItemAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.UpdateCartQuantitiesAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.SearchProductsController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapProductDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapClientDaoSupport"
+    ],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.dao.ibatis.ProductDao"
+    ]
+  },
+  "org.springframework.samples.jpetstore.domain.LineItem": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.service.client.OrderServiceClient": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.SignonInterceptor": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.spring.HandlerInterceptorAdapter"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewOrderAction": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.SecureBaseAction"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.dao.ItemDao": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.spring.AccountForm": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.ViewOrderController": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Controller"
+    ]
+  },
+  "org.springframework.samples.jpetstore.domain.Order": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.domain.logic.SendOrderConfirmationEmailAdvice": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.logic.AfterReturningAdvice",
+      "org.springframework.samples.jpetstore.domain.logic.InitializingBean"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.UserSession": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.web.spring.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.domain.logic.OrderValidator": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.logic.Validator"
+    ]
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.SqlMapAccountDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapClientDaoSupport"
+    ],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.dao.ibatis.AccountDao"
+    ]
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.OracleSequenceDao": {
+    "bases": [
+      "org.springframework.samples.jpetstore.dao.ibatis.SqlMapSequenceDao"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.CartActionForm": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewOrderAction": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.struts.SecureBaseAction"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.dao.OrderDao": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.AddItemToCartAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.ViewProductAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.logic.OrderService": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.web.struts.NewAccountAction": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.logic.AccountValidator": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.logic.Validator"
+    ]
+  },
+  "org.springframework.samples.jpetstore.domain.logic.PetStoreImpl": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.logic.PetStoreFacade",
+      "org.springframework.samples.jpetstore.domain.logic.OrderService"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.OrderFormController": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.dao.ibatis.ProductSearch": {
+    "bases": [],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.CartItem": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.domain.Product": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  },
+  "org.springframework.samples.jpetstore.web.spring.AccountFormController": {
+    "bases": [
+      "org.springframework.samples.jpetstore.web.spring.SimpleFormController"
+    ],
+    "interfaces": []
+  },
+  "org.springframework.samples.jpetstore.domain.Account": {
+    "bases": [],
+    "interfaces": [
+      "org.springframework.samples.jpetstore.domain.Serializable"
+    ]
+  }
+}

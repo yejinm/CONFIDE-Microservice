@@ -1,0 +1,138 @@
+{
+  "system": "jpetstore",
+  "sweep": {
+    "enabled": true,
+    "dpep_cap": 0.16,
+    "caps": [
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22
+    ]
+  },
+  "universe_policy": {
+    "gt_filter_negative": true,
+    "gt_path": "data/processed/groundtruth/jpetstore_ground_truth.json",
+    "n_nodes": 73
+  },
+  "target_policy": {
+    "target_from_gt": true,
+    "target_range": [
+      3,
+      5
+    ],
+    "gt_k": 4
+  },
+  "dpep": {
+    "enabled": true,
+    "percentile": 70.0,
+    "cap": 0.16,
+    "tau": 0.16,
+    "edge_min_weight_final": 0.16
+  },
+  "cac": {
+    "alpha": 15.0,
+    "beta": 0.14116176241012254,
+    "beta_policy": "median",
+    "mode": "sigmoid",
+    "k_policy": "fixed",
+    "k_used": 6.0,
+    "median_u": null,
+    "n_power": 4.0,
+    "edge_min_weight": 0.16,
+    "res_min": 0.1,
+    "res_max": 8.0,
+    "res_step": 0.05,
+    "autotune": false,
+    "autotune_budget": "default"
+  },
+  "cluster_size_stats": {
+    "Baseline": {
+      "before_merge": {
+        "n_clusters": 3,
+        "n_nodes": 73,
+        "sizes": [
+          20,
+          25,
+          28
+        ],
+        "min": 20,
+        "p25": 22,
+        "median": 25,
+        "p75": 26,
+        "max": 28,
+        "n_singletons": 0,
+        "top10": [
+          28,
+          25,
+          20
+        ]
+      },
+      "after_merge": {
+        "n_clusters": 3,
+        "n_nodes": 73,
+        "sizes": [
+          20,
+          25,
+          28
+        ],
+        "min": 20,
+        "p25": 22,
+        "median": 25,
+        "p75": 26,
+        "max": 28,
+        "n_singletons": 0,
+        "top10": [
+          28,
+          25,
+          20
+        ]
+      }
+    },
+    "CAC-Final": {
+      "before_merge": {
+        "n_clusters": 3,
+        "n_nodes": 73,
+        "sizes": [
+          18,
+          22,
+          33
+        ],
+        "min": 18,
+        "p25": 20,
+        "median": 22,
+        "p75": 27,
+        "max": 33,
+        "n_singletons": 0,
+        "top10": [
+          33,
+          22,
+          18
+        ]
+      },
+      "after_merge": {
+        "n_clusters": 3,
+        "n_nodes": 73,
+        "sizes": [
+          18,
+          22,
+          33
+        ],
+        "min": 18,
+        "p25": 20,
+        "median": 22,
+        "p75": 27,
+        "max": 33,
+        "n_singletons": 0,
+        "top10": [
+          33,
+          22,
+          18
+        ]
+      }
+    }
+  }
+}

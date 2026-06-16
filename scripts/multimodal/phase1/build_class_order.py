@@ -1,5 +1,3 @@
-# d:/multimodal_microservice_extraction/scripts/multimodal/build_class_order.py
-
 import json
 import argparse
 from pathlib import Path

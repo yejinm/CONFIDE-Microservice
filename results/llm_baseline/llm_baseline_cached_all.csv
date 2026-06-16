@@ -1,0 +1,2 @@
+system,method,pred_path,bcubed_f1,mojosim,pred_k,gt_k,k_diff
+daytrader,LLM_Prompt_Cached,results/llm_baseline/cached/daytrader_llm_prompt_partition.json,0.4979201233133684,44.11764705882353,7,5,2

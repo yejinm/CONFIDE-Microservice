@@ -4,7 +4,7 @@ import argparse
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import logging
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 
@@ -59,7 +59,7 @@ SYSTEM_CONFIG = {
 }
 
 
-def _pick_newest_existing(paths: List[str]) -> str | None:
+def _pick_newest_existing(paths: List[str]) -> Optional[str]:
     existing = [p for p in paths if p and os.path.isfile(p)]
     if not existing:
         return None

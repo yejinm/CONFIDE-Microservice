@@ -8,6 +8,7 @@ from pathlib import Path
 from sklearn.metrics.pairwise import cosine_similarity
 import argparse
 from collections import Counter
+from typing import Optional
 
 # ---------------- Configuration ----------------
 SYSTEMS = {
@@ -27,20 +28,40 @@ DEFAULT_GT_PATHS = {
     'plants': 'data/processed/groundtruth/plants_ground_truth.json',
 }
 
-def load_data(system, u_path=None, *, u_ablation: str = "with_u", mu_override: float | None = None):
+def load_data(system, u_path=None, *, u_ablation: str = "with_u", mu_override: Optional[float] = None,
+             no_dade_sem: bool = False):
     """Load S_final and U.
 
     - u_ablation='no_u' forces U≡0 (CAC w/o uncertainty)
     - mu_override re-mixes already-materialized semantic/structural matrices under fusion/.
+    - no_dade_sem=True forces using raw semantic matrix S_sem.npy (instead of S_sem_dade_*),
+      and rebuilds S_final = mu*S_struct + (1-mu)*S_sem with a default mu (or mu_override).
 
-    This is designed to support:
-      (1) Uncertainty ablation B: CAC(with U) vs CAC(U≡0)
-      (2) DayTrader surgical mu tuning without rerunning Phase1/2.
+    This supports granular ablation without rerunning Phase1/2.
     """
     try:
         fusion_path = f"data/processed/fusion/{system}_S_final.npy"
 
-        if mu_override is not None:
+        # Ablation: bypass DADE by rebuilding S_final from raw modality matrices.
+        if bool(no_dade_sem):
+            s_sem_path = f"data/processed/fusion/{system}_S_sem.npy"
+            s_struct_path = f"data/processed/fusion/{system}_S_struct.npy"
+            if not os.path.exists(s_sem_path) or not os.path.exists(s_struct_path):
+                raise FileNotFoundError(
+                    f"[{system}] no_dade_sem requires both {s_sem_path} and {s_struct_path} to exist. "
+                    f"(Run Phase1 to materialize them.)"
+                )
+            S_sem = np.load(s_sem_path)
+            S_struct = np.load(s_struct_path)
+            if S_sem.shape != S_struct.shape:
+                raise ValueError(f"[{system}] S_sem and S_struct shape mismatch: {S_sem.shape} vs {S_struct.shape}")
+            # Default mu used only for DADE ablation; can be overridden by --mu_override
+            mu = float(mu_override) if mu_override is not None else 0.50
+            if not (0.0 <= mu <= 1.0):
+                raise ValueError(f"[{system}] mu must be in [0,1], got {mu}")
+            S = mu * S_struct + (1.0 - mu) * S_sem
+            np.fill_diagonal(S, 1.0)
+        elif mu_override is not None:
             s_sem_path = f"data/processed/fusion/{system}_S_sem_dade_base.npy"
             if not os.path.exists(s_sem_path):
                 s_sem_path = f"data/processed/fusion/{system}_S_sem.npy"
@@ -104,7 +125,7 @@ def _apply_u_ablation(U: np.ndarray, *, policy: str, seed: int = 42) -> np.ndarr
     raise ValueError(f"Unknown U ablation policy: {policy}")
 
 
-def _load_modality_matrix(system: str, kind: str) -> np.ndarray | None:
+def _load_modality_matrix(system: str, kind: str) -> Optional[np.ndarray]:
     """Best-effort load modality similarity matrix (N×N).
 
     This enables 'mu' weight tuning *without* rerunning Phase1/2 by reconstructing
@@ -168,7 +189,7 @@ def _score_partition(modularity: float, ifn_ratio: float) -> float:
 
 
 def _build_graphs(S: np.ndarray, U: np.ndarray, *, mode: str, k: float, n_power: float, edge_min_weight: float,
-                 alpha: float = 15.0, beta: float | None = None):
+                 alpha: float = 15.0, beta: Optional[float] = None):
     """Build baseline (S) and CAC (S penalized by U) graphs.
 
     Modes:
@@ -330,26 +351,30 @@ def _autotune_cac(
     return metrics, partition, params
 
 
-def run_cac_algorithm(system, S, U, target_range,
-                      non_linear_mode: str = "exp",
-                      k: float = 6.0,
-                      n_power: float = 4.0,
-                      # NEW: sigmoid params
-                      alpha: float = 15.0,
-                      beta: float | None = None,
-                      beta_policy: str = "median",
-                      res_min: float = 0.1,
-                      res_max: float = 8.0,
-                      res_step: float = 0.05,
-                      edge_min_weight: float = 0.01,
-                      verbose_graph: bool = True,
-                      autotune: bool = False,
-                      autotune_budget: str = "default",
-                      k_policy: str = "fixed",
-                      # NEW: tiny-cluster merge post-processing
-                      merge_small_clusters: bool = False,
-                      min_cluster_size: int = 1,
-                      run_meta: dict | None = None):
+def run_cac_algorithm(
+    system,
+    S,
+    U,
+    target_range,
+    non_linear_mode="exp",
+    k=6,
+    n_power=4,
+    alpha: float = 15.0,
+    beta: float = None,
+    beta_policy: str = "median",
+    res_min=0.1,
+    res_max=8,
+    res_step=0.05,
+    edge_min_weight=0.01,
+    verbose_graph=True,
+    autotune: bool = False,
+    autotune_budget: str = "default",
+    k_policy: str = "auto",
+    merge_small_clusters: bool = False,
+    min_cluster_size: int = 3,
+    run_meta=None,
+    debug_resolutions: bool = False,
+):
     # --- C. S matrix normalization is handled in _build_graphs() ---
 
     num_nodes = S.shape[0]
@@ -430,15 +455,6 @@ def run_cac_algorithm(system, S, U, target_range,
     except Exception:
         rmin, rmax, rstep = 0.1, 8.0, 0.05
 
-    if verbose_graph:
-        # end-exclusive range, consistent with np.arange
-        est_n = int(max(0, (rmax - rmin) / max(rstep, 1e-9)))
-        print(
-            f"[ResolutionSweep] {system}: res in [{rmin:.4f},{rmax:.4f}) step={rstep:.4f} (~{est_n} points) | "
-            f"target_range={target_range} | merge_small_clusters={merge_small_clusters} min_cluster_size={min_cluster_size}",
-            flush=True,
-        )
-
     resolutions = np.arange(rmin, rmax, rstep)
 
     # IMPORTANT: restore initialization of bests and best_cac_params (a previous edit accidentally removed it)
@@ -505,16 +521,117 @@ def run_cac_algorithm(system, S, U, target_range,
             continue
 
         valid_partitions = []
+
+        # Optional debug: memory-safe resolution->K logging.
+        # IMPORTANT: do NOT keep a huge dict in memory (can crash VS Code / node worker).
+        debug_out_json = None
+        debug_out_jsonl = None
+        debug_counts = None
+        debug_k_min = None
+        debug_k_max = None
+        debug_target_hits = 0
+        debug_total = 0
+        if debug_resolutions:
+            # Minimal sentinel (no console spam). Helps diagnose control-flow without large memory usage.
+            try:
+                import os
+                os.makedirs("results/_tmp", exist_ok=True)
+                with open("results/_tmp/_DEBUG_ENTERED.txt", "w", encoding="utf-8") as f:
+                    f.write(f"entered: {system} {name}\n")
+            except Exception:
+                pass
+
+            from collections import Counter
+            debug_counts = Counter()
+            try:
+                os.makedirs("results/_tmp", exist_ok=True)
+                safe_name = name.replace(" ", "_").replace("/", "-")
+                debug_out_json = f"results/_tmp/{system}_{safe_name}_res_to_k.json"
+                debug_out_jsonl = f"results/_tmp/{system}_{safe_name}_res_to_k.jsonl"
+                # truncate previous run
+                with open(debug_out_jsonl, "w", encoding="utf-8") as _f:
+                    _f.write("")
+            except Exception:
+                debug_out_json = None
+                debug_out_jsonl = None
+
+        # Resolution sweep
         for res in resolutions:
             try:
                 partition = community_louvain.best_partition(G, weight='weight', resolution=res, random_state=42)
                 num_services = len(set(partition.values()))
+
+                if debug_resolutions and debug_counts is not None:
+                    k = int(num_services)
+                    debug_total += 1
+                    debug_counts[k] += 1
+                    debug_k_min = k if debug_k_min is None else min(debug_k_min, k)
+                    debug_k_max = k if debug_k_max is None else max(debug_k_max, k)
+                    try:
+                        if int(target_range[0]) == int(target_range[1]) and k == int(target_range[0]):
+                            debug_target_hits += 1
+                    except Exception:
+                        pass
+                    if debug_out_jsonl is not None:
+                        # stream one line per resolution (keeps memory bounded)
+                        try:
+                            with open(debug_out_jsonl, "a", encoding="utf-8") as f:
+                                f.write(json.dumps({"res": float(res), "k": k}, ensure_ascii=False) + "\n")
+                        except Exception:
+                            pass
+
                 if target_range[0] <= num_services <= target_range[1]:
                     modularity = community_louvain.modularity(partition, G)
                     cross_edges, ifn_ratio = calculate_ifn(G, partition)
                     valid_partitions.append((modularity, ifn_ratio, cross_edges, num_services, partition, res))
             except Exception:
                 continue
+
+        # Emit compact debug summary JSON (safe, small) if requested
+        if debug_resolutions and debug_out_json is not None and debug_counts is not None:
+            try:
+                missing = []
+                if debug_k_min is not None and debug_k_max is not None and debug_k_max >= debug_k_min:
+                    missing = [k for k in range(int(debug_k_min), int(debug_k_max) + 1) if k not in debug_counts]
+
+                summary = {
+                    "system": system,
+                    "graph": name,
+                    "target_range": [int(target_range[0]), int(target_range[1])],
+                    "n_resolution_points": int(debug_total),
+                    "k_min": int(debug_k_min) if debug_k_min is not None else None,
+                    "k_max": int(debug_k_max) if debug_k_max is not None else None,
+                    "missing_k_in_[min,max]": missing,
+                    "target_k_hit_resolutions": int(debug_target_hits),
+                    "k_counts": {str(k): int(v) for k, v in sorted(debug_counts.items(), key=lambda kv: kv[0])},
+                    "mapping_jsonl": debug_out_jsonl,
+                }
+                with open(debug_out_json, "w", encoding="utf-8") as f:
+                    json.dump(summary, f, indent=2, ensure_ascii=False)
+
+                # Guaranteed sentinel + post-write verification (no stdout spam)
+                try:
+                    import os
+                    os.makedirs("results/_tmp", exist_ok=True)
+                    sentinel = f"results/_tmp/{system}_{safe_name}_debug_written.txt"
+                    with open(sentinel, "w", encoding="utf-8") as sf:
+                        sf.write(f"json={debug_out_json}\njsonl={debug_out_jsonl}\n")
+                        sf.write(f"json_exists={os.path.exists(debug_out_json)}\n")
+                        sf.write(f"jsonl_exists={os.path.exists(debug_out_jsonl) if debug_out_jsonl else None}\n")
+                        sf.write(f"points={debug_total}\n")
+                except Exception:
+                    pass
+            except Exception as e:
+                # If we fail to write debug evidence, log it to a file (avoid console spam)
+                try:
+                    import os
+                    os.makedirs("results/_tmp", exist_ok=True)
+                    err_path = f"results/_tmp/{system}_{safe_name}_debug_write_error.txt"
+                    with open(err_path, "a", encoding="utf-8") as ef:
+                        ef.write(repr(e) + "\n")
+                except Exception:
+                    pass
+
         if valid_partitions:
             valid_qpos = [x for x in valid_partitions if x[0] > 0]
             if valid_qpos:
@@ -567,14 +684,11 @@ def run_cac_algorithm(system, S, U, target_range,
 
                 # If candidate rejected, skip persisting metrics for this G at this sweep best.
                 if best_part is None:
+                    if debug_resolutions and verbose_graph:
+                        # We don't know which resolution produced the rejected best candidate after sorting;
+                        # emit a hint that merge/target-range guard caused rejection.
+                        print(f"[DebugRes] {system} | {name}: best candidate rejected by TargetRangeGuard after merge.", flush=True)
                     continue
-
-                # recompute metrics for the chosen best_part
-                try:
-                    best_ifn, best_ifn_ratio = calculate_ifn(G, best_part)
-                    best_mod = float(community_louvain.modularity(best_part, G))
-                except Exception:
-                    pass
 
             # --- Persist best info ---
             bests[name] = {
@@ -797,7 +911,7 @@ def _print_cluster_size_stats(system: str, method: str, stage: str, stats: dict)
         flush=True,
     )
 
-def _system_score(metrics: dict | None) -> float:
+def _system_score(metrics: Optional[dict]) -> float:
     """Use the same scoring as internal tie-break: Q - 0.05*IFN_Ratio."""
     if not metrics:
         return float("-inf")
@@ -807,10 +921,7 @@ def _system_score(metrics: dict | None) -> float:
         return float("-inf")
 
 def main():
-    # Always print a startup banner to avoid "no reaction" confusion in some shells.
-    print("[Phase3] phase3_cac_evaluation.py starting...", flush=True)
-
-    parser = argparse.ArgumentParser(description="Phase 3 - CAC clustering evaluation")
+    parser = argparse.ArgumentParser(description='Evaluate CAC Algorithm with modularity and IFN')
     parser.add_argument('systems', nargs='*', help='Systems to run (e.g., acmeair daytrader). If empty, run all.')
 
     # NEW: override target service count range (for forcing splits / paper comparison)
@@ -915,6 +1026,13 @@ def main():
         default=None,
         help="Optional: dump edge-level evidence JSON (useful for case study).",
     )
+    parser.add_argument(
+        "--no_dade_sem",
+        action="store_true",
+        help="Ablation: bypass DADE by rebuilding S_final from raw S_sem.npy + S_struct.npy (no Phase1/2 rerun).",
+    )
+
+    parser.add_argument('--debug_resolutions', action='store_true', help='Dump resolution->K mapping stats during the sweep (for diagnosing K=None).')
 
     args = parser.parse_args()
 
@@ -989,7 +1107,13 @@ def main():
 
             for cap in sweep_caps_global:
                 # Reload and prepare data fresh each cap
-                S, U = load_data(system, u_path, u_ablation=args.u_ablation, mu_override=args.mu_override)
+                S, U = load_data(
+                    system,
+                    u_path,
+                    u_ablation=args.u_ablation,
+                    mu_override=args.mu_override,
+                    no_dade_sem=bool(args.no_dade_sem),
+                )
                 if S is None:
                     continue
 
@@ -1110,6 +1234,7 @@ def main():
                     merge_small_clusters=bool(args.merge_small_clusters),
                     min_cluster_size=int(args.min_cluster_size),
                     run_meta=run_meta,
+                    debug_resolutions=bool(args.debug_resolutions),
                 )
 
                 score = _system_score(bests.get('CAC-Final'))
@@ -1150,7 +1275,13 @@ def main():
         # Select gt_path for this system
         gt_path = gt_paths[idx] if gt_paths else None
 
-        S, U = load_data(system, u_path, u_ablation=args.u_ablation, mu_override=args.mu_override)
+        S, U = load_data(
+            system,
+            u_path,
+            u_ablation=args.u_ablation,
+            mu_override=args.mu_override,
+            no_dade_sem=bool(args.no_dade_sem),
+        )
         if S is None:
             continue
 
@@ -1288,6 +1419,7 @@ def main():
             merge_small_clusters=bool(args.merge_small_clusters),
             min_cluster_size=int(args.min_cluster_size),
             run_meta=run_meta,
+            debug_resolutions=bool(args.debug_resolutions),
         )
 
         # At end of run: print final best K (Services) and best_resolution (for reviewer fairness checks)
@@ -1391,72 +1523,43 @@ def main():
 def merge_tiny_clusters(partition: dict, G: nx.Graph, min_size: int = 3) -> dict:
     """Merge clusters smaller than min_size into the strongest-connected neighbor cluster.
 
-    This is a lightweight, industry-style post-processing step to avoid
-    singleton / tiny services.
+    Lightweight post-processing to reduce singleton/tiny clusters.
 
-    Strategy:
-    - Compute cluster sizes.
-    - Repeatedly pick a node in a tiny cluster and reassign it to the cluster
-      to which it has the highest total edge weight.
-    - If a node has no edges, leave it unchanged.
-
-    Returns a new partition dict.
+    Returns a NEW partition dict.
     """
-    if min_size <= 1:
-        return dict(partition)
-
     part = dict(partition)
 
-    # Build cluster -> nodes map
     def build_clusters(p: dict) -> dict[int, list[int]]:
         clusters: dict[int, list[int]] = {}
         for n, c in p.items():
             clusters.setdefault(int(c), []).append(int(n))
         return clusters
 
-    clusters = build_clusters(part)
-
-    # Iterate until no tiny clusters remain or no progress
-    max_iters = 10_000
-    it = 0
     changed = True
-
-    while changed and it < max_iters:
-        it += 1
+    while changed:
         changed = False
         clusters = build_clusters(part)
-        tiny_cids = [cid for cid, nodes in clusters.items() if len(nodes) < min_size]
-        if not tiny_cids:
+        small_cids = [cid for cid, nodes in clusters.items() if len(nodes) < int(min_size)]
+        if not small_cids:
             break
 
-        # Try to move one node from one tiny cluster per iteration
         moved_any = False
-        for cid in tiny_cids:
-            nodes = clusters.get(cid, [])
-            if not nodes:
-                continue
-
-            # pick a node, move it to its best neighbor cluster
-            for n in nodes:
-                # aggregate neighbor weights by cluster
+        for cid in small_cids:
+            for n in list(clusters.get(cid, [])):
                 scores: dict[int, float] = {}
-                for nbr, attrs in G[n].items():
-                    w = float(attrs.get('weight', 1.0))
-                    nbr_cid = int(part.get(nbr))
+                for nbr in G.neighbors(n):
+                    nbr_cid = int(part.get(nbr, cid))
                     if nbr_cid == cid:
                         continue
-
+                    w = float(G.edges[n, nbr].get("weight", 1.0))
                     scores[nbr_cid] = scores.get(nbr_cid, 0.0) + w
-
                 if not scores:
                     continue
-
                 best_to = max(scores.items(), key=lambda kv: kv[1])[0]
                 part[n] = best_to
                 changed = True
                 moved_any = True
                 break
-
             if moved_any:
                 break
 

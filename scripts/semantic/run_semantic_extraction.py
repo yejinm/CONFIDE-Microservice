@@ -21,7 +21,7 @@ STATS_PATH = OUTPUT_DIR / "semantic_stats.json"
 FAT_JAR = Path("tools/target/tools-fat.jar").resolve()
 
 # Allow overriding java command (PowerShell-friendly):
-#   $env:MM_JAVA_CMD='C:\Program Files\Java\jdk-11\bin\java.exe'
+#   $env:MM_JAVA_CMD="$env:JAVA_HOME\bin\java.exe"
 # or:
 #   $env:MM_JAVA_CMD='java'  (default)
 JAVA_CMD = os.environ.get("MM_JAVA_CMD", "java").strip() or "java"
@@ -77,6 +77,11 @@ def find_source_roots(app_root: Path):
 
 
 def run_semantic_extraction(app: str, src_root: str):
+    if not FAT_JAR.exists():
+        raise FileNotFoundError(
+            f"Missing extractor JAR: {FAT_JAR}. Build it first with: cd tools; mvn package"
+        )
+
     app_root = Path(src_root)
     source_roots = find_source_roots(app_root)
 
@@ -123,7 +128,7 @@ def run_semantic_extraction(app: str, src_root: str):
             str(src.resolve()),
             str(tmp_out.resolve()),
         ]
-        print(f"   ▶ [{module_tag}] java files root = {src.resolve()}")
+        print(f"   - [{module_tag}] java files root = {src.resolve()}")
         try:
             proc = subprocess.run(cmd, check=True, capture_output=True, text=True)
         except subprocess.CalledProcessError as e:

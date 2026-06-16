@@ -1,0 +1,155 @@
+You are an expert software architect.
+
+Task: Microservice extraction via clustering.
+Given a monolithic Java system, you must group classes into cohesive microservices.
+
+System: daytrader
+Input: a list of 68 fully-qualified class names with their package structure, and a few lightweight semantic keywords per class.
+Output: a JSON object mapping microservice names to an array of fully-qualified class names.
+
+Hard constraints:
+- Every class MUST appear in exactly one cluster.
+- Do NOT drop classes.
+- Do NOT create duplicate class entries.
+- Use ONLY the provided class names.
+
+Optimization goals:
+- High cohesion: classes in same cluster should implement closely related business capability.
+- Low coupling between clusters.
+- Prefer grouping by domain functionality, not by "web vs ejb vs entity" technical layers.
+- Use package structure and keywords as hints.
+
+Output format (STRICT):
+{
+  "<service_name_1>": ["com.example.A", "com.example.B"],
+  "<service_name_2>": ["..."]
+}
+
+Before producing the JSON, think step-by-step privately.
+Then output ONLY the JSON and nothing else.
+
+
+Few-shot toy example (format only):
+Input classes:
+- com.shop.web.CartController (keywords: cart, add, remove, checkout)
+- com.shop.service.CartService (keywords: cart, checkout)
+- com.shop.repo.CartRepository (keywords: cart, persist)
+- com.shop.web.UserController (keywords: user, login, profile)
+- com.shop.service.UserService (keywords: user, auth)
+
+Valid JSON output:
+{
+  "Cart": [
+    "com.shop.web.CartController",
+    "com.shop.service.CartService",
+    "com.shop.repo.CartRepository"
+  ],
+  "User": [
+    "com.shop.web.UserController",
+    "com.shop.service.UserService"
+  ]
+}
+
+DayTrader classes (cluster ALL 100):
+- com.ibm.websphere.samples.daytrader.TradeAction  | package: com.ibm.websphere.samples.daytrader  | keywords: param, order, account, userid, user, stock, holding, given, customer, get
+- com.ibm.websphere.samples.daytrader.TradeServices  | package: com.ibm.websphere.samples.daytrader  | keywords: param, order, account, userid, stock, user, quote, completed, get, holding
+- com.ibm.websphere.samples.daytrader.beans.MarketSummaryDataBean  | package: com.ibm.websphere.samples.daytrader.beans  | keywords: get, gets, returns, sets, param, set, volume, summary, quotedata, tsia
+- com.ibm.websphere.samples.daytrader.beans.RunStatsDataBean  | package: com.ibm.websphere.samples.daytrader.beans  | keywords: count, gets, returns, get, sets, param, set, order, tradeusercount, trade
+- com.ibm.websphere.samples.daytrader.direct.KeySequenceDirect  | package: com.ibm.websphere.samples.daytrader.direct  | keywords: block, key, sequence, direct, keyval, nextid, ids, get, next, stmt
+- com.ibm.websphere.samples.daytrader.direct.TradeDirect  | package: com.ibm.websphere.samples.daytrader.direct  | keywords: get, stmt, conn, see, tradeservices, data, quotedata, quote, account, order
+- com.ibm.websphere.samples.daytrader.ejb3.DTBroker3MDB  | package: com.ibm.websphere.samples.daytrader.ejb3  | keywords: broker, publishtime, receivetime, currentstats, command, orderid, twophase, direct, on, message
+- com.ibm.websphere.samples.daytrader.ejb3.DTStreamer3MDB  | package: com.ibm.websphere.samples.daytrader.ejb3  | keywords: streamer, publishtime, receivetime, currentstats, command, symbolnumber, on, message
+- com.ibm.websphere.samples.daytrader.ejb3.MarketSummarySingleton  | package: com.ibm.websphere.samples.daytrader.ejb3  | keywords: market, summary, singleton, update, data, bean, setup, every, seconds, quotes
+- com.ibm.websphere.samples.daytrader.ejb3.TradeSLSBBean  | package: com.ibm.websphere.samples.daytrader.ejb3  | keywords: order, account, get, profile, quote, holding, price, message, orders, create
+- com.ibm.websphere.samples.daytrader.ejb3.TradeSLSBLocal  | package: com.ibm.websphere.samples.daytrader.ejb3  | keywords: slsb, local, investment, return, ping, two, phase, publish, quote, price
+- com.ibm.websphere.samples.daytrader.ejb3.TradeSLSBRemote  | package: com.ibm.websphere.samples.daytrader.ejb3  | keywords: slsb, remote, investment, return, ping, two, phase, publish, quote, price
+- com.ibm.websphere.samples.daytrader.entities.AccountDataBean  | package: com.ibm.websphere.samples.daytrader.entities  | keywords: get, set, account, login, profile, count, balance, logout, to, last
+- com.ibm.websphere.samples.daytrader.entities.AccountProfileDataBean  | package: com.ibm.websphere.samples.daytrader.entities  | keywords: get, set, account, profile, to, user, password, full, name, address
+- com.ibm.websphere.samples.daytrader.entities.HoldingDataBean  | package: com.ibm.websphere.samples.daytrader.entities  | keywords: get, set, holding, purchase, quote, to, quantity, price, date, account
+- com.ibm.websphere.samples.daytrader.entities.OrderDataBean  | package: com.ibm.websphere.samples.daytrader.entities  | keywords: get, set, order, is, date, open, orderstatus, to, type, status
+- com.ibm.websphere.samples.daytrader.web.OrdersAlertFilter  | package: com.ibm.websphere.samples.daytrader.web  | keywords: orders, alert, see, destroy, init, dofilter, servletrequest, servletresponse, filterchain, userid
+- com.ibm.websphere.samples.daytrader.web.TestServlet  | package: com.ibm.websphere.samples.daytrader.web  | keywords: param, object, encapsulates, test, process, incoming, requests, do, post, init
+- com.ibm.websphere.samples.daytrader.web.TradeAppServlet  | package: com.ibm.websphere.samples.daytrader.web  | keywords: param, object, encapsulates, app, method, information, get, process, incoming, requests
+- com.ibm.websphere.samples.daytrader.web.TradeBuildDB  | package: com.ibm.websphere.samples.daytrader.web  | keywords: build, sqlbuffer, sql, parse, ddl, to, buffer, main
+- com.ibm.websphere.samples.daytrader.web.TradeConfigServlet  | package: com.ibm.websphere.samples.daytrader.web  | keywords: config, do, display, runtime, configuration, creation, date, currentconfig, update, initialization
+- com.ibm.websphere.samples.daytrader.web.TradeScenarioServlet  | package: com.ibm.websphere.samples.daytrader.web  | keywords: param, object, encapsulates, scenario, method, information, tradescenarioservlet, get, process, incoming
+- com.ibm.websphere.samples.daytrader.web.TradeServletAction  | package: com.ibm.websphere.samples.daytrader.web  | keywords: param, exception, user, results, object, javax, display, do, dispatch, back
+- com.ibm.websphere.samples.daytrader.web.TradeWebContextListener  | package: com.ibm.websphere.samples.daytrader.web  | keywords: context, web, tradedirect, prop, stream, initialized, destroyed
+- com.ibm.websphere.samples.daytrader.web.jsf.AccountDataJSF  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: get, set, account, holdings, of, gain, number, orders, order, creation
+- com.ibm.websphere.samples.daytrader.web.jsf.ExternalContextProducer  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: external, context, producer, produce, faces
+- com.ibm.websphere.samples.daytrader.web.jsf.HoldingData  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: get, set, holding, purchase, price, gain, quantity, date, quote, basis
+- com.ibm.websphere.samples.daytrader.web.jsf.JSFLoginFilter  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: jsf, login, see, destroy, init, dofilter, servletrequest, servletresponse, filterchain, session
+- com.ibm.websphere.samples.daytrader.web.jsf.LoginValidator  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: login, validator, msg, validate
+- com.ibm.websphere.samples.daytrader.web.jsf.MarketSummaryJSF  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: get, set, summary, market, top, gainers, losers, gain, percent, quote
+- com.ibm.websphere.samples.daytrader.web.jsf.OrderData  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: order, set, get, date, status, open, completion, fee, type, quantity
+- com.ibm.websphere.samples.daytrader.web.jsf.OrderDataJSF  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: order, get, orders, all, session, set, data, userid, orderdatabeans, count
+- com.ibm.websphere.samples.daytrader.web.jsf.PortfolioJSF  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: get, set, total, gain, holdings, portfolio, balance, basis, percent, session
+- com.ibm.websphere.samples.daytrader.web.jsf.TradeActionProducer  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: producer, produce, trade, action
+- com.ibm.websphere.samples.daytrader.web.jsf.TradeAppJSF  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: get, set, taction, app, accountdata, accountprofiledata, session, user, password, cpassword
+- com.ibm.websphere.samples.daytrader.web.jsf.TradeConfigJSF  | package: com.ibm.websphere.samples.daytrader.web.jsf  | keywords: set, get, mode, order, is, interface, list, config, runtime, processing
+- com.ibm.websphere.samples.daytrader.web.prims.ExplicitGC  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, explicit, post, requests, method, javax, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingBean  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: message, ping, contained, msg, returns, get, sets, param, set
+- com.ibm.websphere.samples.daytrader.web.prims.PingCDIBean  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: cdi, ping, beanmanager, beans, get, bean, manger, via, hello, current
+- com.ibm.websphere.samples.daytrader.web.prims.PingCDIJSFBean  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, cdijsf, get, hit, count
+- com.ibm.websphere.samples.daytrader.web.prims.PingEJBIFace  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, ejbi, face, get, msg
+- com.ibm.websphere.samples.daytrader.web.prims.PingEJBLocal  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, ejb, local, non, javadoc, see, com, ibm, websphere, samples
+- com.ibm.websphere.samples.daytrader.web.prims.PingEJBLocalDecorator  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, ejb, local, decorator, get, msg
+- com.ibm.websphere.samples.daytrader.web.prims.PingInterceptor  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: interceptor, ping, method
+- com.ibm.websphere.samples.daytrader.web.prims.PingJDBCRead  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, jdbc, read, post, requests, method, javax, httpservletrequest
+- com.ibm.websphere.samples.daytrader.web.prims.PingJDBCRead2JSP  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, jdbc, read, post, requests, method, javax, httpservletrequest
+- com.ibm.websphere.samples.daytrader.web.prims.PingJDBCWrite  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, jdbc, write, method, requests, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingJSONP  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, post, requests, method, javax, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingManagedExecutor  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, managed, executor, post, requests, method, javax, httpservletrequest
+- com.ibm.websphere.samples.daytrader.web.prims.PingManagedThread  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, thread, info, ping, managed, post, requests, method, javax, httpservletrequest
+- com.ibm.websphere.samples.daytrader.web.prims.PingReentryServlet  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, reentry, do, get, about, post, main, method
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, post, requests, method, javax, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2DB  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, post, requests, method, javax, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2Include  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, ping, include, post, requests, method, javax, httpservletrequest, do, forwards
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2IncludeRcv  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, ping, include, rcv, post, requests, method, javax, httpservletrequest, do
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2JNDI  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, post, requests, method, javax, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2Jsp  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, ping, jsp, post, requests, method, javax, httpservletrequest, do, forwards
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2PDF  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, ping, post, requests, method, javax, httpservletrequest, do, forwards, doget
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2Servlet  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, ping, post, requests, method, javax, httpservletrequest, do, forwards, doget
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet2ServletRcv  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, ping, rcv, post, requests, method, javax, httpservletrequest, do, forwards
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet30Async  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, async, post, requests, method, javax, httpservletrequest, do
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, async, post, requests, method, javax, httpservletrequest, do
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async.ReadListenerImpl  | package: com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async  | keywords: read, on, data, len, available, output, writelistener, all, error
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async.WriteListenerImpl  | package: com.ibm.websphere.samples.daytrader.web.prims.PingServlet31Async  | keywords: write, on, possible, error
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet31AsyncRead  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, async, read, post, requests, method, javax, httpservletrequest
+- com.ibm.websphere.samples.daytrader.web.prims.PingServlet31AsyncRead.ReadListenerImpl  | package: com.ibm.websphere.samples.daytrader.web.prims.PingServlet31AsyncRead  | keywords: read, on, data, len, available, output, all, error
+- com.ibm.websphere.samples.daytrader.web.prims.PingServletCDI  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, do, get, called, when, loaded, initialize, param, config, servletconfig
+- com.ibm.websphere.samples.daytrader.web.prims.PingServletCDIBeanManagerViaCDICurrent  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: cdi, ping, manager, via, current, do, get, called, when, loaded
+- com.ibm.websphere.samples.daytrader.web.prims.PingServletCDIBeanManagerViaJNDI  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, cdi, manager, via, do, get, called, when, loaded, initialize
+- com.ibm.websphere.samples.daytrader.web.prims.PingServletLargeContentLength  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, info, ping, large, content, length, post, requests, method, javax
+- com.ibm.websphere.samples.daytrader.web.prims.PingServletSetContentLength  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, length, info, ping, content, post, requests, method, javax, httpservletrequest
+- com.ibm.websphere.samples.daytrader.web.prims.PingServletWriter  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, ping, writer, post, requests, method, javax, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingSession1  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, session, ping, post, requests, method, javax, httpservletrequest, do, get
+- com.ibm.websphere.samples.daytrader.web.prims.PingSession2  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, session, info, ping, post, requests, method, javax, httpservletrequest, do
+- com.ibm.websphere.samples.daytrader.web.prims.PingSession3  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: param, session, info, ping, post, requests, method, javax, httpservletrequest, do
+- com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, upgrade, do, get, post
+- com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet.Handler  | package: com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet  | keywords: handler, init, destroy
+- com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet.Listener  | package: com.ibm.websphere.samples.daytrader.web.prims.PingUpgradeServlet  | keywords: on, data, len, dataread, available, close, connection, all, read, error
+- com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketBinary  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, on, web, socket, binary, open, error, close
+- com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketJson  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, on, web, socket, context, mtf, thread, open, error, close
+- com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketTextAsync  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, on, web, socket, text, async, open, error, close
+- com.ibm.websphere.samples.daytrader.web.prims.PingWebSocketTextSync  | package: com.ibm.websphere.samples.daytrader.web.prims  | keywords: ping, on, web, socket, text, sync, open, error, close
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Entity  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, entity, do, get, post, out, quote, symbol, output, iter
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2MDBQueue  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, mdb, queue, do, get, post, out, output, conn, message
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2MDBTopic  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, mdb, topic, do, get, post, out, output, conn, message
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2CMROne2Many  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, session, cmr, one, many, do, get, post, out, userid
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2CMROne2One  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: one, ping, session, cmr, do, get, post, out, userid, output
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2Entity  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, session, entity, do, get, post, out, symbol, quotedata, output
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2Entity2JSP  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, session, entity, do, get, post, symbol, quotedata, ctx, iter
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2Session2EntityCollection  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, session, entity, collection, do, get, post, out, userid, holdingdatabeans
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2SessionLocal  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, session, local, do, get, post, out, output, rnd1, rnd2
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2SessionRemote  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, session, remote, do, get, post, out, output, rnd1, rnd2
+- com.ibm.websphere.samples.daytrader.web.prims.ejb3.PingServlet2TwoPhase  | package: com.ibm.websphere.samples.daytrader.web.prims.ejb3  | keywords: ping, two, phase, do, get, post, out, symbol, quotedata, output
+- com.ibm.websphere.samples.daytrader.web.websocket.ActionDecoder  | package: com.ibm.websphere.samples.daytrader.web.websocket  | keywords: decoder, decode, destroy, init, actionmessage, will
+- com.ibm.websphere.samples.daytrader.web.websocket.ActionMessage  | package: com.ibm.websphere.samples.daytrader.web.websocket  | keywords: message, keyname, parser, event, do, decoding, get, decoded, action
+- com.ibm.websphere.samples.daytrader.web.websocket.JsonDecoder  | package: com.ibm.websphere.samples.daytrader.web.websocket  | keywords: decoder, decode, destroy, init, jsonobject, message, will
+- com.ibm.websphere.samples.daytrader.web.websocket.JsonEncoder  | package: com.ibm.websphere.samples.daytrader.web.websocket  | keywords: encoder, destroy, init, jsonobject, encode
+- com.ibm.websphere.samples.daytrader.web.websocket.JsonMessage  | package: com.ibm.websphere.samples.daytrader.web.websocket  | keywords: message, get, key, set, value
+- com.ibm.websphere.samples.daytrader.web.websocket.MarketSummaryWebSocket  | package: com.ibm.websphere.samples.daytrader.web.websocket  | keywords: on, market, summary, web, socket, key, value, open, taction, mksummary
+- com.ibm.websphere.samples.daytrader.web.websocket.RecentStockChangeList  | package: com.ibm.websphere.samples.daytrader.web.websocket  | keywords: stock, change, recent, list, add, jobjectbuilder, temp, iterator, message, changes
+
+Now output the STRICT JSON only.

@@ -1,0 +1,33 @@
+{
+  "system": "jpetstore",
+  "target_range": [
+    3,
+    5
+  ],
+  "baseline": {
+    "Q": 0.027953263117938262,
+    "IFN": 1727,
+    "IFN_Ratio": 0.6680851063829787,
+    "Services": 3,
+    "Resolution": 0.9000000000000002
+  },
+  "cac_final": {
+    "Q": 0.024207978512834995,
+    "IFN": 1661,
+    "IFN_Ratio": 0.648068669527897,
+    "Services": 3,
+    "Resolution": 0.9500000000000003
+  },
+  "params": {
+    "mode": "exp",
+    "k": 6.0,
+    "n_power": 4.0,
+    "edge_min_weight": 0.02,
+    "res_min": 0.1,
+    "res_max": 8.0,
+    "res_step": 0.05,
+    "autotune": false,
+    "autotune_budget": "default",
+    "best_resolution": 0.9500000000000003
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "authority": {
+    "note": "Monolith classes mapped to IBM microservice boundaries by service interfaces/entities and impl propagation.",
+    "repo": "data/raw/acmeair-quarkus-main",
+    "services": [
+      "acmeair-authservice-quarkus",
+      "acmeair-bookingservice-quarkus",
+      "acmeair-customerservice-quarkus",
+      "acmeair-flightservice-quarkus",
+      "acmeair-mainservice-quarkus"
+    ]
+  },
+  "cluster_legend": {
+    "-1": "infra/tooling/dto",
+    "0": "customerservice",
+    "1": "bookingservice",
+    "2": "flightservice",
+    "3": "authservice"
+  },
+  "rules_applied": {
+    "entity_impl_forced_by_semantic_name": [
+      "com.acmeair.morphia.entities.AirportCodeMappingImpl",
+      "com.acmeair.morphia.entities.BookingImpl",
+      "com.acmeair.morphia.entities.CustomerAddressImpl",
+      "com.acmeair.morphia.entities.CustomerImpl",
+      "com.acmeair.morphia.entities.CustomerSessionImpl",
+      "com.acmeair.morphia.entities.FlightImpl",
+      "com.acmeair.morphia.entities.FlightSegmentImpl",
+      "com.acmeair.wxs.entities.AirportCodeMappingImpl",
+      "com.acmeair.wxs.entities.BookingImpl",
+      "com.acmeair.wxs.entities.BookingPKImpl",
+      "com.acmeair.wxs.entities.CustomerAddressImpl",
+      "com.acmeair.wxs.entities.CustomerImpl",
+      "com.acmeair.wxs.entities.CustomerSessionImpl",
+      "com.acmeair.wxs.entities.FlightImpl",
+      "com.acmeair.wxs.entities.FlightPKImpl",
+      "com.acmeair.wxs.entities.FlightSegmentImpl"
+    ],
+    "interface_impl_propagation": [
+      {
+        "class": "com.acmeair.morphia.services.BookingServiceImpl",
+        "from": 1,
+        "rule": "interface->impl:BookingService",
+        "to": 1
+      },
+      {
+        "class": "com.acmeair.morphia.services.CustomerServiceImpl",
+        "from": 0,
+        "rule": "interface->impl:CustomerService",
+        "to": 0
+      },
+      {
+        "class": "com.acmeair.morphia.services.FlightServiceImpl",
+        "from": 2,
+        "rule": "interface->impl:FlightService",
+        "to": 2
+      },
+      {
+        "class": "com.acmeair.wxs.service.BookingServiceImpl",
+        "from": 1,
+        "rule": "interface->impl:BookingService",
+        "to": 1
+      },
+      {
+        "class": "com.acmeair.wxs.service.CustomerServiceImpl",
+        "from": 0,
+        "rule": "interface->impl:CustomerService",
+        "to": 0
+      },
+      {
+        "class": "com.acmeair.wxs.service.FlightServiceImpl",
+        "from": 2,
+        "rule": "interface->impl:FlightService",
+        "to": 2
+      }
+    ],
+    "seed_assignments": [
+      {
+        "class": "com.acmeair.web.CustomerREST",
+        "from": 0,
+        "rule": "seed",
+        "to": 0
+      },
+      {
+        "class": "com.acmeair.web.BookingsREST",
+        "from": 1,
+        "rule": "seed",
+        "to": 1
+      },
+      {
+        "class": "com.acmeair.web.FlightsREST",
+        "from": 2,
+        "rule": "seed",
+        "to": 2
+      },
+      {
+        "class": "com.acmeair.web.LoginREST",
+        "from": 3,
+        "rule": "seed",
+        "to": 3
+      },
+      {
+        "class": "com.acmeair.web.RESTCookieSessionFilter",
+        "from": 3,
+        "rule": "seed",
+        "to": 3
+      },
+      {
+        "class": "com.acmeair.service.CustomerService",
+        "from": 0,
+        "rule": "seed",
+        "to": 0
+      },
+      {
+        "class": "com.acmeair.service.BookingService",
+        "from": 1,
+        "rule": "seed",
+        "to": 1
+      },
+      {
+        "class": "com.acmeair.service.TransactionService",
+        "from": 1,
+        "rule": "seed",
+        "to": 1
+      },
+      {
+        "class": "com.acmeair.service.FlightService",
+        "from": 2,
+        "rule": "seed",
+        "to": 2
+      },
+      {
+        "class": "com.acmeair.entities.Customer",
+        "from": 0,
+        "rule": "seed",
+        "to": 0
+      },
+      {
+        "class": "com.acmeair.entities.CustomerAddress",
+        "from": 0,
+        "rule": "seed",
+        "to": 0
+      },
+      {
+        "class": "com.acmeair.entities.CustomerSession",
+        "from": 3,
+        "rule": "seed",
+        "to": 3
+      },
+      {
+        "class": "com.acmeair.entities.Booking",
+        "from": 1,
+        "rule": "seed",
+        "to": 1
+      },
+      {
+        "class": "com.acmeair.entities.BookingPK",
+        "from": 1,
+        "rule": "seed",
+        "to": 1
+      },
+      {
+        "class": "com.acmeair.entities.Flight",
+        "from": 2,
+        "rule": "seed",
+        "to": 2
+      },
+      {
+        "class": "com.acmeair.entities.FlightSegment",
+        "from": 2,
+        "rule": "seed",
+        "to": 2
+      },
+      {
+        "class": "com.acmeair.entities.AirportCodeMapping",
+        "from": 2,
+        "rule": "seed",
+        "to": 2
+      },
+      {
+        "class": "com.acmeair.loader.CustomerLoader",
+        "from": 0,
+        "rule": "seed",
+        "to": 0
+      },
+      {
+        "class": "com.acmeair.loader.FlightLoader",
+        "from": 2,
+        "rule": "seed",
+        "to": 2
+      }
+    ]
+  },
+  "summary": {
+    "class_count": 71,
+    "cluster_counts": {
+      "0": 11,
+      "1": 10,
+      "2": 15,
+      "3": 5
+    },
+    "coverage_ratio": 0.5774647887323944,
+    "covered_labeled": 41,
+    "covered_unlabeled": 30,
+    "largest_cluster": 15
+  },
+  "system": "acmeair"
+}

@@ -1,0 +1,23 @@
+{
+  "system": "jpetstore",
+  "best_cap": 0.12,
+  "best_mu": null,
+  "u_ablation": "normal",
+  "mode": "sigmoid",
+  "alpha": 15.0,
+  "merge_small_clusters": true,
+  "min_cluster_size": 3,
+  "baseline": {
+    "bcubed_f1": 0.3444,
+    "mojosim": 31.51,
+    "k": 0,
+    "gt_k": 0
+  },
+  "cac": {
+    "bcubed_f1": 0.3915,
+    "mojosim": 38.36,
+    "k": 0,
+    "gt_k": 0
+  },
+  "note": ""
+}
